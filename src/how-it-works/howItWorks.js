@@ -30,6 +30,7 @@ export default class HowItWorks extends Component {
                     Find Buyer
                     OOO
             </div>
+            {/* https://www.youtube.com/watch?v= this will not work*/}
                 <iframe src="https://www.youtube.com/embed/QFaFIcGhPoM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3"> </iframe>
             </div>
         )
