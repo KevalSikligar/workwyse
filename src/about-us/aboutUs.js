@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import BreadCrumbs from '../breadcrumbs/breadcrumbs';
 
 function AboutUs(props) {
-    console.log('props => ', props);
+
     const pathList = [
         { to: "/about-us", title: "About Us" }
     ]
