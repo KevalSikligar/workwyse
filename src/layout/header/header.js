@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default class Header extends Component {
     render() {
@@ -24,7 +24,8 @@ export default class Header extends Component {
                                             <ul class="contact border-left">
                                                 <li class="d-lg-none">
                                                     <a href="#" class="callnumber text-dark">
-                                                        <span><i class="fa fa-phone mr-1"></i>: +425 345 8765</span></a>
+                                                        <span><i class="fa fa-phone mr-1"></i>: +425 345 8765</span>
+                                                    </a>
                                                 </li>
                                                 <li class="dropdown d-none d-xl-inline-block">
                                                     <a href="#" class="" data-toggle="dropdown">
@@ -45,11 +46,15 @@ export default class Header extends Component {
                                 <div class="col-xl-5 col-lg-5 col-sm-8 col-5">
                                     <div class="top-bar-right">
                                         <ul class="custom">
-                                            <li><a href="register.html" class=""><i class="fa fa-user mr-1"></i>
-                                                <span>Register</span></a>
+                                            <li>
+                                                <a href="register.html" class=""><i class="fa fa-user mr-1"></i>
+                                                    <span>Register</span>
+                                                </a>
                                             </li>
-                                            <li><a href="login.html" class=""><i class="fa fa-sign-in mr-1"></i>
-                                                <span>Login</span></a>
+                                            <li>
+                                                <a href="login.html" class=""><i class="fa fa-sign-in mr-1"></i>
+                                                    <span>Login</span>
+                                                </a>
                                             </li>
                                             <li class="dropdown">
                                                 <a href="#" class="" data-toggle="dropdown"><i class="fa fa-home mr-1"></i>
@@ -86,12 +91,12 @@ export default class Header extends Component {
                         </div>
                         <nav class="horizontalMenu clearfix d-md-flex">
                             <ul class="horizontalMenu-list">
-                                <li><Link to="/about-us" class="active">About Us </Link></li>
-                                <li><Link to="/faq">FAQ </Link></li>
-                                <li><Link to="/terms-of-service">Terms of Service </Link></li>
-                                <li><Link to="/privacy-policy">Privay Policy </Link></li>
-                                <li><Link to="/pricing">Pricing </Link></li>
-                                {/* <li><a href="contact.html"> Contact Us <span class="horizontal-arrow"></span></a></li> */}
+                                <li><NavLink to="/about-us" activeClassName="active">About Us </NavLink></li>
+                                <li><NavLink to="/faq" activeClassName="active">FAQ </NavLink></li>
+                                <li><NavLink to="/how-it-works" activeClassName="active">How It Works </NavLink></li>
+                                <li><NavLink to="/terms-of-service" activeClassName="active">Terms of Service </NavLink></li>
+                                <li><NavLink to="/privacy-policy" activeClassName="active">Privay Policy </NavLink></li>
+                                <li><NavLink to="/pricing" activeClassName="active">Pricing </NavLink></li>
                             </ul>
                             <ul class="mb-0 pr-2">
                                 <li class="d-none d-lg-flex">

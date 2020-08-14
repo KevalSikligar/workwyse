@@ -6,23 +6,42 @@ export default function FAQ() {
     const pathList = [
         { to: "/faq", title: "FAQ" }
     ]
+
     return (
         <div>
             <BreadCrumbs title="FAQ" breadcrumbssegment={pathList} />
-
-            <h3>
-                How It Works
-                Our powerful engine in the back room matches your requirements with firms that are able to cover your most important needs.
-                Search - Browse our list of companies, see prices and much more using advanced filters, or you can post a project and define any requirements - Firms that have experience working with your industry are listed first (see Industry Focus under Seller profiles). - View company profiles, see company ratings that are pulled from all across the Internet.
-                Speak - Send a message to your top matches or a 'Work With' request. - Discuss project particulars, share email addresses & contact information, upload documents.
-                Select - Once you've found the right match, we'll leave you to it
-                215/6.55
-                Try it out
-                Post a Project
-                Find Buyer
-                OOO
-                FAQs
-            </h3>
+            <div class="container">
+                <div id="accordion" class="accordion">
+                    <div class="card mb-0">
+                        <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                            <a class="card-title">Item 1</a>
+                        </div>
+                        <div id="collapseOne" class="card-body collapse" data-parent="#accordion" >
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                            aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                            craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </p>
+                        </div>
+                        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            <a class="card-title">Item 2</a>
+                        </div>
+                        <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                            aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                            craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </p>
+                        </div>
+                        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            <a class="card-title">Item 3</a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion" >
+                            <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                            aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore sustainable VHS.
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

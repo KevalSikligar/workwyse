@@ -9,6 +9,7 @@ import Privacy from './privacy/privacy';
 import TermsOfService from './terms-of-service/termsOfService';
 import Pricing from './pricing/pricing';
 import AboutUs from './about-us/aboutUs';
+import HowItWorks from './how-it-works/howItWorks';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/pricing" component={Pricing} />
       <Route path="/terms-of-service" component={TermsOfService} />
       <Route path="/privacy-policy" component={Privacy} />
+      <Route path="/how-it-works" component={HowItWorks} />
       <Footer />
     </div>
   );
