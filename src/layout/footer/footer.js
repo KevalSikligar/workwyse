@@ -9,7 +9,7 @@ export default class Footer extends Component {
                     <div class="container">
                         <div class="row d-flex">
                             <div class="col-lg-8 col-sm-12  mt-2 mb-2 text-left ">
-                                Copyright © 2019 <a href="index.html" class="fs-14 text-white">rejoin</a>. Designed by <a href="spruko.com" class="fs-14 text-white">Spruko</a> All rights reserved.
+                                Copyright © 2020 <a href="index.html" class="fs-14 text-white">Workwyse</a>. Designed by <a href="spruko.com" class="fs-14 text-white">Workwyse</a> All rights reserved.
 							</div>
                             <div class="col-lg-4 col-sm-12 ml-auto mb-2 mt-2 d-none d-lg-block">
                                 <ul class="social mb-0">
