@@ -15,7 +15,6 @@ function AboutUs(props) {
                     <div class="container">
                         <div class="section-title center-block text-center">
                             <h1>WHO ARE WE? THIS IS OUR STORY</h1>
-                            <p>team@workwyse.io</p>
                         </div>
                         <div class="about-desc pb-md-7 pb-0">
                             <p>Born during the Covid crisis of 2020, when offices were left empty with phones left to continuously ring.</p>

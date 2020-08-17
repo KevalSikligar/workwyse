@@ -48,7 +48,7 @@ export default class HowItWorks extends Component {
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-12 col-12">
                                     <div class="steps-item">
-                                        <div class="steps-title"><span>1</span> Search a Project</div>                                        
+                                        <div class="steps-title"><span>1</span> Search</div>                                
                                         <div class="steps-desc">
                                             <p>Browse our list of companies, see prices and much more using advanced filters, or you can post a project and define any requirements </p>
                                             <p>Firms that have experience working with your industry are listed first (see Industry Focus under Seller profiles).</p>

@@ -95,7 +95,7 @@ export default class Header extends Component {
                                 <li><NavLink to="/faq" activeClassName="active">FAQ </NavLink></li>
                                 <li><NavLink to="/how-it-works" activeClassName="active">How It Works </NavLink></li>
                                 <li><NavLink to="/terms-of-service" activeClassName="active">Terms of Service </NavLink></li>
-                                <li><NavLink to="/privacy-policy" activeClassName="active">Privay Policy </NavLink></li>
+                                <li><NavLink to="/privacy-policy" activeClassName="active">Privacßy Policy </NavLink></li>
                                 <li><NavLink to="/pricing" activeClassName="active">Pricing </NavLink></li>
                             </ul>
                             <ul class="mb-0 pr-2">
