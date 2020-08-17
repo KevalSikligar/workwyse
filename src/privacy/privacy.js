@@ -61,7 +61,7 @@ export default function Privacy() {
                   Laws;
                 </li>
                 <li>
-                  Cookiesa small text file placed on your computer by this
+                  Cookies a small text file placed on your computer by this
                   Website when you visit certain parts of the Website and/or
                   When you use certain features of the Website. Details of the
                   cookies used by this Website are set out in the clause below (

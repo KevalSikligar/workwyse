@@ -29,6 +29,7 @@ export default class Footer extends Component {
                             <div class="p-2 text-center footer-links">
                                 <a class="btn btn-link"><Link to="/about-us" class="active">About Us </Link></a>
                                 <a class="btn btn-link"><Link to="/faq">FAQ </Link></a>
+                                <a class="btn btn-link"><Link to="/how-it-works">How It Works </Link></a>
                                 <a class="btn btn-link"><Link to="/terms-of-service">Terms of service </Link></a>
                                 <a class="btn btn-link"><Link to="/privacy-policy">Privacy Policy </Link></a>
                                 <a class="btn btn-link"><Link to="/pricing" >Pricing </Link></a>
