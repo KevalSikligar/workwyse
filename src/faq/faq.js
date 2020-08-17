@@ -1,6 +1,5 @@
 import React from 'react'
 import BreadCrumbs from '../breadcrumbs/breadcrumbs';
-import * as $ from 'jquery';
 
 export default function FAQ() {
 
@@ -24,16 +23,16 @@ export default function FAQ() {
                                     </h2>
                                 </div>
                                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body">                                        
+                                    <div class="card-body">
                                         <div class="privacy-sub-section">
-                                        <h4>There are two ways for Buyers to initiate contact:</h4>
-                                        <ul>
-                                            <li>Send a 'Work With' request that invites them to your project. You can send requests out to a maximum of 5 Sellers.</li>
-                                            <li>Alternatively, if you decide do not to send any requests. up to 5 Sellers can contact you.</li>
-                                            <li>Send a personalised message directly to Sellers</li>
-                                            <li>Feel free to share any details once you connect!</li>
-                                        </ul>
-                                    </div>
+                                            <h4>There are two ways for Buyers to initiate contact:</h4>
+                                            <ul>
+                                                <li>Send a 'Work With' request that invites them to your project. You can send requests out to a maximum of 5 Sellers.</li>
+                                                <li>Alternatively, if you decide do not to send any requests. up to 5 Sellers can contact you.</li>
+                                                <li>Send a personalised message directly to Sellers</li>
+                                                <li>Feel free to share any details once you connect!</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -69,19 +68,19 @@ export default function FAQ() {
                             <div class="card">
                                 <div class="card-header" id="headingFour">
                                     <h2 class="mb-0">
-                                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"> What is the (WWI) WorkWyseIndex rating and how are profiles rated? <i class="fa fa-plus"></i></button> 
+                                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"> What is the (WWI) WorkWyseIndex rating and how are profiles rated? <i class="fa fa-plus"></i></button>
                                     </h2>
                                 </div>
                                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                                     <div class="card-body">
-                                    <div class="privacy-sub-section">
-                                        <h4> Providing a median of the following scores.</h4>
-                                        <ul class="mb-md-5">                                            
-                                            <li>Glassdoor rating</li>
-                                            <li>Trustpilot rating	</li>
-                                            <li>Google Business rating</li>
-                                            <li>Facebook Page ratting</li>
-                                        </ul>
+                                        <div class="privacy-sub-section">
+                                            <h4> Providing a median of the following scores.</h4>
+                                            <ul class="mb-md-5">
+                                                <li>Glassdoor rating</li>
+                                                <li>Trustpilot rating</li>
+                                                <li>Google Business rating</li>
+                                                <li>Facebook Page rating</li>
+                                            </ul>
                                         </div>
                                         <p>You can see written reviews by clicking the WWI icon.</p>
                                         <p>We have our own algorithm that works based on the rating our users provide.</p>

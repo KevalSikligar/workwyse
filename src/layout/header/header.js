@@ -47,12 +47,12 @@ export default class Header extends Component {
                                     <div class="top-bar-right">
                                         <ul class="custom">
                                             <li>
-                                                <a href="register.html" class=""><i class="fa fa-user mr-1"></i>
+                                                <a href="#" class=""><i class="fa fa-user mr-1"></i>
                                                     <span>Register</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="login.html" class=""><i class="fa fa-sign-in mr-1"></i>
+                                                <a href="#" class=""><i class="fa fa-sign-in mr-1"></i>
                                                     <span>Login</span>
                                                 </a>
                                             </li>
@@ -95,7 +95,7 @@ export default class Header extends Component {
                                 <li><NavLink to="/faq" activeClassName="active">FAQ </NavLink></li>
                                 <li><NavLink to="/how-it-works" activeClassName="active">How It Works </NavLink></li>
                                 <li><NavLink to="/terms-of-service" activeClassName="active">Terms of Service </NavLink></li>
-                                <li><NavLink to="/privacy-policy" activeClassName="active">Privacßy Policy </NavLink></li>
+                                <li><NavLink to="/privacy-policy" activeClassName="active">Privacy Policy </NavLink></li>
                                 <li><NavLink to="/pricing" activeClassName="active">Pricing </NavLink></li>
                             </ul>
                             <ul class="mb-0 pr-2">
