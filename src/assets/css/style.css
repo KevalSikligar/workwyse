@@ -174,7 +174,7 @@
     
     p {
         margin-top: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 10px;
     }
     
     abbr[data-original-title],
@@ -38128,10 +38128,33 @@
     }
     /* Accordian */
     
-    .accordion .card-header:after {
-        font-family: 'FontAwesome';
-        content: "\f068";
-        float: right;
+    .accordion>.card>.card-header {
+        padding-left: 15px;
+    }
+    
+    .accordion .card-header .btn.btn-link {
+        font-size: 18px;
+        width: 100%;
+        display: block;
+        text-align: left;
+        color: #000;
+        position: relative;
+        text-decoration: none;
+        white-space: normal;
+        word-break: break-word;
+        padding-right: 25px;
+        font-weight: 500;
+    }
+    
+    .accordion .card-header .btn.btn-link i {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        color: #1295fd;
+    }
+    
+    .accordion>.card {
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .2);
     }
     
     .accordion .card-header.collapsed:after {
@@ -38468,4 +38491,8 @@
         font-size: 18px;
         position: relative;
         padding-left: 15px;
+    }
+    
+    .accordion .card-header h2 {
+        width: 100%;
     }
