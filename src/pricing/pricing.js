@@ -47,7 +47,7 @@ export default class Pricing extends Component {
                                         <span class="month">/month</span> </div> <div class="pricingContent2">
                                         <ul>
                                             <li><b>Notifications</b> on leads</li>
-                                            <li><b>(via</b> email/broswer)</li>
+                                            <li><b>(via</b> email/browser)</li>
                                             <li><b>x25 Contact Request</b> (per week)</li>
                                             <li><b>Messaging</b> System</li>
                                             <li><b>Admin</b> dashboard</li>
