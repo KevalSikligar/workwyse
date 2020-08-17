@@ -15,7 +15,7 @@ function AboutUs(props) {
                     <div class="container">
                         <div class="section-title center-block text-center">
                             <h1>WHO ARE WE? THIS IS OUR STORY</h1>
-                            <p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+                            <p>team@workwyse.io</p>
                         </div>
                         <div class="about-desc pb-md-7 pb-0">
                             <p>Born during the Covid crisis of 2020, when offices were left empty with phones left to continuously ring.</p>
@@ -36,7 +36,7 @@ function AboutUs(props) {
                                             <div class="servic-data mt-3">
                                                 <h4 class="font-weight-semibold mb-2">General Account</h4>
                                                 <h5>team@workwyse.io</h5>
-                                                <p class="text-muted mb-0">Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+                                                <p class="text-muted mb-0">Reference site about Generate Account, giving information on its origins, as well as a random Lipsum generator.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -52,7 +52,7 @@ function AboutUs(props) {
                                             <div class="servic-data mt-3">
                                                 <h4 class="font-weight-semibold mb-2">Help Technical Issues</h4>
                                                 <h5>support@workwyse.io</h5>
-                                                <p class="text-muted mb-0">Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+                                                <p class="text-muted mb-0">Reference site about Technical Issues, giving information on its origins, as well as a random Lipsum generator.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -63,13 +63,12 @@ function AboutUs(props) {
                                     <div class="mb-lg-0 mb-4">
                                         <div class="service-card text-center">
                                             <div class="bg-light icon-bg icon-service text-purple about">
-
                                                 <img src={require('../assets/images/products/about/billing.png')} alt="img" />
                                             </div>
                                             <div class="servic-data mt-3">
                                                 <h4 class="font-weight-semibold mb-2">Billing Inquiries</h4>
                                                 <h5>billing@workwyse.io</h5>
-                                                <p class="text-mute mb-0">Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator. </p>
+                                                <p class="text-mute mb-0">Reference site about Billing Inquiries, giving information on its origins, as well as a random Lipsum generator. </p>
                                             </div>
                                         </div>
                                     </div>
@@ -83,7 +82,6 @@ function AboutUs(props) {
                         <div class="container"> 
                             <div class="text-center text-white section-title pb-7">
                                 <h1>Workwyse is a registered association in Luzern, Switzerland </h1>
-                                <p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-12 bg-white p-0">

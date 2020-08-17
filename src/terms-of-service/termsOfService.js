@@ -17,8 +17,8 @@ export default function TermsOfService() {
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text priint.</p>
                         </div>
                         <div class="privacy-policy">                        
-                            <h3>Genral Terms</h3>
-                            <p>Workwyse is a service provided by Workwyse Ltd (the Company) of ....... ----, United Kingdom. These terms of service ("Terms") govern your access and use of all Workwyse services so please read them carefully before using the services.  </p>
+                            <h3>General Terms</h3>
+                            <p>Workwyse is a service provided by Workwyse Ltd (the Company) of United Kingdom. These terms of service ("Terms") govern your access and use of all Workwyse services so please read them carefully before using the services.  </p>
                             <p>By using the Services you agree to be bound by these Terms in their entirety.</p>
                             <p>If you are using the services on behalf of an organization then you are agreeing to these terms for that organization and are warranting that you have the authority to bind that organization to these terms. In that case "you" and "your" will refer to that organization.</p>
                             <p>You may use the Services only in compliance with these Terms. You may use the Services only if you have the power to form a contract with Workwyse Ltd and are not barred under any applicable laws from doing so. The Services may continue to change over time as we refine and add more features. We may stop, suspend, or modify the Services at any time without prior notice to you. We may also remove any content from our Services at our discretion. </p>

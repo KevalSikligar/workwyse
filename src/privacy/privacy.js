@@ -63,7 +63,7 @@ export default function Privacy() {
                 <li>
                   Cookiesa small text file placed on your computer by this
                   Website when you visit certain parts of the Website and/or
-                  when you use certain features of the Website. Details of the
+                  When you use certain features of the Website. Details of the
                   cookies used by this Website are set out in the clause below (
                   Cookies);{' '}
                 </li>
@@ -110,33 +110,33 @@ export default function Privacy() {
                 interpretation:
               </h4>
               <ul>
-                <li>the singular includes the plural and vice versa;</li>
+                <li>The singular includes the plural and vice versa;</li>
                 <li>
-                  Cookiesa small text file placed on your computer by this
+                  Cookie is a small text file placed on your computer by this
                   Website when you visit certain parts of the Website and/or
                   when you use certain features of the Website. Details of the
                   cookies used by this Website are set out in the clause below (
                   Cookies);{' '}
                 </li>
                 <li>
-                  references to sub-clauses, clauses, schedules or appendices
+                  References to sub-clauses, clauses, schedules or appendices
                   are to sub-clauses, clauses, schedules or appendices of this
                   privacy policy;
                 </li>
                 <li>
-                  a reference to a person includes firms, companies, government
+                  A reference to a person includes firms, companies, government
                   entities, trusts and partnerships;
                 </li>
                 <li>
-                  "including" is understood to mean "including without
+                  "Including" is understood to mean "including without
                   limitation";{' '}
                 </li>
                 <li>
-                  reference to any statutory provision includes any modification
+                  Reference to any statutory provision includes any modification
                   or amendment of it;
                 </li>
                 <li>
-                  the headings and sub-headings do not form part of this privacy
+                  The headings and sub-headings do not form part of this privacy
                   policy.
                 </li>
               </ul>
@@ -156,15 +156,15 @@ export default function Privacy() {
             <h3> Data collected</h3>
             <h4> We may collect the following Data, which includes personal Data, from you:</h4>
             <ul>
-              <li>name;</li>
-              <li>job title;</li>
-              <li>profession;</li>
-              <li>contact Information such as email addresses and telephone numbers;</li>
-              <li>demographic information such as postcode, preferences and interests;</li>
-              <li>financial information such as credit / debit card numbers;</li>
+              <li>Name;</li>
+              <li>Job title;</li>
+              <li>Profession;</li>
+              <li>Contact Information such as email addresses and telephone numbers;</li>
+              <li>Demographic information such as postcode, preferences and interests;</li>
+              <li>Financial information such as credit / debit card numbers;</li>
               <li>IP address (automatically collected);</li>
-              <li>web browser type and version (automatically collected);</li>
-              <li>company number, vat number, email address, phone number, location, additional company and user information required as per sign up process;</li>
+              <li>Web browser type and version (automatically collected);</li>
+              <li>ompany number, vat number, email address, phone number, location, additional company and user information required as per sign up process;</li>
               
             </ul>
             <p class="mt-md-4">
@@ -177,9 +177,9 @@ export default function Privacy() {
               <h3>How we collect Data</h3>
               <h4>We collect Data in the following ways:</h4>
               <ul>
-                <li>data is given to us by you ; </li>
-                <li>data is received from other sources; and</li>
-                <li>data is collected automatically.</li>              
+                <li>Data is given to us by you ; </li>
+                <li>Data is received from other sources; and</li>
+                <li>Data is collected automatically.</li>              
               </ul>        
             </div>         
             
@@ -187,13 +187,13 @@ export default function Privacy() {
               <h3>Data that is given to us by you</h3>
               <h4>WorkWyse Ltd will collect your Data in a number of ways, for example:</h4>
               <ul>
-                <li>when you contact us through the Website, by telephone, post, e-mail or through any other means; </li>
-                <li>when you register with us and set up an account to receive our products/services;</li>
-                <li>when you complete surveys that we use for research purposes (although you are not obliged to respond to them);</li>              
-                <li>when you enter a competition or promotion through a social media channel;</li>
-                <li>when you make payments to us, through this Website or otherwise;</li>
-                <li>when you elect to receive marketing communications from us;</li>
-                <li>when you use our services;</li>                
+                <li>When you contact us through the Website, by telephone, post, e-mail or through any other means; </li>
+                <li>When you register with us and set up an account to receive our products/services;</li>
+                <li>When you complete surveys that we use for research purposes (although you are not obliged to respond to them);</li>              
+                <li>When you enter a competition or promotion through a social media channel;</li>
+                <li>When you make payments to us, through this Website or otherwise;</li>
+                <li>When you elect to receive marketing communications from us;</li>
+                <li>When you use our services;</li>                
               </ul>        
               <p class="mt-md-4">
               {' '}
@@ -218,18 +218,18 @@ export default function Privacy() {
               <h3>Data that is collected automatically</h3>
               <h4>To the extent that you access the Website, we will collect your Data automatically, for example:</h4>
               <ul>
-                <li>we automatically collect some information about your visit to the Website. This information helps us to make improvements to Website content and navigation, and includes your IP address, the date, times and frequency with which you access the Website and the way you use and interact with its content.</li>                
-                <li>we will collect your Data automatically via cookies, in line with the cookie settings on your browser. For more information about cookies, and how we use them on the Website, see the section below, headed "Cookies".</li>
+                <li>We automatically collect some information about your visit to the Website. This information helps us to make improvements to Website content and navigation, and includes your IP address, the date, times and frequency with which you access the Website and the way you use and interact with its content.</li>                
+                <li>We will collect your Data automatically via cookies, in line with the cookie settings on your browser. For more information about cookies, and how we use them on the Website, see the section below, headed "Cookies".</li>
               </ul>                      
             </div>
             <div className='privacy-sub-section mt-md-5'>
               <h3>Our use of Data</h3>
               <h4>Any or all of the above Data may be required by us from time to time in order to provide you with the best possible service and experience when using our Website. Specifically, Data may be used by us for the following reasons:</h4>
               <ul>
-                <li>internal record keeping;</li>                
-                <li>improvement of our products / services;</li>
-                <li>transmission by email of marketing materials that may be of interest to you;</li>
-                <li>contact for market research purposes which may be done using email, telephone, fax or mail. Such information may be used to customise or update the Website;</li>
+                <li>Internal record keeping;</li>                
+                <li>Improvement of our products / services;</li>
+                <li>Transmission by email of marketing materials that may be of interest to you;</li>
+                <li>Contact for market research purposes which may be done using email, telephone, fax or mail. Such information may be used to customise or update the Website;</li>
               </ul> 
               <p class="mt-md-4">             
               {' '}
