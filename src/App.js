@@ -3,7 +3,7 @@ import './App.css';
 import Footer from "./layout/footer/footer"
 import Header from "./layout/header/header"
 import './assets/css/style.css';
-import { Route } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 import FAQ from './faq/faq';
 import Privacy from './privacy/privacy';
 import TermsOfService from './terms-of-service/termsOfService';
@@ -13,16 +13,18 @@ import HowItWorks from './how-it-works/howItWorks';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Route path="/(about-us)?" exact component={AboutUs} />
-      <Route path="/faq" component={FAQ} />
-      <Route path="/pricing" component={Pricing} />
-      <Route path="/terms-of-service" component={TermsOfService} />
-      <Route path="/privacy-policy" component={Privacy} />
-      <Route path="/how-it-works" component={HowItWorks} />
-      <Footer />
-    </div>
+    <HashRouter>
+      <div className="App">
+        <Header />
+        <Route path="/(about-us)?" exact component={AboutUs} />
+        <Route path="/faq" exact component={FAQ} />
+        <Route path="/pricing" exact component={Pricing} />
+        <Route path="/terms-of-service" exact component={TermsOfService} />
+        <Route path="/privacy-policy" exact component={Privacy} />
+        <Route path="/how-it-works" exact component={HowItWorks} />
+        <Footer />
+      </div>
+    </HashRouter>
   );
 }
 
