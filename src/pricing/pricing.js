@@ -26,11 +26,11 @@ export default class Pricing extends Component {
                                     </div>
                                     <div class="pricingContent2">
                                         <ul>
-                                            <li><b>Project</b> Posts</li>
-                                            <li><b>x5</b> Contact Requests per Project</li>
-                                            <li><b>Messaging</b> System</li>
-                                            <li><b>Admin</b> Dashboard</li>
-                                            <li><b>Accept/Reject</b> Responses</li>
+                                            <li><b>Project Posts</b></li>
+                                            <li><b>x5> Contact Requests </b> per Project</li>
+                                            <li><b>Messaging System</b> </li>
+                                            <li><b>Admin Dashboard </b></li>
+                                            <li><b>Accept/Reject Responses </b></li>
                                         </ul>
                                     </div>
                                     <div class="pricingTable2-sign-up"> <a href="#" class="btn btn-block btn-primary">Post A Project</a> </div>
@@ -40,17 +40,17 @@ export default class Pricing extends Component {
                             <div class="col-xl-4 col-md-6 col-sm-12 col-lg-3">
                                 <div class="pricingTable2 orange h-100">
                                     <div class="pricingTable2-header"> <h3>SELLERS</h3>
-                                        <span>&nbsp;</span>
+                                        <span>Freemium</span>
                                     </div>
                                     <div class="pricing-plans">
-                                        <span class="price-value1"><span>£19</span></span>
+                                        <span class="price-value1"><span>£0.00</span></span>
                                         <span class="month">/month</span> </div> <div class="pricingContent2">
                                         <ul>
-                                            <li><b>Notifications</b> on leads</li>
+                                            <li><b>Notifications on leads </b></li>
                                             <li><b>(via</b> email/browser)</li>
                                             <li><b>x25 Contact Request</b> (per week)</li>
-                                            <li><b>Messaging</b> System</li>
-                                            <li><b>Admin</b> dashboard</li>
+                                            <li><b>Messaging System</b></li>
+                                            <li><b>Admin dashboard</b></li>
                                         </ul>
                                     </div>
                                     <div class="pricingTable2-sign-up"> <a href="#" class="btn btn-block btn-secondary">Sign up</a> </div>
@@ -66,10 +66,10 @@ export default class Pricing extends Component {
                                     </div>
                                     <div class="pricingContent2">
                                         <ul>
-                                            <li><b>Contact requests to/from buyers </b> that are ready to hire now.</li>
-                                            <li><b>Purchase as many premium </b> leads as you wish and</li>
+                                            <li><b>Contact requests to/from buyers that are ready to hire now. </b></li>
+                                            <li><b>Purchase as many premium leads as you wish </b> and</li>
                                             <li><b>Pay at the end of</b> each week</li>
-                                            <li><b>Receive buyer contact</b> and <b>project details</b></li>
+                                            <li><b>Receive buyer contact and project details</b></li>
                                             <li><b>Secure Payment</b> via Stripe</li>
                                         </ul>
                                     </div>
