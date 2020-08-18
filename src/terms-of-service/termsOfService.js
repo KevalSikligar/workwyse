@@ -14,7 +14,7 @@ export default function TermsOfService() {
                     <div class="container">
                         <div class="section-title center-block text-center">
                             <h1>WE PROTECT YOUR INFORMATION. OUR TERMS & CONDITIONS </h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text priint.</p>
+                            {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text priint.</p> */}
                         </div>
                         <div class="privacy-policy">                        
                             <h3>General Terms</h3>
