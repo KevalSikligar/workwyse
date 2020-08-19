@@ -8,16 +8,16 @@ class BreadCrumbs extends Component {
         return (
             <div>
                 <section>
-                    <div class="bannerimg cover-image bg-background3 sptb-2" data-image-src={require("../assets/images/banners/banner2.jpg")}>
-                        <div class="header-text mb-0">
-                            <div class="container">
-                                <div class="text-center text-white ">
-                                    <h1 class="">{this.props.title ? this.props.title : ""}</h1>
-                                    <ol class="breadcrumb text-center">
-                                        <li class="breadcrumb-item"><Link to="/about-us">Home</Link></li>
+                    <div className="bannerimg cover-image bg-background3 sptb-2" data-image-src={require("../assets/images/banners/banner2.jpg")}>
+                        <div className="header-text mb-0">
+                            <div className="container">
+                                <div className="text-center text-white ">
+                                    <h1 className="">{this.props.title ? this.props.title : ""}</h1>
+                                    <ol className="breadcrumb text-center">
+                                        <li className="breadcrumb-item"><Link to="/about-us">Home</Link></li>
                                         {
                                             this.props.breadcrumbssegment.map((segment, index) =>
-                                                <li key={index} class="breadcrumb-item active text-white" aria-current="page"><Link to={segment.to}>{segment.title}</Link></li>
+                                                <li key={index} className="breadcrumb-item active text-white" aria-current="page"><Link to={segment.to}>{segment.title}</Link></li>
                                             )
                                         }
                                     </ol>

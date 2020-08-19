@@ -10,6 +10,9 @@ import TermsOfService from './terms-of-service/termsOfService';
 import Pricing from './pricing/pricing';
 import AboutUs from './about-us/aboutUs';
 import HowItWorks from './how-it-works/howItWorks';
+import GeneralSettings from './settings/general-settings';
+import ProfileSettings from './settings/profile-settings';
+import LocationSettings from './settings/location-settings';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         <Route path="/terms-of-service" exact component={TermsOfService} />
         <Route path="/privacy-policy" exact component={Privacy} />
         <Route path="/how-it-works" exact component={HowItWorks} />
+        <Route path="/general-setting" exact component={GeneralSettings} />
+        <Route path="/profile-setting" exact component={ProfileSettings} />
+        <Route path="/location-setting" exact component={LocationSettings} />
         <Footer />
       </div>
     </HashRouter>

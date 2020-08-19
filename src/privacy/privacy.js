@@ -166,7 +166,7 @@ export default function Privacy() {
                 <li>Web browser type and version (automatically collected);</li>
                 <li>Company number, vat number, email address, phone number, location, additional company and user information required as per sign up process;</li>
               </ul>
-              <p class="mt-md-4">
+              <p className="mt-md-4">
                 {' '}
               in each case, in accordance with this privacy policy.
             </p>
@@ -194,7 +194,7 @@ export default function Privacy() {
                 <li>When you elect to receive marketing communications from us;</li>
                 <li>When you use our services;</li>
               </ul>
-              <p class="mt-md-4">
+              <p className="mt-md-4">
                 {' '}
               in each case, in accordance with this privacy policy.
             </p>
@@ -230,7 +230,7 @@ export default function Privacy() {
                 <li>Transmission by email of marketing materials that may be of interest to you;</li>
                 <li>Contact for market research purposes which may be done using email, telephone, fax or mail. Such information may be used to customise or update the Website;</li>
               </ul>
-              <p class="mt-md-4">
+              <p className="mt-md-4">
                 {' '}
               in each case, in accordance with this privacy policy.
             </p>
