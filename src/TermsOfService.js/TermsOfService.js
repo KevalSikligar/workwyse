@@ -1,5 +1,5 @@
-import React from 'react'
-import BreadCrumbs from '../breadcrumbs/breadcrumbs';
+import React from 'react';
+import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 
 export default function TermsOfService() {
 

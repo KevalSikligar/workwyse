@@ -1,5 +1,5 @@
 import React from 'react';
-import BreadCrumbs from '../breadcrumbs/breadcrumbs';
+import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import { Link } from 'react-scroll';
 
 export default function Privacy() {

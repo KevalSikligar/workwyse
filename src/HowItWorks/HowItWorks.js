@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BreadCrumbs from '../breadcrumbs/breadcrumbs';
+import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 
 export default class HowItWorks extends Component {
 

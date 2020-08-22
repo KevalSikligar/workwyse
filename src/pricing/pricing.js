@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BreadCrumbs from '../breadcrumbs/breadcrumbs';
+import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 
 export default class Pricing extends Component {
 
@@ -27,13 +27,13 @@ export default class Pricing extends Component {
                                     <div className="pricingContent2">
                                         <ul>
                                             <li><b>Project Posts</b></li>
-                                            <li><b>x5> Contact Requests </b> per Project</li>
+                                            <li><b>x5 Contact Requests </b> per Project</li>
                                             <li><b>Messaging System</b> </li>
                                             <li><b>Admin Dashboard </b></li>
                                             <li><b>Accept/Reject Responses </b></li>
                                         </ul>
                                     </div>
-                                    <div className="pricingTable2-sign-up"> <a href="#" className="btn btn-block btn-primary">Post A Project</a> </div>
+                                    <div className="pricingTable2-sign-up"> <a href="!#" className="btn btn-block btn-primary">Post A Project</a> </div>
                                 </div>
                             </div>
                             {/* second card */}
@@ -53,7 +53,7 @@ export default class Pricing extends Component {
                                             <li><b>Admin dashboard</b></li>
                                         </ul>
                                     </div>
-                                    <div className="pricingTable2-sign-up"> <a href="#" className="btn btn-block btn-secondary">Sign up</a> </div>
+                                    <div className="pricingTable2-sign-up"> <a href="!#" className="btn btn-block btn-secondary">Sign up</a> </div>
                                 </div>
                             </div>
                             {/* third card */}
@@ -73,7 +73,9 @@ export default class Pricing extends Component {
                                             <li><b>Secure Payment</b> via Stripe</li>
                                         </ul>
                                     </div>
-                                    <div className="pricingTable2-sign-up"> <a href="#" className="btn btn-block btn-success">sign up</a> </div>
+                                    <div className="pricingTable2-sign-up">
+                                        <a href="!#" className="btn btn-block btn-success">sign up</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

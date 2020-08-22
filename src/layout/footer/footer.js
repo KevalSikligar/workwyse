@@ -27,7 +27,7 @@ export default class Footer extends Component {
                     <div className="text-white p-0 border-top">
                         <div className="container">
                             <div className="p-2 text-center footer-links">
-                                <Link className="btn btn-link active" to="/about-us" >About Us </Link>
+                                <Link className="btn btn-link active" to="/about-us" >About WorkWyse </Link>
                                 <Link className="btn btn-link" to="/faq">FAQ </Link>
                                 <Link className="btn btn-link" to="/how-it-works">How It Works </Link>
                                 <Link className="btn btn-link" to="/terms-of-service">Terms of service </Link>

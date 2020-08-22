@@ -7,6 +7,10 @@
     @import url("../color-skins/color-skins/color10.css");
     @import url("../plugins/select2/select2/css/select2.min.css");
     @import url("../plugins/horizontal/horizontal-menu/horizontal.css");
+    @import url("../plugins/iconfonts/simple-line-icons/simple-line-icons.css");
+    @import url("../../assets/iconfonts/typicons/typicons.css");
+    /* @import url("../../assets/images/photos/construction.jpg */
+
     /* ###### bootstrap ####### */
 
     /*Color variables*/
@@ -23598,7 +23602,7 @@
             background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
             -webkit-animation: progress-bar-stripes 1s linear infinite;
             animation: progress-bar-stripes 1s linear infinite;
-            z-index: 99;
+            z-index: 0 !important;
         }
     }
 
@@ -36857,4 +36861,179 @@
 
     .accordion .card-header h2 {
         width: 100%;
+    }
+
+    .header-main .top-bar-right .custom li a.dropdown-item i {
+        color: #1650e2;
+    }
+
+    /* Modal CSS */
+
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .breadcrumb-section {
+        position: relative;
+        z-index: 0;
+    }
+
+    .cursor-pointer {
+        cursor: pointer !important;
+    }
+
+    .modal-backdrop.show {
+        opacity: 0 !important;
+        display: none;
+    }
+
+    .modal {
+        background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .modal-register .modal-content {
+        width: 100%;
+    }
+
+    .modal-register .single-page .wrapper {
+        box-shadow: none;
+    }
+
+    .modal-register .modal-header {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+    }
+
+    .modal-register .close {
+        opacity: 1 !important;
+    }
+
+    /* Swtich Slider */
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    .search-section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .post-project-video iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    .btn-linkdin-bg {
+        background-color: #0073b0 !important;
+        border: 1px solid #0073b0 !important;
+    }
+
+    .remeber-password {
+        display: flex;
+        justify-content: space-between;
     }

@@ -1,30 +1,29 @@
+/* eslint-disable no-script-url */
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
+import Login from '../../Login/Login';
+
 
 export default function Header() {
 
-    const [showMenu, setShowMenu] = useState(false)
-    console.log('showMenu => ', showMenu);
-
+    // eslint-disable-next-line no-unused-vars
+    const [showMenu, setShowMenu] = useState(false);
 
     const DisplayMenu = (e) => {
         e.preventDefault()
         setShowMenu(true);
-
         document.body.classList.add('active');
     }
 
-
     const closeDropdwn = (e) => {
         e.preventDefault()
-
         if (document.body.classList.contains('active')) {
             document.body.classList.remove('active');
         }
-
     }
+
     return (
         <>
             <div className="header-main">
@@ -53,11 +52,11 @@ export default function Header() {
                                                     <span>Language<i className="fa fa-caret-down"></i></span>
                                                 </a>
                                                 <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                    <a href="#" className="dropdown-item">English</a>
-                                                    <a className="dropdown-item" href="#">Arabic</a>
-                                                    <a className="dropdown-item" href="#">German</a>
-                                                    <a href="#" className="dropdown-item" >Greek</a>
-                                                    <a href="#" className="dropdown-item" >Spanish</a>
+                                                    <a href="!#" className="dropdown-item">English</a>
+                                                    <a href="!#" className="dropdown-item">Arabic</a>
+                                                    <a href="!#" className="dropdown-item">German</a>
+                                                    <a href="!#" className="dropdown-item">Greek</a>
+                                                    <a href="!#" className="dropdown-item">Spanish</a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -67,26 +66,28 @@ export default function Header() {
                             <div className="col-xl-5 col-lg-5 col-sm-8 col-5">
                                 <div className="top-bar-right">
                                     <ul className="custom">
-                                        <li>
-                                            <a href="#" className=""><i className="fa fa-user mr-1"></i>
-                                                <span>Register</span>
+                                        <li className="dropdown">
+                                            <a href="#" className="" data-toggle="dropdown"><i className="fa fa-user mr-1"></i>
+                                                <span>Sign Up</span>
                                             </a>
+                                            <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                <NavLink to="/sign-up-buyer" className="dropdown-item"><i className="dropdown-icon icon icon-user"></i> As Buyer</NavLink>
+                                                <NavLink className="dropdown-item" to="/sign-up-seller"><i className="dropdown-icon icon icon-user"></i> As Seller</NavLink>
+                                            </div>
                                         </li>
                                         <li>
-                                            <a href="#" className=""><i className="fa fa-sign-in mr-1"></i>
-                                                <span>Login</span>
-                                            </a>
+                                            <span data-toggle="modal" data-target="#ModalLogin" className="cursor-pointer text-white">Login</span>
                                         </li>
                                         <li className="dropdown">
                                             <a href="#" className="" data-toggle="dropdown"><i className="fa fa-home mr-1"></i>
-                                                <span> My Dashboard</span>
+                                                <span>My Dashboard</span>
                                             </a>
                                             <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                <a href="mydash.html" className="dropdown-item"><i className="dropdown-icon icon icon-user"></i> My Profile</a>
-                                                <a className="dropdown-item" href="#"><i className="dropdown-icon icon icon-speech"></i> Inbox</a>
-                                                <a className="dropdown-item" href="#"><i className="dropdown-icon icon icon-bell"></i> Notifications</a>
-                                                <a href="mydash.html" className="dropdown-item" ><i className="dropdown-icon  icon icon-settings"></i> Account Settings</a>
-                                                <a className="dropdown-item" href="#"><i className="dropdown-icon icon icon-power"></i> Log out</a>
+                                                <NavLink to="/general-setting" className="dropdown-item"><i className="dropdown-icon icon icon-user"></i> My Profile</NavLink>
+                                                <NavLink to="/inbox" className="dropdown-item" ><i className="dropdown-icon icon icon-speech"></i> Inbox</NavLink>
+                                                <NavLink to="/notifications" className="dropdown-item" ><i className="dropdown-icon icon icon-bell"></i> Notifications</NavLink>
+                                                <NavLink to="/general-setting" className="dropdown-item"><i className="dropdown-icon  icon icon-settings"></i> Settings</NavLink>
+                                                <NavLink to="/" className="dropdown-item" ><i className="dropdown-icon icon icon-power"></i> Logout</NavLink>
                                             </div>
                                         </li>
                                     </ul>
@@ -111,24 +112,22 @@ export default function Header() {
                         <a href="index.html"><img src={require("../../assets/images/brand/logo.png")} alt="" /></a>
                     </div>
                     <nav className="horizontalMenu clearfix d-md-flex" onClick={(e) => closeDropdwn(e)} >
-                        <div class="horizontal-overlapbg"></div>
+                        <div className="horizontal-overlapbg"></div>
                         <ul className="horizontalMenu-list">
-                            <li><NavLink to="/about-us" activeClassName="active">About Us </NavLink></li>
-                            <li><NavLink to="/faq" activeClassName="active">FAQ </NavLink></li>
-                            <li><NavLink to="/how-it-works" activeClassName="active">How It Works </NavLink></li>
-                            <li><NavLink to="/terms-of-service" activeClassName="active">Terms of Service </NavLink></li>
-                            <li><NavLink to="/privacy-policy" activeClassName="active">Privacy Policy </NavLink></li>
-                            {/* <li><NavLink to="/pricing" activeClassName="active">Pricing </NavLink></li> */}
-                            <li className="dropdown d-none d-xl-inline-block">
-                                <a href="#" className="" data-toggle="dropdown">
-                                    <span>Settings<i className="fa fa-caret-down"></i></span>
-                                </a>
+                            <li><NavLink to="/home" activeClassName="active">Home</NavLink></li>
+                            <li className="dropdown">
+                                <NavLink to="/" data-toggle="dropdown">About</NavLink>
                                 <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                    <NavLink className="dropdown-item" to="/general-setting">General Settings</NavLink>
-                                    <NavLink to="/profile-setting" className="dropdown-item">Profile Settings</NavLink>
-                                    <NavLink className="dropdown-item" to="/location-setting">Location Settings</NavLink>
+                                    <li><NavLink to="/about-us" activeClassName="active">About WorkWyse </NavLink></li>
+                                    <li><NavLink to="/faq" activeClassName="active">FAQ </NavLink></li>
+                                    <li><NavLink to="/terms-of-service" activeClassName="active">Terms of Service </NavLink></li>
+                                    <li><NavLink to="/privacy-policy" activeClassName="active">Privacy Policy </NavLink></li>
+                                    <li><NavLink to="/how-it-works" activeClassName="active">How It Works </NavLink></li>
+                                    <li><NavLink to="/pricing" activeClassName="active">Pricing </NavLink></li>
                                 </div>
                             </li>
+                            <li><NavLink to="/how-it-works" activeClassName="active">How It Works </NavLink></li>
+                            <li><NavLink to="/pricing" activeClassName="active">Pricing </NavLink></li>
                         </ul>
                         <ul className="mb-0 pr-2">
                             <li className="d-none d-lg-flex">
@@ -137,11 +136,12 @@ export default function Header() {
                         </ul>
                         <ul className="mb-0 pl-2 create-resume-btn">
                             <li className="d-none d-lg-flex">
-                                <span><a className="btn btn-info ad-post mt-1" href="create-resume.html"><i className="fa fa-edit"></i> Post a Project</a></span>
+                                <span><NavLink className="btn btn-info ad-post mt-1" to="/post-a-project"><i className="fa fa-edit"></i> Post a Project</NavLink></span>
                             </li>
                         </ul>
                     </nav>
                 </div>
+                <Login id="ModalLogin"></Login>
             </div>
         </>
     )
