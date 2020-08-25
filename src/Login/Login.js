@@ -14,9 +14,9 @@ export default function Login() {
                                         <div className="d-block mx-auto">
                                             <div className="wrapper wrapper2">
                                                 <div className="p-4 mb-5">
-                                                    <div class="modal-header">
-                                                        <h4 class="text-left font-weight-semibold fs-16 mb-0">Login With</h4>
-                                                        <button type="button" class="close py-0" data-dismiss="modal" aria-label="Close">
+                                                    <div className="modal-header">
+                                                        <h4 className="text-left font-weight-semibold fs-16 mb-0">Login With</h4>
+                                                        <button type="button" className="close py-0" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
@@ -41,10 +41,10 @@ export default function Login() {
                                                         <NavLink to="/about-us" className="btn btn-primary btn-block">Login</NavLink>
                                                     </div>
                                                     <div className="toggle-switch">
-                                                        <label class="switch">
+                                                        <label className="switch">
                                                             I am a Buyer
                                                             <input type="checkbox" checked />
-                                                            <span class="slider round"></span>
+                                                            <span className="slider round"></span>
                                                             Seller
                                                         </label>
                                                     </div> */}

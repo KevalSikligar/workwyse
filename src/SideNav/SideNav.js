@@ -24,11 +24,6 @@ export default function SideNav() {
                                 <i className="typcn typcn-briefcase fs-20"></i>
                             </span> Find Buyer
 						</NavLink>
-                        <a href="!#" className="d-flex border-bottom">
-                            <span className="icon1 mr-2">
-                                <i className="typcn typcn-cog-outline fs-20"></i>
-                            </span> Settings
-						</a>
                         <NavLink to="/general-setting" activeClassName="active" className="d-flex border-bottom">
                             <span className="icon1 mr-2">
                                 <i className="typcn typcn-edit fs-20"></i>
@@ -49,11 +44,6 @@ export default function SideNav() {
                                 <i className="typcn typcn-cog-outline fs-20"></i>
                             </span> Location
 						</NavLink>
-                        <NavLink to="/industry-focus" activeClassName="active" className="d-flex  border-bottom">
-                            <span className="icon1 mr-2">
-                                <i className="typcn typcn-folder fs-20"></i>
-                            </span> Industry Focus
-						</NavLink>
                         <NavLink to="/notifications" activeClassName="active" className="d-flex  border-bottom">
                             <span className="icon1 mr-2">
                                 <i className="typcn typcn-folder fs-20"></i>
@@ -64,6 +54,13 @@ export default function SideNav() {
                                 <i className="typcn typcn-credit-card fs-20"></i>
                             </span> Reviews
 						</NavLink>
+                        {/* Only for buyer in the future */}
+                        <NavLink to="/posts" activeClassName="active" className=" d-flex  border-bottom">
+                            <span className="icon1 mr-2">
+                                <i className="typcn typcn-credit-card fs-20"></i>
+                            </span> Posts
+						</NavLink>
+                        {/* Only for seller in the future */}
                         <NavLink to="/billings" activeClassName="active" className="d-flex  border-bottom">
                             <span className="icon1 mr-2">
                                 <i className="typcn typcn-shopping-cart fs-20"></i>
