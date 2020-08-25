@@ -3,7 +3,7 @@ import './App.css';
 import Footer from "./layout/Footer/Footer"
 import Header from "./layout/Header/Header"
 import './assets/css/style.css';
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch, HashRouter } from "react-router-dom";
 import SignUpSeller from './SignUp/SignUpSeller';
 import AboutUs from './AboutUs/AboutUs';
 import Faq from './Faq/Faq';
@@ -28,11 +28,12 @@ import Services from './Settings/Services';
 import MyCompany from './Settings/MyCompany';
 import ForgotPassword from './ForgotPassword/ForgotPassword';
 import Success from './SignUp/Success';
+import getCurrentPosition from './GetCurrentLocation/GetCurrentLocation';
 
 export default class App extends React.Component {
     render() {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div className="App">
                     <Header />
                     <Switch>
@@ -48,6 +49,7 @@ export default class App extends React.Component {
                         <Route path="/my-company" exact component={MyCompany} />
                         <Route path="/location-setting" exact component={LocationSettings} />
                         <Route path="/service-setting" exact component={Services} />
+                        <Route path="/location-current" exact component={getCurrentPosition} />
                         <Route path="/sign-up/(seller|buyer)" exact component={SignUpSeller} />
                         <Route path="/sign-up/success" exact component={Success} />
                         <Route path="/login" exact component={Login} />
@@ -63,7 +65,7 @@ export default class App extends React.Component {
                     </Switch>
                     <Footer />
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }
