@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'semantic-ui-react';
+import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
+import ProgressBar from 'react-bootstrap/ProgressBar'
 
 class CompanyDetails1 extends Component {
 
@@ -8,6 +10,9 @@ class CompanyDetails1 extends Component {
         this.props.nextStep()
     }
     render() {
+        const pathList = [
+            { to: "/sign-up", title: "Sign Up" }
+        ]
         // const [completed, setCompleted] = useState(0);
 
         // useEffect(() => {
@@ -15,97 +20,129 @@ class CompanyDetails1 extends Component {
         // }, []);
         const { values } = this.props;
         return (
-            <div className="form-group">
-                {/* <ProgressBar bgcolor={"#6a1b9a"} completed={completed} /> */}
-                <Form>
-                    <h1 className="ui centered">Enter User Details</h1>
-                    <Form.Field>
-                        <input className="form-control"
-                            placeholder='First Name'
-                            onChange={this.props.handleChange('firstName')}
-                            defaultValue={values.firstName}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <input className="form-control"
-                            placeholder='Last Name'
-                            onChange={this.props.handleChange('lastName')}
-                            defaultValue={values.lastName}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <input className="form-control"
-                            type='email'
-                            placeholder='Email Address'
-                            onChange={this.props.handleChange('email')}
-                            defaultValue={values.email}
-                        />
-                    </Form.Field>
-                    {/* <Form.Field>
-                        <select>
-                            <option>FMCG</option>
-                            <option>FMCB</option>
-                            <option>FMCH</option>
-                            <option>FMCK</option>
-                            <option>FMCL</option>
-                        </select>
-                        <button className="btn btn-primary">Allow review to Site Access?</button>
-                    </Form.Field> */}
-                    <Form.Field>
-                        <input className="form-control" placeholder='Company Name'
-                            onChange={this.props.handleChange('companyName')}
-                            defaultValue={values.companyName}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <input className="form-control" placeholder='Company Number'
-                            onChange={this.props.handleChange('companyNumber')}
-                            defaultValue={values.companyNumber}
-                        />
-                        <i className="fa fa-search"></i>
-                    </Form.Field>
-                    <Form.Field>
-                        <input className="form-control" placeholder='Trading As(optional)'
-                            onChange={this.props.handleChange('tradingAs')}
-                            defaultValue={values.tradingAs}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <input className="form-control" placeholder='Job Title'
-                            onChange={this.props.handleChange('jobTitle')}
-                            defaultValue={values.jobTitle}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <input className="form-control" placeholder='Contact Number(optional)'
-                            onChange={this.props.handleChange('contactNumber')}
-                            defaultValue={values.contactNumber}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <p>I serve customers within</p>
-                        <input type="radio"
-                            onChange={this.props.handleChange('miles')}
-                            defaultValue={values.miles}
-                        />
-                        <select>
-                            <option>20 miles</option>
-                            <option>40 miles</option>
-                            <option>60 miles</option>
-                            <option>80 miles</option>
-                        </select>
-                        <p>of</p>
-                        <input className="form-control" type="text" placeholder="Location will come here" />
-                    </Form.Field>
-                    <Form.Field>
-                        <input type="radio"
-                            onChange={this.props.handleChange('nation')}
-                            defaultValue={values.nation}
-                        />Nation Wide
-                    </Form.Field>
-                    <Button onClick={this.saveAndContinue}>Next</Button>
-                </Form>
+            <>
+            <BreadCrumbs title="Sign Up" breadcrumbssegment={pathList} />
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 sptb custom-card">
+                        <div className="card mb-0">
+                            <ProgressBar animated variant="primary" now={20} />
+                            <div className="card-header">
+                                <h3 className="card-title">Complete Your Profile </h3>
+                            </div>
+                            <div className="card-body">
+                                <div className="row">
+                                    <div className="col-sm-6 col-md-6">
+                                        <div className="form-group">
+                                            <label className="form-label">First Name</label>
+                                            <input type="text" className="form-control" placeholder="First Name" />
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-md-6">
+                                        <div className="form-group">
+                                            <label className="form-label">Surname</label>
+                                            <input type="text" className="form-control" placeholder="Surname" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-sm-6 col-md-6">
+                                        <div className="form-group">
+                                            <label className="form-label">Email Address</label>
+                                            <input type="email" className="form-control" placeholder="Email" />
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-md-6">
+                                        <div className="form-group">
+                                            <label className="form-label">Phone Number</label>
+                                            <input type="text" className="form-control" placeholder="Number" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-sm-6 col-md-6">
+                                        <div className="form-group">
+                                            <label className="form-label">Company Number</label>
+                                            <input type="text" className="form-control position-relative" placeholder="Number" />
+                                            <button className="search-icon"><i className="fa fa-search" aria-hidden="true"></i> </button>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-md-6">
+                                        <div className="form-group">
+                                            <label className="form-label">Company Name</label>
+                                            <input type="text" className="form-control" placeholder="Name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-sm-6 col-md-6">
+                                        <div className="form-group">
+                                            <label className="form-label">Trading</label>
+                                            <input type="text" className="form-control" placeholder="Trading" />
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6 col-md-6">
+                                        <div className="form-group">
+                                            <label className="form-label">Job Title</label>
+                                            <input type="text" className="form-control" placeholder="Title" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-sm-12 col-md-12">
+                                        <label className="form-label text-dark fs-16">Show me Seller</label>
+                                        <div class="custom-controls-stacked">
+                                            <div className="row">
+                                                <div className="col-md-6 col-lg-6 col-sm-12">
+                                                    <label class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" name="example-radios3" value="option1" />
+                                                        {/* <span class="">Visible to everyone</span> */}
+                                                        <div className="custom-control-label d-md-flex w-100 align-items-center">
+                                                            <select className="form-control w-50">
+                                                                <option>20 miles</option>
+                                                                <option>40 miles</option>
+                                                                <option>60 miles</option>
+                                                            </select>
+                                                            <span className="px-5 form-label text-dark fs-16">of</span>
+                                                            <div className="form-group w-50 mb-0">
+                                                                <input type="text" className="form-control position-relative" />
+                                                                <span className="map-icon"><img src={require('../assets/images/svg/gps.svg')} className="location-gps" alt="img" /></span>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div className="col-md-6 col-lg-6 col-sm-12">
+                                                    <label class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input" name="example-radios3" value="option2" />
+                                                        {/* <span class="custom-control-label">Visible to only my Customers</span> */}
+                                                        <div className="custom-control-label d-md-flex w-100 align-items-center">
+                                                            <select className="form-control w-50">
+                                                                <option>20 miles</option>
+                                                                <option>40 miles</option>
+                                                                <option>60 miles</option>
+                                                            </select>
+                                                            <span className="px-5 form-label text-dark fs-16">of</span>
+                                                            <div className="form-group w-50 mb-0">
+                                                                <input type="text" className="form-control position-relative" />
+                                                                <span className="map-icon"><img src={require('../assets/images/svg/gps.svg')} className="location-gps" alt="img" /></span>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="card-footer text-right">
+                                <Button className="btn btn-primary" onClick={this.saveAndContinue}>Next</Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            </>
         )
     }
 }

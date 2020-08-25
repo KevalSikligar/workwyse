@@ -4,7 +4,6 @@ import Footer from "./layout/Footer/Footer"
 import Header from "./layout/Header/Header"
 import './assets/css/style.css';
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-import SignUpBuyer from './SignUp/SignUpBuyer';
 import SignUpSeller from './SignUp/SignUpSeller';
 import AboutUs from './AboutUs/AboutUs';
 import Faq from './Faq/Faq';
@@ -15,6 +14,7 @@ import HowItWorks from './HowItWorks/HowItWorks';
 import GeneralSettings from './Settings/GeneralSettings';
 import ProfileSettings from './Settings/ProfileSettings';
 import LocationSettings from './Settings/LocationSettings';
+import IndustryFocus from './Settings/IndustryFocus';
 import Login from './Login/Login';
 import PostProject from './PostProject/PostProject';
 import FindBuyer from './Settings/FindBuyer';
@@ -26,6 +26,8 @@ import NotFoundPage from './NotFoundPage/NotFoundPage';
 import Home from './Home/Home';
 import Services from './Settings/Services';
 import MyCompany from './Settings/MyCompany';
+import ForgotPassword from './ForgotPassword/ForgotPassword';
+import Success from './SignUp/Success';
 
 export default class App extends React.Component {
     render() {
@@ -46,8 +48,8 @@ export default class App extends React.Component {
                         <Route path="/my-company" exact component={MyCompany} />
                         <Route path="/location-setting" exact component={LocationSettings} />
                         <Route path="/service-setting" exact component={Services} />
-                        <Route path="sign-up-buyer" exact component={SignUpBuyer} />
-                        <Route path="/sign-up-seller" exact component={SignUpSeller} />
+                        <Route path="/sign-up/(seller|buyer)" exact component={SignUpSeller} />
+                        <Route path="/sign-up/success" exact component={Success} />
                         <Route path="/login" exact component={Login} />
                         <Route path="/post-a-project" exact component={PostProject} />
                         <Route path="/find-buyer" exact component={FindBuyer} />
@@ -55,6 +57,8 @@ export default class App extends React.Component {
                         <Route path="/inbox" exact component={Inbox} />
                         <Route path="/reviews" exact component={Reviews} />
                         <Route path="/notifications" exact component={Notifications} />
+                        <Route path="/industry-focus" exact component={IndustryFocus} />
+                        <Route path="/forgot-password" exact component={ForgotPassword} />
                         <Route component={NotFoundPage} />
                     </Switch>
                     <Footer />

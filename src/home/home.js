@@ -65,7 +65,7 @@ export default class Home extends Component {
                                         <div class="p-4 mb-5">
                                             <h4 class="text-left font-weight-semibold fs-16">Login With</h4>
                                             <div class="btn-list d-sm-flex">
-                                                <a href="https://twitter.com/" class="btn btn-secondary btn-linkdin-bg mb-sm-0"><i class="fa fa-linkedin fa-1x mr-2"></i> LinkedIn</a>
+                                                <a href="https://www.linkedin.com/login" class="btn btn-secondary btn-linkdin-bg mb-sm-0"><i class="fa fa-linkedin fa-1x mr-2"></i> LinkedIn</a>
                                             </div>
                                         </div>
                                         <hr class="divider" />
@@ -79,19 +79,30 @@ export default class Home extends Component {
                                                 <label>Password</label>
                                             </div>
                                             <div class="submit">
-                                                <a class="btn btn-primary btn-block" href="index.html">Login</a>
+                                                <NavLink to="/home" class="btn btn-primary btn-block">Login</NavLink>
                                             </div>
                                             <div class="remeber-password">
-                                                <p class="mb-2">
-                                                    <label class="custom-control custom-checkbox mb-3">
+                                                <p class="mb-0">
+                                                    <label class="custom-control custom-checkbox mb-0">
                                                         <input type="checkbox" class="custom-control-input" name="checkbox1" value="option1" />
                                                         <span class="custom-control-label">
-                                                            <a href="!#" class="text-dark">Remember Me</a>
+                                                           Remember Me
                                                         </span>
                                                     </label>
                                                 </p>
-                                                <p class="mb-2"><a href="forgot.html">Forgot Password</a></p>
+                                                <p class="mb-0"><NavLink to="/forgot-password">Forgot Password</NavLink></p>
                                             </div>
+                                            <hr className="my-5" />
+                                            <div className="swticher-section">
+                                                <p className="mb-0">I am a :</p>
+                                                <label class="custom-switch">
+                                                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"/>
+                                                    <span class="custom-switch-indicator"></span>
+                                                    <span class="custom-switch-description">Buyer/Seller</span>
+                                                </label>                                                
+                                            </div>
+                                            <hr className="my-5" />
+                                            <div className="clearfix"></div>
                                             {/* <div>
                                                 <ReCaptcha
                                                     ref={(el) => { this.captchaDemo = el; }}

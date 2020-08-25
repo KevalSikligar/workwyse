@@ -48,7 +48,7 @@ export default function Login() {
                                                             Seller
                                                         </label>
                                                     </div> */}
-                                                    <p className="mb-2"><a href="forgot.html" >Forgot Password</a></p>
+                                                    <p className="mb-2"><NavLink to="/forgot-password" >Forgot Password</NavLink></p>
                                                     <p className="text-dark mb-0">Don't have account?<a href="register.html" className="text-primary ml-1">Sign Up</a></p>
                                                 </form>
                                             </div>

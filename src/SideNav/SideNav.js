@@ -49,6 +49,11 @@ export default function SideNav() {
                                 <i className="typcn typcn-cog-outline fs-20"></i>
                             </span> Location
 						</NavLink>
+                        <NavLink to="/industry-focus" activeClassName="active" className="d-flex  border-bottom">
+                            <span className="icon1 mr-2">
+                                <i className="typcn typcn-folder fs-20"></i>
+                            </span> Industry Focus
+						</NavLink>
                         <NavLink to="/notifications" activeClassName="active" className="d-flex  border-bottom">
                             <span className="icon1 mr-2">
                                 <i className="typcn typcn-folder fs-20"></i>
