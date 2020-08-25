@@ -50,7 +50,7 @@ export default class CompanyDetails5 extends Component {
                                     <div className="col-md-6 col-sm-12">
                                         <div className="review-item">
                                             <div className="review-img">
-                                                <img src={require('../assets/images/glassdoor-logo.svg')} className="logo-image img-fluid" alt="img" />
+                                                <img src={require('../assets/images/glassdoor-logo.png')} className="logo-image img-fluid" alt="img" />
                                             </div>
                                             <div className="review-content">
                                                 <button className="btn review-btn">Glassdoor Connected</button>                                                
@@ -75,7 +75,7 @@ export default class CompanyDetails5 extends Component {
                                                 <img src={require('../assets/images/facebook-logo.png')} className="logo-image img-fluid" alt="img" />
                                             </div>
                                             <div className="review-content">
-                                                <button className="btn review-btn">Facebook Connected</button>                                                
+                                                <button className="btn review-btn connect-btn"> Connect Facebook Business</button>                                                
                                             </div>
                                         </div>
                                     </div>

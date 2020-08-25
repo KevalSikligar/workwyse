@@ -38927,6 +38927,7 @@ select.form-control {
     text-align: center;
     padding: 25px;
     background-color: #f8f8f8;
+    margin-top: 25px;
 }
 
 .review-item {
@@ -38949,6 +38950,11 @@ select.form-control {
     background-color: #1650e2;
     display: block;
     color: #fff;
+}
+
+.connect-btn {
+    background-color: #ff8819 !important;
+    border-color: #ff8819 !important;
 }
 
 .review-img {
