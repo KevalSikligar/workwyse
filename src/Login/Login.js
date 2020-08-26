@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Login() {
     return (
         <>
-            <div className="modal fade modal-register" tabindex="-1" id="ModalLogin" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade modal-register" tabIndex="-1" id="ModalLogin" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <section className="">
@@ -14,9 +14,9 @@ export default function Login() {
                                         <div className="d-block mx-auto">
                                             <div className="wrapper wrapper2">
                                                 <div className="p-4 mb-5">
-                                                    <div className="modal-header">
-                                                        <h4 className="text-left font-weight-semibold fs-16 mb-0">Login With</h4>
-                                                        <button type="button" className="close py-0" data-dismiss="modal" aria-label="Close">
+                                                    <div class="modal-header">
+                                                        <h4 class="text-left font-weight-semibold fs-16 mb-0">Login With</h4>
+                                                        <button type="button" class="close py-0" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
@@ -41,15 +41,15 @@ export default function Login() {
                                                         <NavLink to="/about-us" className="btn btn-primary btn-block">Login</NavLink>
                                                     </div>
                                                     <div className="toggle-switch">
-                                                        <label className="switch">
+                                                        <label class="switch">
                                                             I am a Buyer
                                                             <input type="checkbox" checked />
-                                                            <span className="slider round"></span>
+                                                            <span class="slider round"></span>
                                                             Seller
                                                         </label>
                                                     </div> */}
-                                                    <p className="mb-2"><NavLink to="/forgot-password" >Forgot Password</NavLink></p>
-                                                    <p className="text-dark mb-0">Don't have account?<a href="register.html" className="text-primary ml-1">Sign Up</a></p>
+                                                    <p className="mb-2"><NavLink to="/forgot-password">Forgot Password</NavLink></p>
+                                                    <p className="text-dark mb-0">Don't have account?<NavLink to="sign-up/buyer" className="text-primary ml-1">Sign Up</NavLink></p>
                                                 </form>
                                             </div>
                                         </div>

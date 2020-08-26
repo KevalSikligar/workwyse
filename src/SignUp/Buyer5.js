@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
-import { Form, Button } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
+import swal from 'sweetalert';
 
 
 class Buyer5 extends Component {
     saveAndContinue = (e) => {
-        this.props.history.push("/sign-up/success");
+        swal("You have successfully registered. Clicking on OK will redirect you to Home Page.")
+            .then(() => {
+                this.props.history.push("/home");
+            })
     }
 
     back = (e) => {

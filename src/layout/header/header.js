@@ -67,7 +67,7 @@ export default function Header() {
                                 <div className="top-bar-right">
                                     <ul className="custom">
                                         <li className="dropdown">
-                                            <a href="javascript:void(0)" className="" data-toggle="dropdown"><i className="fa fa-user mr-1"></i>
+                                            <a href="!#" className="" data-toggle="dropdown"><i className="fa fa-user mr-1"></i>
                                                 <span>Sign Up</span>
                                             </a>
                                             <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
@@ -136,7 +136,7 @@ export default function Header() {
                         </ul>
                         <ul className="mb-0 pl-2 create-resume-btn">
                             <li className="d-none d-lg-flex">
-                                <span><NavLink className="btn btn-success ad-post mt-1" to="/post-a-project"><i className="fa fa-edit"></i> Post a Project</NavLink></span>
+                                <span><NavLink className="btn btn-info ad-post mt-1" to="/post-a-project"><i className="fa fa-edit"></i> Post a Project</NavLink></span>
                             </li>
                         </ul>
                     </nav>

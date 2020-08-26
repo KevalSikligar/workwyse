@@ -27,7 +27,6 @@ import Home from './Home/Home';
 import Services from './Settings/Services';
 import MyCompany from './Settings/MyCompany';
 import ForgotPassword from './ForgotPassword/ForgotPassword';
-import Success from './SignUp/Success';
 // import getCurrentPosition from './GetCurrentLocation/GetCurrentLocation';
 
 export default class App extends React.Component {
@@ -51,7 +50,6 @@ export default class App extends React.Component {
                         <Route path="/service-setting" exact component={Services} />
                         {/* <Route path="/location-current" exact component={getCurrentPosition} /> */}
                         <Route path="/sign-up/(seller|buyer)" exact component={SignUpSeller} />
-                        <Route path="/sign-up/success" exact component={Success} />
                         <Route path="/login" exact component={Login} />
                         <Route path="/post-a-project" exact component={PostProject} />
                         <Route path="/find-buyer" exact component={FindBuyer} />

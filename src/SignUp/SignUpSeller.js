@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ComapanyDetails1 from './CompanyDetails1';
-import Success from './Success';
 import CompanyDetails3 from './CompanyDetails3';
 import CompanyDetails2 from './CompanyDetails2';
 import CompanyDetails4 from './CompanyDetails4';
@@ -18,6 +17,12 @@ class SignUpSeller extends Component {
         age: '',
         city: '',
         country: ''
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.location.pathname !== this.props.location.pathname) {
+            this.setState({ step: 1 })
+        }
     }
 
     nextStep = () => {
@@ -99,8 +104,6 @@ class SignUpSeller extends Component {
                     prevStep={this.prevStep}
                     values={values}
                 />
-            case 7:
-                return <Success />
             default: return false
         }
     }

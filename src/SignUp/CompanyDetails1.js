@@ -95,7 +95,7 @@ class CompanyDetails1 extends Component {
                                                 <div className="row">
                                                     <div className="col-md-6 col-lg-6 col-sm-12">
                                                         <label className="custom-control custom-radio mb-5">
-                                                            <input type="radio" className="custom-control-input" checked name="example-radios3" value="option1" />
+                                                            <input type="radio" className="custom-control-input" defaultChecked name="example-radios3" value="option1" />
                                                             {/* <span className="">Visible to everyone</span> */}
                                                             <div className="custom-control-label d-md-flex w-100 align-items-center  ml-4">
                                                                 <select className="form-control w-50">
@@ -121,12 +121,12 @@ class CompanyDetails1 extends Component {
                                                                 </select>
                                                                 <span className="px-5 form-label text-dark fs-16">of</span>
                                                                 <div className="form-group w-50 mb-0">
-                                                                    <input type="text" className="form-control position-relative" placeholder="Location"/>
+                                                                    <input type="text" className="form-control position-relative" placeholder="Location" />
                                                                     <span className="map-icon"><img src={require('../assets/images/svg/gps.svg')} className="location-gps" alt="img" /></span>
                                                                 </div>
                                                             </div>
                                                         </label>
-                                                    </div>                                                    
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
