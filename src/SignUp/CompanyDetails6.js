@@ -36,58 +36,76 @@ class CompanyDetails6 extends Component {
                                     <h3 className="card-title">Complete Your Profile </h3>
                                 </div>
                                 <div className="card-body">
-                                    <div className="row">
-                                        <div className="col-sm-6 col-md-6">
-                                            <div className="form-group">
-                                                <label className="form-label">Company Size</label>
-                                                <select className="form-control">
-                                                    <option>Select Company Size</option>
-                                                    <option>1-5</option>
-                                                    <option>6-15</option>
-                                                    <option>15-60</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div className="col-sm-6 col-md-6">
-                                            <div className="form-group">
-                                                <label className="form-label">What is the scale of your operation(s)?</label>
-                                                <select className="form-control">
-                                                    <option>Local</option>
-                                                    <option>National</option>
-                                                    <option>Global</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                <div className="mb-md-4 float-right">
+                                    <div className="form-group d-flex align-items-center">
+                                        <label className="text-dark d-inline-block fs-18  mr-2 mb-0">Rate:</label>
+                                        <select className="form-control w-auto">
+                                            <option>Monthly</option>
+                                            <option>Hourly</option>
+                                            <option>One Off</option>
+                                        </select>
                                     </div>
-                                    <div className="row">
-                                        <div className="col-sm-6 col-md-6">
-                                            <div className="form-group">
-                                                <label className="form-label">External Link 1</label>
-                                                <input type="text" className="form-control" placeholder="External Link #1" />
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6 col-md-6">
-                                            <div className="form-group">
-                                                <label className="form-label">External Link 2</label>
-                                                <input type="text" className="form-control" placeholder="External Link #2" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-sm-6 col-md-6">
-                                            <div className="form-group">
-                                                <label className="form-label">External Link 3</label>
-                                                <input type="text" className="form-control" placeholder="External Link #3" />
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6 col-md-6">
-                                            <div className="form-group">
-                                                <label className="form-label">External Link 4</label>
-                                                <input type="text" className="form-control" placeholder="External Link #4" />
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
+                                   <table className="services-table">
+                                       <thead className="head-row">
+                                           <tr>
+                                              <th> Service Title</th>  
+                                              <th> Rate</th>
+                                              <th> Description</th>  
+                                           </tr> 
+                                       </thead> 
+                                       <tbody>
+                                           <tr>
+                                               <td>
+                                                   <button className="btn service-btn">Web Design</button>
+                                               </td>
+                                               <td>
+                                                   <div className="form-group mb-0">
+                                                        <select className="form-control">
+                                                            <option>$5 - $50</option>
+                                                            <option>$50 - $100</option>
+                                                            <option>$100 - $150</option>
+                                                        </select>
+                                                   </div>
+                                               </td>
+                                               <td>
+                                                   <div className="td-desc form-group mb-0">
+                                                        <input type="text" className="form-control" placeholder="Description"/>
+                                                   </div>
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td>
+                                                   <button className="btn service-btn active">Web Design Marketing</button>
+                                               </td>
+                                               <td>
+                                                  &nbsp;
+                                               </td>
+                                               <td>
+                                                   &nbsp;
+                                               </td>
+                                           </tr>
+                                           <tr>
+                                               <td>
+                                                   <button className="btn service-btn">Paid Marketing</button>
+                                               </td>
+                                               <td>
+                                                   <div className="form-group mb-0">
+                                                        <select className="form-control">
+                                                            <option>$5 - $50</option>
+                                                            <option>$50 - $100</option>
+                                                            <option>$100 - $150</option>
+                                                        </select>
+                                                   </div>
+                                               </td>
+                                               <td>
+                                                   <div className="td-desc form-group mb-0">
+                                                        <input type="text" className="form-control" placeholder="Description"/>
+                                                   </div>
+                                               </td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
 
                                 </div>
                                 <div className="card-footer text-right">

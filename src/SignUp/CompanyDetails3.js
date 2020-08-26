@@ -35,7 +35,7 @@ class CompanyDetails3 extends Component {
                                 </div>
                                 <div className="card-body">
                                     <div className="row">
-                                        <div className="col-sm-6 col-md-6 border-width-5">
+                                        <div className="col-sm-6 col-md-6 border-width-5 pr-md-5">
                                             <div className="upload-img mb-5">
                                                 <img src={require('../assets/images/upload-picture.png')} className="logo-image img-fluid" alt="img" />
                                             </div>

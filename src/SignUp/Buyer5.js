@@ -21,11 +21,49 @@ class Buyer5 extends Component {
         ]
         return (
             <div>
-                            <BreadCrumbs title="Sign Up" breadcrumbssegment={pathList} />
-
-                <h1>5th step</h1>
-                <Button onClick={this.back}>Back</Button>
-                <Button onClick={this.saveAndContinue}>Save and Exit</Button>
+                <BreadCrumbs title="Sign Up" breadcrumbssegment={pathList} />
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 sptb custom-card">
+                            <div className="card mb-0">
+                                <ProgressBar animated variant="primary" now={70} />
+                                <div className="card-header">
+                                    <h3 className="card-title">Complete Your Profile</h3>
+                                </div>
+                                <div className="card-body">
+                                    <div className="row">
+                                        <div className="form-group">
+                                            <button className="btn service-btn mw-100">Confirm You Industry</button>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-6 col-sm-12">
+                                            <div className="form-group">
+                                                <label>Title</label>
+                                                <select className="form-control">
+                                                    <option>Wholesale</option>
+                                                    <option>Wholesale 1</option>
+                                                    <option>Wholesale 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-12 col-sm-12">
+                                            <div className="info-section">
+                                                <p className="text-dark fs-18 mb-0">This will ensure that you are matched with Sellers who focus on your industry.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="card-footer text-right">
+                                    <Button className="btn btn-info mr-2" onClick={this.back}> Back </Button>
+                                    <Button className="btn btn-primary" onClick={this.saveAndContinue}> Next </Button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -43,16 +43,16 @@ export default class Home extends Component {
                                 </div>
                                 <div className="row">
                                     <div className="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
-                                        <div className="search-background bg-transparent">
+                                        <div className="search-background bg-transparent breadcrumb-search">
                                             <div className="form row no-gutters">
-                                                <div className="form-group  col-xl-4 col-lg-3 col-md-12 mb-0 bg-white ">
+                                                <div className="form-group  col-xl-5 col-lg-4 col-md-4 col-sm-12 mb-0 bg-white">
                                                     <input type="text" className="form-control input-lg br-tr-md-0 br-br-md-0" id="text4" placeholder="What service are you looking for?" />
                                                 </div>
-                                                <div className="form-group  col-xl-3 col-lg-3 col-md-12 mb-0 bg-white">
+                                                <div className="form-group  col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-0 bg-white">
                                                     <input type="text" className="form-control input-lg br-md-0" id="text5" placeholder="PostCode/City" />
                                                     <span><img src={require('../assets/images/svg/gps.svg')} className="location-gps" alt="img" /></span>
                                                 </div>
-                                                <div className="col-xl-3 col-lg-3 col-md-12 mb-0">
+                                                <div className="col-xl-3 col-lg-3 col-md-4 mb-0">
                                                     <a href="!#" className="btn btn-lg btn-block btn-success br-tl-md-0 br-bl-md-0"><i className="fa fa-search mr-1"></i>Post A Project</a>
                                                 </div>
                                             </div>
