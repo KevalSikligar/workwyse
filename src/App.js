@@ -15,7 +15,7 @@ import GeneralSettings from './Settings/GeneralSettings';
 import ProfileSettings from './Settings/ProfileSettings';
 import LocationSettings from './Settings/LocationSettings';
 import IndustryFocus from './Settings/IndustryFocus';
-import Login from './Login/Login';
+// import Login from './Login/Login';
 import PostProject from './PostProject/PostProject';
 import FindBuyer from './Settings/FindBuyer';
 import Inbox from './Settings/Inbox';
@@ -27,6 +27,7 @@ import Home from './Home/Home';
 import Services from './Settings/Services';
 import MyCompany from './Settings/MyCompany';
 import ForgotPassword from './ForgotPassword/ForgotPassword';
+import MyPosts from './Settings/MyPosts';
 // import getCurrentPosition from './GetCurrentLocation/GetCurrentLocation';
 
 export default class App extends React.Component {
@@ -50,7 +51,7 @@ export default class App extends React.Component {
                         <Route path="/service-setting" exact component={Services} />
                         {/* <Route path="/location-current" exact component={getCurrentPosition} /> */}
                         <Route path="/sign-up/(seller|buyer)" exact component={SignUpSeller} />
-                        <Route path="/login" exact component={Login} />
+                        {/* <Route path="/login" exact component={Login} /> */}
                         <Route path="/post-a-project" exact component={PostProject} />
                         <Route path="/find-buyer" exact component={FindBuyer} />
                         <Route path="/billings" exact component={Billings} />
@@ -58,6 +59,7 @@ export default class App extends React.Component {
                         <Route path="/reviews" exact component={Reviews} />
                         <Route path="/notifications" exact component={Notifications} />
                         <Route path="/industry-focus" exact component={IndustryFocus} />
+                        <Route path="/posts" exact component={MyPosts} />
                         <Route path="/forgot-password" exact component={ForgotPassword} />
                         <Route component={NotFoundPage} />
                     </Switch>

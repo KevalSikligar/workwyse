@@ -1,7 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
-export default function Login() {
+function Login(props) {
     return (
         <>
             <div className="modal fade modal-register" tabIndex="-1" id="ModalLogin" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -28,7 +28,7 @@ export default function Login() {
                                                     </div>
                                                 </div>
                                                 <hr className="divider" />
-                                                <form id="login" className="card-body" tabindex="500">
+                                                <form id="login" className="card-body" tabIndex="500">
                                                     <div className="mail">
                                                         <input type="email" name="mail" />
                                                         <label>Mail or Username</label>
@@ -37,18 +37,7 @@ export default function Login() {
                                                         <input type="password" name="password" />
                                                         <label>Password</label>
                                                     </div>
-                                                    {/* <div className="submit">
-                                                        <NavLink to="/about-us" className="btn btn-primary btn-block">Login</NavLink>
-                                                    </div>
-                                                    <div className="toggle-switch">
-                                                        <label class="switch">
-                                                            I am a Buyer
-                                                            <input type="checkbox" checked />
-                                                            <span class="slider round"></span>
-                                                            Seller
-                                                        </label>
-                                                    </div> */}
-                                                    <p className="mb-2"><NavLink to="/forgot-password">Forgot Password</NavLink></p>
+                                                    <p className="mb-2"><NavLink to="/forgot-password" onClick={() => props.history.push("/forgot-password")} data-dismiss="modal">Forgot Password</NavLink></p>
                                                     <p className="text-dark mb-0">Don't have account?<NavLink to="sign-up/buyer" className="text-primary ml-1">Sign Up</NavLink></p>
                                                 </form>
                                             </div>
@@ -63,3 +52,5 @@ export default function Login() {
         </>
     )
 };
+
+export default withRouter(Login)

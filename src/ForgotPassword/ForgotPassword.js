@@ -1,11 +1,13 @@
 import React from 'react'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
+import { NavLink } from 'react-router-dom';
 
 export default function ForgotPassword() {
 
     const pathList = [
         { to: "/forgot-password", title: "Forgot Password" }
     ]
+
     return (
         <div>
             <BreadCrumbs title="Forgot Password" breadcrumbssegment={pathList} />
@@ -25,7 +27,7 @@ export default function ForgotPassword() {
                                             <a className="btn btn-primary btn-block" href="index.html">Send</a>
                                         </div>
                                         <div className="text-center text-dark mb-0">
-                                            Forget it, <a href="login.html">send me back</a> to the sign in.
+                                            Forget it, <NavLink to="/login">send me back</NavLink> to the sign in.
 									</div>
                                     </form>
                                 </div>
