@@ -31,7 +31,7 @@ export default function SideNav() {
 						</NavLink>
                         <NavLink to="/my-company" activeClassName="active" className="d-flex border-bottom">
                             <span className="icon1 mr-2">
-                                <i className="typcn typcn-edit fs-20"></i>
+                                <i className="fa fa-building fs-20"></i>
                             </span> My Company
 						</NavLink>
                         <NavLink to="/service-setting" activeClassName="active" className="d-flex border-bottom">
@@ -41,12 +41,12 @@ export default function SideNav() {
 						</NavLink>
                         <NavLink to="/location-setting" activeClassName="active" className="d-flex border-bottom">
                             <span className="icon1 mr-2">
-                                <i className="typcn typcn-cog-outline fs-20"></i>
+                                <i className="typcn typcn-location-arrow fs-20"></i>
                             </span> Location
 						</NavLink>
                         <NavLink to="/notifications" activeClassName="active" className="d-flex  border-bottom">
                             <span className="icon1 mr-2">
-                                <i className="typcn typcn-folder fs-20"></i>
+                                <i className="typcn typcn-bell fs-20"></i>
                             </span> Notifications
 						</NavLink>
                         <NavLink to="/reviews" activeClassName="active" className=" d-flex  border-bottom">
@@ -57,7 +57,7 @@ export default function SideNav() {
                         {/* Only for buyer in the future */}
                         <NavLink to="/posts" activeClassName="active" className=" d-flex  border-bottom">
                             <span className="icon1 mr-2">
-                                <i className="typcn typcn-credit-card fs-20"></i>
+                                <i className="fa fa-sticky-note fs-16"></i>
                             </span> Posts
 						</NavLink>
                         {/* Only for seller in the future */}
@@ -68,7 +68,7 @@ export default function SideNav() {
 						</NavLink>
                         <NavLink to="/inbox" activeClassName="active" className="d-flex border-bottom">
                             <span className="icon1 mr-2">
-                                <i className="typcn typcn-flag-outline fs-20"></i>
+                                <i className="fa fa-envelope fs-16"></i>
                             </span> Inbox
 						</NavLink>
                     </div>

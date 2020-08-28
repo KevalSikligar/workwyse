@@ -20,16 +20,17 @@ class CompanyDetails6 extends Component {
     }
 
     render() {
+
         var href = window.location.href;
         const route = href.match(/([^\/]*)\/*$/)[1]
-
+        const finalName = route.charAt(0).toUpperCase() + route.slice(1);
         const pathList = [
-            { to: `/sign-up/${route}`, title: "Sign Up" }
+            { to: `/sign-up/${route}`, title: `Sign Up` }
         ]
 
         return (
             <>
-                <BreadCrumbs title="Sign Up" breadcrumbssegment={pathList} />
+                <BreadCrumbs title={`${finalName} Sign Up`} breadcrumbssegment={pathList} />
                 <div className="container">
                     <div className="row">
                         <div className="col-12 sptb custom-card">
@@ -39,71 +40,129 @@ class CompanyDetails6 extends Component {
                                     <h3 className="card-title">Complete Your Profile </h3>
                                 </div>
                                 <div className="card-body">
-                                    <div className="mb-md-4 float-right">
-                                        <div className="form-group d-flex align-items-center">
-                                            <label className="text-dark d-inline-block fs-18  mr-2 mb-0">Rate:</label>
-                                            <select className="form-control w-auto">
-                                                <option>Monthly</option>
-                                                <option>Hourly</option>
-                                                <option>One Off</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <table className="services-table">
-                                        <thead className="head-row">
+                                    <table className="services-table table-bordered">
+                                        <thead className="text-center">
                                             <tr>
-                                                <th> Service Title</th>
-                                                <th> Rate</th>
-                                                <th> Description</th>
+                                                <th></th>
+                                                <th>One Off</th>
+                                                <th>Monthly</th>
+                                                <th>Hourly</th>
+                                            </tr>
+                                        </thead>
+                                        <thead>
+                                            <tr>
+                                                <th colSpan="4">Digital Marketing</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <th scope="row">Facebook</th>
                                                 <td>
-                                                    <button className="btn service-btn">Web Design</button>
+                                                    <select class="form-control">
+                                                        <option selected>$250 - $1000</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
                                                 </td>
                                                 <td>
-                                                    <div className="form-group mb-0">
-                                                        <select className="form-control">
-                                                            <option>$5 - $50</option>
-                                                            <option>$50 - $100</option>
-                                                            <option>$100 - $150</option>
-                                                        </select>
-                                                    </div>
+                                                    <select class="form-control">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
                                                 </td>
                                                 <td>
-                                                    <div className="td-desc form-group mb-0">
-                                                        <input type="text" className="form-control" placeholder="Description" />
+                                                    <div className="hourly-rates">
+                                                        <span>$25</span>
+                                                        <b>-</b>
+                                                        <span>$25</span>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <th scope="row">Linkedin</th>
                                                 <td>
-                                                    <button className="btn service-btn active">Web Design Marketing</button>
+                                                    <select class="form-control">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
                                                 </td>
                                                 <td>
-                                                    &nbsp;
-                                               </td>
-                                                <td>
-                                                    &nbsp;
-                                               </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <button className="btn service-btn">Paid Marketing</button>
+                                                    <select class="form-control">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
                                                 </td>
                                                 <td>
-                                                    <div className="form-group mb-0">
-                                                        <select className="form-control">
-                                                            <option>$5 - $50</option>
-                                                            <option>$50 - $100</option>
-                                                            <option>$100 - $150</option>
-                                                        </select>
+                                                    <div className="hourly-rates">
+                                                        <span>$25</span>
+                                                        <b>-</b>
+                                                        <span>$35</span>
                                                     </div>
                                                 </td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th colSpan="4">Web Designing</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Frontend Web Design</th>
                                                 <td>
-                                                    <div className="td-desc form-group mb-0">
-                                                        <input type="text" className="form-control" placeholder="Description" />
+                                                    <select class="form-control">
+                                                        <option selected>$250 - $1000</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <div className="hourly-rates">
+                                                        <span>$25</span>
+                                                        <b>-</b>
+                                                        <span>$25</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">UI/UX Design</th>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <div className="hourly-rates">
+                                                        <span>$25</span>
+                                                        <b>-</b>
+                                                        <span>$35</span>
                                                     </div>
                                                 </td>
                                             </tr>

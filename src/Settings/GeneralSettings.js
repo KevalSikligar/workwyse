@@ -25,6 +25,24 @@ export default function GeneralSettings() {
                                 </div>
                                 <div className="card-body">
                                     <div className="row">
+                                        <div className="col-12 col-md-12 bg-background3 border-radius-4 mb-md-5 mb-sm-3">
+                                            <div className="company-profile-head">
+                                                <div className="company-img">
+                                                    <div className="profile-pic">
+                                                        <div className="profile-pic-img">
+                                                            <span className="edit-profile-img dots" data-toggle="tooltip" data-placement="top" title="Edit picture">
+                                                                <i className="fa fa-pencil" aria-hidden="true"></i>
+                                                            </span>
+                                                            <img src={require('../assets/images/users/male/25.jpg')} className="brround" alt="user" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="company-content">
+                                                    <div className="company-name fs-18 mb-1 font-weight-semibold">Robert McLean</div>
+                                                    <div className="company-name fs-18 font-weight-semibold">London, United Kingdom</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div className="form-group col-sm-6">
                                             <label className="form-label">First Name</label>
                                             <input type="text" className="form-control" placeholder="First Name" />
@@ -53,7 +71,7 @@ export default function GeneralSettings() {
                                 </div>
                             </div>
                         </div>
-                        <div className="sptb">
+                        <div className="sptb low-pad-top">
                             <div className="card mb-0">
                                 <div className="card-header">
                                     <h3 className="card-title">Account Settings</h3>
@@ -96,6 +114,5 @@ export default function GeneralSettings() {
                 </div>
             </div>
         </div>
-
     )
 }

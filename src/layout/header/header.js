@@ -131,12 +131,12 @@ export default function Header() {
                         </ul>
                         <ul className="mb-0 pr-2">
                             <li className="d-none d-lg-flex">
-                                <span><NavLink to="/sign-up/seller" className="btn btn-secondary ad-post mt-1"><i className="fa fa-briefcase"></i> Join as Seller</NavLink></span>
+                                <span><NavLink to="/sign-up/seller" className="btn btn-secondary add-post mt-1"><i className="fa fa-briefcase"></i> Join as Seller</NavLink></span>
                             </li>
                         </ul>
                         <ul className="mb-0 pl-2 create-resume-btn">
                             <li className="d-none d-lg-flex">
-                                <span><NavLink className="btn btn-info ad-post mt-1" to="/post-a-project"><i className="fa fa-edit"></i> Post a Project</NavLink></span>
+                                <span><NavLink className="btn btn-success add-post mt-1" to="/post-a-project"><i className="fa fa-edit"></i> Post a Project</NavLink></span>
                             </li>
                         </ul>
                     </nav>

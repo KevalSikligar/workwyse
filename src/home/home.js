@@ -119,7 +119,7 @@ export default class Home extends Component {
                                                     verifyCallback={this.verifyCallback}
                                                 />
                                             </div> */}
-                                            <p className="text-dark mb-0">Don't have account?<a href="register.html" className="text-primary ml-1">Sign Up</a></p>
+                                            <p className="text-dark mb-0">Don't have account?<NavLink to="/sign-up/seller" className="text-primary ml-1">Sign Up</NavLink></p>
                                         </form>
                                     </div>
                                 </div>

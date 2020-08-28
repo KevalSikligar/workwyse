@@ -15,13 +15,14 @@ class CompanyDetails1 extends Component {
 
         var href = window.location.href;
         const route = href.match(/([^\/]*)\/*$/)[1]
+        const finalName = route.charAt(0).toUpperCase() + route.slice(1);
         const pathList = [
-            { to: `/sign-up/${route}`, title: "Sign Up" }
+            { to: `/sign-up/${route}`, title: `Sign Up` }
         ]
 
         return (
             <>
-                <BreadCrumbs title="Sign Up" breadcrumbssegment={pathList} />
+                <BreadCrumbs title={`${finalName} Sign Up`} breadcrumbssegment={pathList} />
                 <div className="container">
                     <div className="row">
                         <div className="col-12 sptb custom-card">

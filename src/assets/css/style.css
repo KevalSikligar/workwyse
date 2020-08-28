@@ -31675,16 +31675,17 @@ button.bg-lime:focus, button.bg-lime:hover {
     top: 0;
 }
 
-.bg-background-color:before, .bg-background3:before, .bg-background9:before {
+.bg-background-color::before, .bg-background3::before, .bg-background9::before {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     left: 0;
     right: 0;
     display: block;
     z-index: 1;
     top: 0;
+    bottom: 0;
 }
 
 .bg-background3 .header-text {
@@ -37299,71 +37300,57 @@ select.form-control {
     align-items: center;
 }
 
+/***  Billing Page  ***/
+
+/***  Billing Page  ***/
+
 /***  PGD  ***/
 
-/***  My Profile Page  ***/
-
-.templatedata {
-    padding: 15px;
+.box-shadow-none {
+    box-shadow: none !important;
     border: 1px solid #ddd;
-    font-size: 15px;
 }
 
-.edittemplate {
-    cursor: pointer;
-}
-
-.multiselect .badge {
-    background: linear-gradient(to right, rgba(22, 80, 226, 0.95) 0%, rgba(126, 81, 236, 0.95) 100%);
-    color: #fff;
-    border: none;
-    font-weight: 500;
-    line-height: 1.2;
-    padding: 6px 20px 9px;
-    margin-right: 12px;
-    cursor: pointer;
-}
-
-/***  Service Page  ***/
-
-.multiselect .badge {
-    background: linear-gradient(to right, rgba(22, 80, 226, 0.95) 0%, rgba(126, 81, 236, 0.95) 100%);
-    color: #fff;
-    border: none;
-    font-weight: 500;
-    line-height: 1.2;
-    padding: 8px 20px 11px;
-    margin: 5px 12px 5px 0;
-    cursor: pointer;
-}
-
-.services-tables .custom-select {
-    text-align: justify;
-    color: #000;
-    border: none;
-    background: transparent;
-}
-
-.services-tables .table th, .services-tables .table td {
-    vertical-align: middle;
-}
-
-.services-tables .table td {
-    font-size: 15px;
-}
-
-.services-tables .table th {
-    text-transform: capitalize;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.hourly-rates {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.inner-card-header {
+    background-color: #f0f3fa;
 }
 
 /***  Service Page  ***/
 
 /***  PGDe  ***/
+
+/*** KPT ***/
+
+.card-header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buyer-desc {
+    border: 1px solid #ddd;
+    padding: 15px;
+    max-width: calc(100% - 300px);
+    width: 100%;
+    border-radius: 4px;
+    background-color: #f0f3fa;
+}
+
+.card-find-buyer-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buyer-desc-right-section {
+    max-width: 250px;
+    width: 100%;
+    align-self: center;
+}
+
+.inner-card-header.active {
+    background-color: #5d51d3;
+}
+
+.inner-card-header.active .card-header-content {
+    color: #fff;
+}

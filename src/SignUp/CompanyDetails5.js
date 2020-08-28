@@ -17,18 +17,21 @@ export default class CompanyDetails5 extends Component {
 
     render() {
 
+        var href = window.location.href;
+        const route = href.match(/([^\/]*)\/*$/)[1]
+        const finalName = route.charAt(0).toUpperCase() + route.slice(1);
         const pathList = [
-            { to: "/sign-up", title: "Sign Up" }
+            { to: `/sign-up/${route}`, title: `Sign Up` }
         ]
+
         return (
             <>
-                <BreadCrumbs title="Sign Up" breadcrumbssegment={pathList} />
+                <BreadCrumbs title={`${finalName} Sign Up`} breadcrumbssegment={pathList} />
                 <div className="container">
                     <div className="row">
                         <div className="col-12 sptb custom-card">
                             <div className="card mb-0">
                                 <ProgressBar animated variant="primary" now={85} />
-
                                 <div className="card-header">
                                     <h3 className="card-title">Complete Your Profile</h3>
                                 </div>
