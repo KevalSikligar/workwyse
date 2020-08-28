@@ -29,6 +29,8 @@ import Services from './Settings/Services';
 import MyCompany from './Settings/MyCompany';
 import ForgotPassword from './ForgotPassword/ForgotPassword';
 import MyPosts from './Settings/MyPosts';
+import SellerHome from './Home/SellerHome';
+import BuyerHome from './Home/BuyerHome';
 // import getCurrentPosition from './GetCurrentLocation/GetCurrentLocation';
 
 export default class App extends React.Component {
@@ -61,6 +63,8 @@ export default class App extends React.Component {
                         <Route path="/notifications" exact component={Notifications} />
                         <Route path="/industry-focus" exact component={IndustryFocus} />
                         <Route path="/posts" exact component={MyPosts} />
+                        <Route path="/dashboard-seller" exact component={SellerHome} />
+                        <Route path="/dashboard-buyer" exact component={BuyerHome} />
                         <Route path="/forgot-password" exact component={ForgotPassword} />
                         <Route component={NotFoundPage} />
                     </Switch>

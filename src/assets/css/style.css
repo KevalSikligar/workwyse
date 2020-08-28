@@ -36882,7 +36882,7 @@ body {
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 1050;
     /* Sit on top */
     left: 0;
     top: 0;
@@ -37353,4 +37353,107 @@ select.form-control {
 
 .inner-card-header.active .card-header-content {
     color: #fff;
+}
+
+.send-message {
+    height: 40px;
+    width: 40px;
+    background: rgba(104, 90, 234, .9);
+    color: #fff !important;
+    border-radius: 50%;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+
+.bottom .form-control {
+    background: #ffffff;
+    color: #999999;
+    border: none;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 20px 110px 20px 20px;
+    resize: none;
+    border: 1px solid #f2f2f2;
+    height: 70px;
+    box-shadow: none;
+}
+
+.message-option {
+    list-style: none;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    bottom: 0;
+}
+
+.middle-section {
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    margin-bottom: 30px;
+}
+
+.middle-section ul {
+    padding: 30px 0;
+    list-style: none;
+    margin-bottom: 0;
+    width: 100%;
+    padding-top: 0px;
+}
+
+.middle-section ul>li {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: justify;
+    justify-content: flex-end;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.middle-section ul>li:nth-of-type(even) {
+    -ms-flex-pack: justify;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.middle-section ul>li+li {
+    margin-top: 30px;
+}
+
+.middle-section ul>li p {
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.middle-section ul>li p:first-child {
+    padding-top: 15px;
+}
+
+.middle-section ul>li p:last-child {
+    padding-bottom: 15px;
+}
+
+.middle-section ul>li .bubble {
+    display: inline-block;
+    max-width: 460px;
+    background: rgba(104, 90, 234, .9);
+    text-align: left;
+    border-radius: 6px;
+}
+
+.message-option li {
+    display: inline-block;
+    vertical-align: middle;
 }

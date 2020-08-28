@@ -38,7 +38,7 @@ function Login(props) {
                                                         <label>Password</label>
                                                     </div>
                                                     <p className="mb-2"><NavLink to="/forgot-password" onClick={() => props.history.push("/forgot-password")} data-dismiss="modal">Forgot Password</NavLink></p>
-                                                    <p className="text-dark mb-0">Don't have account?<NavLink to="sign-up/buyer" className="text-primary ml-1">Sign Up</NavLink></p>
+                                                    <p className="text-dark mb-0">Don't have account?<NavLink to="sign-up/buyer" onClick={() => props.history.push("/sign-up/buyer")} className="text-primary ml-1" data-dismiss="modal" >Sign Up</NavLink></p>
                                                 </form>
                                             </div>
                                         </div>

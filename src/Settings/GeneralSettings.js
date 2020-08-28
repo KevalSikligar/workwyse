@@ -9,6 +9,15 @@ export default function GeneralSettings() {
         { to: "/general-settings", title: "General Settings" }
     ]
 
+    const blurEventFunc = (e) => {
+        document.getElementById("myDIV").style.borderColor = "#ddd";
+    }
+
+    const myFunction = (e) => {
+        document.getElementById("myDIV").style.borderColor = "#5e59e9";
+        document.getElementById("myDIV").addEventListener('blur', blurEventFunc);
+    }
+
     return (
         <div>
             <BreadCrumbs title="General Settings" breadcrumbssegment={pathList} />
@@ -96,16 +105,16 @@ export default function GeneralSettings() {
                                         </div>
                                     </div>
                                     <div className="form-group">
-                                        <label className="form-label">Seller Template <span className="ml-2 edittemplate"><i class="typcn typcn-edit fs-20"></i></span></label>
-                                        <div className="templatedata">
-                                            Hi, I'm interested in working with you on your project - "----------".
+                                        <label className="form-label">Seller Template <span className="ml-2 edittemplate"><i class="typcn typcn-edit fs-20" onClick={() => myFunction()}></i></span></label>
+                                        <p id="myDIV" contenteditable="true" className="templatedata" onClick={() => myFunction()}>
+                                            Hi, I'm interested in working with you on your project.
                                         <br />
-                                        Our Relationship with you is rooted in pragmatism. We respect confidentiality yet discuss yor challenges honestly with you. We tell you things you may not want to heat but need to because such knowledge is vital.
-                                        </div>
+                                        Our relationship with you is rooted in pragmatism. We respect confidentiality yet discuss your challenges honestly with you. We tell you things you may not want to heat but need to because such knowledge is vital.
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="card-footer text-right">
-                                    <Button className="btn btn-danger  mr-2">Cancel</Button>
+                                    <Button className="btn btn-danger mr-2">Cancel</Button>
                                     <Button className="btn btn-primary">Save</Button>
                                 </div>
                             </div>
