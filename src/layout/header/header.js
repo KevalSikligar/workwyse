@@ -37,7 +37,6 @@ export default function Header() {
                                             <li><a className="social-icon text-dark" href="#"><i className="fa fa-facebook"></i></a></li>
                                             <li><a className="social-icon text-dark" href="#"><i className="fa fa-twitter"></i></a></li>
                                             <li><a className="social-icon text-dark" href="#"><i className="fa fa-linkedin"></i></a></li>
-                                            <li><a className="social-icon text-dark" href="#"><i className="fa fa-google-plus"></i></a></li>
                                         </ul>
                                     </div>
                                     <div className="clearfix">
@@ -46,18 +45,6 @@ export default function Header() {
                                                 <a href="#" className="callnumber text-dark">
                                                     <span><i className="fa fa-phone mr-1"></i>: +425 345 8765</span>
                                                 </a>
-                                            </li>
-                                            <li className="dropdown d-none d-xl-inline-block">
-                                                <a href="#" className="" data-toggle="dropdown">
-                                                    <span>Language<i className="fa fa-caret-down"></i></span>
-                                                </a>
-                                                <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                    <a href="!#" className="dropdown-item">English</a>
-                                                    <a href="!#" className="dropdown-item">Arabic</a>
-                                                    <a href="!#" className="dropdown-item">German</a>
-                                                    <a href="!#" className="dropdown-item">Greek</a>
-                                                    <a href="!#" className="dropdown-item">Spanish</a>
-                                                </div>
                                             </li>
                                         </ul>
                                     </div>

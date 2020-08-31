@@ -85,6 +85,7 @@ export default function GeneralSettings() {
                                 <div className="card-header">
                                     <h3 className="card-title">Account Settings</h3>
                                 </div>
+                                {/* Connect with linkedin */}
                                 <div className="card-body">
                                     <div className="form-group">
                                         <label className="form-label">Email</label>

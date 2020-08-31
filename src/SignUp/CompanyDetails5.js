@@ -78,7 +78,7 @@ export default class CompanyDetails5 extends Component {
                                                     <img src={require('../assets/images/facebook-logo.png')} className="logo-image img-fluid" alt="img" />
                                                 </div>
                                                 <div className="review-content">
-                                                    <button className="btn review-btn"> Connect Facebook Business</button>
+                                                    <button className="btn review-btn-colorChange"> Connect Facebook Business</button>
                                                 </div>
                                             </div>
                                         </div>

@@ -2,6 +2,7 @@
 import React from 'react'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import SideNav from '../SideNav/SideNav';
+import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Annotations, AnnotationsDirective, AnnotationDirective } from '@syncfusion/ej2-react-circulargauge';
 
 export default function Inbox() {
 
@@ -21,9 +22,75 @@ export default function Inbox() {
                         <div className="custom-card">
                             <div className="card">
                                 <div className="card-header">
-                                    <h3 className="card-title">Paid Advertising</h3>
+                                    <div className="filter-section">
+                                        <div className="header-left">
+                                            <h3 className="card-title">Inbox</h3>
+                                        </div>
+                                        <div className="header-right">
+                                            <div className="dropdown-search d-md-flex">
+                                                <div className="filter-dropodwn">
+                                                    <select className="form-control">
+                                                        <option>Web Designing</option>
+                                                        <option>Digital Marketing</option>
+                                                        <option>Facebook Marketing</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="card-body">
+                                    <div className="card-header card-gauge-section col-12 col-md-12 bg-background3 border-radius-4 mb-md-5 mb-sm-3 p-6 text-white">
+                                        <h3 className="card-title text-capitalize z-index-10">Web Designing </h3>
+                                        <div className="gauge-content">
+                                            <CircularGaugeComponent style={{
+                                                width: 150,
+                                                height: 150
+                                            }}>
+                                                <Inject services={[Annotations]} />
+                                                <AxesDirective>
+                                                    <AxisDirective lineStyle={{
+                                                        width: 2,
+                                                        color: '#fff'
+                                                    }} background='transparent'
+                                                        majorTicks={{
+                                                            interval: 25,
+                                                            color: '#fff',
+                                                            height: 3,
+                                                            width: 3
+                                                        }} minorTicks={{
+                                                            interval: 5,
+                                                            color: '#fff',
+                                                            height: 5,
+                                                            width: 2
+                                                        }}
+                                                        labelStyle={{
+                                                            font: {
+                                                                color: '#fff',
+                                                                size: 15,
+                                                                fontWeight: 'normal'
+                                                            }
+                                                        }}>
+                                                        <PointersDirective>
+                                                            <PointerDirective value={45} pointerWidth={2} needleStartWidth={3} needleEndWidth={3} radius='80%' color='#fff' cap={{
+                                                                radius: 4,
+                                                                color: '#fff',
+                                                                border: {
+                                                                    color: '#fff',
+                                                                    width: 10
+                                                                },
+                                                            }} needleTail={{
+                                                                length: '0%'
+                                                            }}></PointerDirective>
+                                                        </PointersDirective>
+                                                        <AnnotationsDirective>
+                                                            <AnnotationDirective content='<div><div><span>Pointer Value : 45</span></div></div>' />
+                                                        </AnnotationsDirective>
+                                                    </AxisDirective>
+                                                </AxesDirective>
+                                            </CircularGaugeComponent>
+                                        </div>
+                                    </div>
                                     <div className="middle-section">
                                         <ul>
                                             <li>

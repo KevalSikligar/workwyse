@@ -37177,6 +37177,17 @@ select.form-control {
     color: #fff;
 }
 
+.btn.review-btn-colorChange {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #6759ea;
+    display: block;
+    color: #fff;
+}
+
 .connect-btn {
     background-color: #ff8819 !important;
     border-color: #ff8819 !important;
@@ -37456,4 +37467,105 @@ select.form-control {
 .message-option li {
     display: inline-block;
     vertical-align: middle;
+}
+
+.filter-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-search .form-group button.search-icon {
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.dropdown-search .form-control {
+    width: 250px;
+}
+
+.ads-tabs .tabs-menu {
+    margin-bottom: 2rem;
+    padding: 0px 40px;
+}
+
+.ads-tabs .tabs-menu ul li {
+    margin-right: 1rem;
+}
+
+.ads-tabs .tabs-menu ul li .active {
+    color: #fff;
+    border-radius: 4px;
+}
+
+.ads-tabs .tabs-menu ul li a {
+    border: 1px solid #e8ebf3;
+    color: #343a40;
+    padding: 10px 20px 11px 20px;
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+}
+
+.ads-tabs tr td:last-child a {
+    margin-right: 5px;
+}
+
+.filter-caresoule .owl-nav {
+    position: absolute;
+    top: -15px;
+    z-index: 0;
+    width: 100%;
+}
+
+.filter-caresoule .owl-nav .owl-prev {
+    left: -50px;
+}
+
+.filter-caresoule .owl-nav .owl-next {
+    right: -50px;
+}
+
+.filter-caresoule .owl-nav button {
+    background-color: #6759ea !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    font-size: 30px !important;
+    height: 40px;
+    width: 40px;
+    display: block !important;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px !important;
+    position: absolute !important;
+    top: 5px;
+    border: 1px solid #6759ea !important;
+}
+
+.filter-caresoule .owl-nav button span {
+    align-self: center !important;
+    display: flex !important;
+    justify-content: center;
+    top: -5px !important;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    font-size: 40px;
+    bottom: 0;
+}
+
+.card-gauge-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-gauge-section.bg-background3::before {
+    z-index: 0;
+}
+
+#circulargauge_control_1_CircularGaugeBorder {
+    fill: transparent !important;
 }

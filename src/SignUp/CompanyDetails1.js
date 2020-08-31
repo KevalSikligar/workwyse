@@ -71,14 +71,15 @@ class CompanyDetails1 extends Component {
                                         <div className="col-sm-6 col-md-6">
                                             <div className="form-group">
                                                 <label className="form-label">Company Name</label>
-                                                <input type="text" className="form-control" placeholder="Name" />
+                                                <input type="text" className="form-control position-relative" placeholder="Name" />
+                                                <button className="search-icon"><i className="fa fa-search" aria-hidden="true"></i> </button>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-sm-6 col-md-6">
                                             <div className="form-group">
-                                                <label className="form-label">Trading</label>
+                                                <label className="form-label">Trading As</label>
                                                 <input type="text" className="form-control" placeholder="Trading" />
                                             </div>
                                         </div>
