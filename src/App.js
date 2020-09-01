@@ -32,6 +32,7 @@ import SellerHome from './Home/SellerHome';
 import BuyerHome from './Home/BuyerHome';
 import FindBuyerDetails from './Settings/FindBuyerDetails';
 import MyPostsDetails from './Settings/MyPostsDetails';
+import SignInLinkedIn from './SignUp/SignInLinkedIn';
 // import getCurrentPosition from './GetCurrentLocation/GetCurrentLocation';
 
 export default class App extends React.Component {
@@ -67,6 +68,9 @@ export default class App extends React.Component {
                         <Route path="/posts-details" exact component={MyPostsDetails} />
                         <Route path="/dashboard-seller" exact component={SellerHome} />
                         <Route path="/dashboard-buyer" exact component={BuyerHome} />
+                        <Route exact path="/linkedin" component={SignInLinkedIn} />
+                        <Route path="/" component={SignInLinkedIn} />
+                        {/* <Route path="/sign-up/linkedin" exact component={SignInLinkedIn} /> */}
                         <Route path="/forgot-password" exact component={ForgotPassword} />
                         <Route component={NotFoundPage} />
                     </Switch>

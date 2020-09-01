@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 // import { ReCaptcha } from 'react-recaptcha-google'
+import { LinkedIn } from 'react-linkedin-login-oauth2';
 
 export default class Home extends Component {
 
@@ -8,6 +9,27 @@ export default class Home extends Component {
         super(props, context);
         this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
         this.verifyCallback = this.verifyCallback.bind(this);
+    }
+
+
+    state = {
+        code: '',
+        errorMessage: '',
+    };
+
+
+    handleSuccess = (data) => {
+        this.setState({
+            code: data.code,
+            errorMessage: '',
+        });
+    }
+
+    handleFailure = (error) => {
+        this.setState({
+            code: '',
+            errorMessage: error.errorMessage,
+        });
     }
 
     componentDidMount() {
@@ -70,7 +92,13 @@ export default class Home extends Component {
                                         <div className="p-4 mb-5">
                                             <h4 className="text-left font-weight-semibold fs-16">Login With</h4>
                                             <div className="btn-list d-sm-flex">
-                                                <a href="https://www.linkedin.com/login" className="btn btn-secondary btn-linkdin-bg mb-sm-0"><i className="fa fa-linkedin fa-1x mr-2"></i> LinkedIn</a>
+                                                <LinkedIn
+                                                    clientId="81lx5we2omq9xh"
+                                                    onFailure={this.handleFailure}
+                                                    onSuccess={this.handleSuccess}
+                                                    redirectUri="http://localhost:3000/linkedin"
+                                                >
+                                                </LinkedIn>
                                             </div>
                                         </div>
                                         <hr className="divider" />

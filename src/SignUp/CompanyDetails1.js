@@ -80,13 +80,13 @@ class CompanyDetails1 extends Component {
                                         <div className="col-sm-6 col-md-6">
                                             <div className="form-group">
                                                 <label className="form-label">Trading As</label>
-                                                <input type="text" className="form-control" placeholder="Trading" />
+                                                <input type="text" className="form-control" placeholder="Trading As" />
                                             </div>
                                         </div>
                                         <div className="col-sm-6 col-md-6">
                                             <div className="form-group">
                                                 <label className="form-label">Job Title</label>
-                                                <input type="text" className="form-control" placeholder="Title" />
+                                                <input type="text" className="form-control" placeholder="Job Title" />
                                             </div>
                                         </div>
                                     </div>

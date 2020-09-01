@@ -35,7 +35,7 @@ class Buyer5 extends Component {
                     <div className="row">
                         <div className="col-12 sptb custom-card">
                             <div className="card mb-0">
-                                <ProgressBar animated variant="primary" now={70} />
+                                <ProgressBar animated variant="primary" now={100} />
                                 <div className="card-header">
                                     <h3 className="card-title">Complete Your Profile</h3>
                                 </div>
@@ -67,7 +67,7 @@ class Buyer5 extends Component {
                                 </div>
                                 <div className="card-footer text-right">
                                     <Button className="btn btn-info mr-2" onClick={this.back}> Back </Button>
-                                    <Button className="btn btn-primary" onClick={this.saveAndContinue}> Next </Button>
+                                    <Button className="btn btn-primary" onClick={this.saveAndContinue}> Save And Verify Email </Button>
                                 </div>
                             </div>
                         </div>

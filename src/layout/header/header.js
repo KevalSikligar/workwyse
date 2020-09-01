@@ -70,9 +70,6 @@ export default function Header() {
                                                 <span>My Dashboard</span>
                                             </a>
                                             <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                {/* <NavLink to="/general-setting" className="dropdown-item"><i className="dropdown-icon icon icon-user"></i> My Profile</NavLink>
-                                            <NavLink to="/inbox" className="dropdown-item" ><i className="dropdown-icon icon icon-speech"></i> Inbox</NavLink>
-                                            <NavLink to="/notifications" className="dropdown-item" ><i className="dropdown-icon icon icon-bell"></i> Notifications</NavLink> */}
                                                 <NavLink to="/general-setting" className="dropdown-item"><i className="dropdown-icon  icon icon-settings"></i> Settings</NavLink>
                                                 <NavLink to="/" className="dropdown-item" ><i className="dropdown-icon icon icon-power"></i> Logout</NavLink>
                                             </div>

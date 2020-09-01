@@ -22,7 +22,7 @@ export default class HowItWorks extends Component {
                     <div className="sptb bg-white">
                         <div className="container">
                             <div className="section-title center-block text-center">
-                                <h1>HOW DOES WORKWYSE WORK? ITS VERY SIMPLE</h1>
+                                <h1>HOW DOES WORKWYSE WORK?</h1>
                                 <p>Our powerful engine in the back room matches your requirements with firms that are able to cover your most important needs.</p>
                             </div>
                             <div className="row">

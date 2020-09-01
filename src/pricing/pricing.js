@@ -27,7 +27,7 @@ export default class Pricing extends Component {
                                     <div className="pricingContent2">
                                         <ul>
                                             <li><b>Project Posts</b></li>
-                                            <li><b>x5 Contact Requests </b> per Project</li>
+                                            <li><b>5 Contact Requests </b> per Project</li>
                                             <li><b>Messaging System</b> </li>
                                             <li><b>Admin Dashboard </b></li>
                                             <li><b>Accept/Reject Responses </b></li>
@@ -46,9 +46,8 @@ export default class Pricing extends Component {
                                         <span className="price-value1"><span>£0.00</span></span>
                                         <span className="month">/month</span> </div> <div className="pricingContent2">
                                         <ul>
-                                            <li><b>Notifications on leads </b></li>
-                                            <li><b>(via</b> email/browser)</li>
-                                            <li><b>x25 Contact Request</b> (per week)</li>
+                                            <li><b>Notifications on leads </b><b>(via</b> email/browser)</li>
+                                            <li><b>25 Contact Request</b> (per week)</li>
                                             <li><b>Messaging System</b></li>
                                             <li><b>Admin dashboard</b></li>
                                         </ul>

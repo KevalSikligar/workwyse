@@ -107,7 +107,7 @@ export default function GeneralSettings() {
                                     </div>
                                     <div className="form-group">
                                         <label className="form-label">Seller Template <span className="ml-2 edittemplate"><i class="typcn typcn-edit fs-20" onClick={() => myFunction()}></i></span></label>
-                                        <p id="myDIV" contenteditable="true" className="templatedata" onClick={() => myFunction()}>
+                                        <p id="myDIV" contentEditable="true" className="templatedata" onClick={() => myFunction()}>
                                             Hi, I'm interested in working with you on your project.
                                         <br />
                                         Our relationship with you is rooted in pragmatism. We respect confidentiality yet discuss your challenges honestly with you. We tell you things you may not want to heat but need to because such knowledge is vital.

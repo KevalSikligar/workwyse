@@ -269,3 +269,15 @@
 }
 
 /***  Billing Page  ***/
+
+/*  Post Details */
+
+.post-section-map {
+    width: 100%;
+    height: 250px;
+}
+
+.post-section-map iframe {
+    width: 100%;
+    height: 250px;
+}

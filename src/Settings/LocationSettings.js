@@ -1,72 +1,104 @@
 import React, { useState, useEffect, useRef } from "react";
+import _ from 'lodash';
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs'
 import SideNav from '../SideNav/SideNav'
 import Button from 'semantic-ui-react/dist/commonjs/elements/Button/Button';
-import { GoogleMap, Marker, withGoogleMap, withScriptjs } from "react-google-maps"
+import { Map, GoogleApiWrapper } from 'google-maps-react';
+import axios from 'axios';
 
-let autoComplete;
-
-const loadScript = (url, callback) => {
-    let script = document.createElement("script");
-    script.type = "text/javascript";
-
-    if (script.readyState) {
-        script.onreadystatechange = function () {
-            if (script.readyState === "loaded" || script.readyState === "complete") {
-                script.onreadystatechange = null;
-                callback();
-            }
-        };
-    } else {
-        script.onload = () => callback();
-    }
-
-    script.src = url;
-    document.getElementsByTagName("head")[0].appendChild(script);
+const mapStyles = {
+    width: '100%',
+    height: '100%'
 };
 
-function handleScriptLoad(updateQuery, autoCompleteRef) {
-    autoComplete = new window.google.maps.places.Autocomplete(
-        autoCompleteRef.current,
-        { types: ["(cities)"], componentRestrictions: { country: "us" } }
-    );
-    autoComplete.setFields(["address_components", "formatted_address"]);
-    autoComplete.addListener("place_changed", () =>
-        handlePlaceSelect(updateQuery)
-    );
-}
+// import { GoogleMap, Marker, withGoogleMap, withScriptjs } from "react-google-maps"
+// import { render } from "node-sass";
 
-async function handlePlaceSelect(updateQuery) {
-    const addressObject = autoComplete.getPlace();
-    const query = addressObject.formatted_address;
-    updateQuery(query);
-    console.log(addressObject);
-}
-const MyMapComponent = withScriptjs(withGoogleMap((props) =>
-    <GoogleMap
-        defaultZoom={8}
-        defaultCenter={{ lat: -34.397, lng: 150.644 }}
-    >
-        {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
-    </GoogleMap>
-))
+// let autoComplete;
 
-export default function LocationSettings(props) {
+// const loadScript = (url, callback) => {
+//     let script = document.createElement("script");
+//     script.type = "text/javascript";
+
+//     if (script.readyState) {
+//         script.onreadystatechange = function () {
+//             if (script.readyState === "loaded" || script.readyState === "complete") {
+//                 script.onreadystatechange = null;
+//                 callback();
+//             }
+//         };
+//     } else {
+//         script.onload = () => callback();
+//     }
+
+//     script.src = url;
+//     document.getElementsByTagName("head")[0].appendChild(script);
+// };
+
+// function handleScriptLoad(updateQuery, autoCompleteRef) {
+//     autoComplete = new window.google.maps.places.Autocomplete(
+//         autoCompleteRef.current,
+//         { types: ["(cities)"], componentRestrictions: { country: "us" } }
+//     );
+//     autoComplete.setFields(["address_components", "formatted_address"]);
+//     autoComplete.addListener("place_changed", () =>
+//         handlePlaceSelect(updateQuery)
+//     );
+// }
+
+// async function handlePlaceSelect(updateQuery) {
+//     const addressObject = autoComplete.getPlace();
+//     const query = addressObject.formatted_address;
+//     updateQuery(query);
+//     console.log(addressObject);
+// }
+// const MyMapComponent = withScriptjs(withGoogleMap((props) =>
+//     <GoogleMap
+//         defaultZoom={8}
+//         defaultCenter={{ lat: -34.397, lng: 150.644 }}
+//     >
+//         {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
+//     </GoogleMap>
+// ))
+let latitude, longitude;
+
+const LocationSettings = (props) => {
+    const [searchTerm, setSearchTerm] = useState("");
+    const [result, setResult] = useState([])
 
     const pathList = [
         { to: "/location-setting", title: "Location Settings" }
     ]
 
-    const [query, setQuery] = useState("");
-    const autoCompleteRef = useRef(null);
-
     useEffect(() => {
-        loadScript(
-            `https://maps.googleapis.com/maps/api/js?key=AIzaSyD9z0v2NvVvTHjsnSdLdqHkyZkK8iQd474&libraries=places`,
-            () => handleScriptLoad(setQuery, autoCompleteRef)
-        );
-    }, []);
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(function (position) {
+                latitude = position.coords.latitude
+                longitude = position.coords.longitude
+                console.log("Latitude is :", position.coords.latitude);
+                console.log("Longitude is :", position.coords.longitude);
+            });
+        }
 
+    }, [])
+
+    const debounceSearch = useRef(
+        _.debounce(async (searchTerm) => {
+            const resp = await axios.get(`http://api.postcodes.io/postcodes/${searchTerm}/autocomplete`)
+            console.log('resp =>', resp.data.result);
+        }, 1000)
+    );
+
+    useEffect(
+        () => {
+            if (searchTerm) {
+                debounceSearch.current(searchTerm);
+            } else {
+                setResult([]);
+            }
+        },
+        [searchTerm] // Only call effect if debounced search term changes
+    );
 
     return (
         <div>
@@ -99,25 +131,34 @@ export default function LocationSettings(props) {
                                                                     <option>60 miles</option>
                                                                 </select>
                                                                 <span className="px-5 form-label text-dark fs-16">of</span>
-                                                                <div className="form-group w-100  mb-0">
-                                                                    <input className="form-control position-relative w-100"
-                                                                        ref={autoCompleteRef}
-                                                                        onChange={event => setQuery(event.target.value)}
+                                                                <div className="form-group w-100 mb-0">
+                                                                    <input type="text" className="form-control position-relative w-100"
                                                                         placeholder="Enter a City"
-                                                                        value={query}
+                                                                        onChange={e => setSearchTerm(e.target.value)}
+                                                                    // value={query}
                                                                     />
-                                                                    {/* <input type="text" className="form-control position-relative w-100" placeholder="Location" /> */}
                                                                     <span className="map-icon"><img src={require('../assets/images/svg/gps.svg')} className="location-gps" alt="img" /></span>
                                                                 </div>
                                                             </div>
                                                             <div className="location-map-section my-5">
                                                                 <div className="col-lg-612 col-md-12 col-sm-12 col-12 bg-white p-0">
                                                                     <div className="about-map-section">
-                                                                        <MyMapComponent isMarkerShown
-                                                                            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9z0v2NvVvTHjsnSdLdqHkyZkK8iQd474"
-                                                                            loadingElement={<div style={{ height: `100%` }} />}
-                                                                            containerElement={<div style={{ height: `400px` }} />}
-                                                                            mapElement={<div style={{ height: `100%` }} />} />
+                                                                        <Map
+                                                                            google={props.google}
+                                                                            zoom={14}
+                                                                            style={mapStyles}
+                                                                            initialCenter={{
+                                                                                lat: latitude,
+                                                                                lng: longitude
+                                                                            }}
+                                                                        >
+
+                                                                        </Map>
+                                                                        {/* <MyMapComponent isMarkerShown
+                                                                                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgH29Pldnf8x3FQpXNB-9XK3U7Z2_FGr8"
+                                                                                loadingElement={<div style={{ height: `100%` }} />}
+                                                                                containerElement={<div style={{ height: `400px` }} />}
+                                                                                mapElement={<div style={{ height: `100%` }} />} /> */}
                                                                         {/* <iframe title="For Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238133.1523816246!2d72.68221020433099!3d21.15914250210564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1597424132065!5m2!1sen!2sin"
                                                                             frameBorder="0" allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe> */}
                                                                     </div>
@@ -154,3 +195,7 @@ export default function LocationSettings(props) {
         </div>
     )
 }
+
+export default GoogleApiWrapper({
+    apiKey: 'AIzaSyBgH29Pldnf8x3FQpXNB-9XK3U7Z2_FGr8'
+})(LocationSettings);
