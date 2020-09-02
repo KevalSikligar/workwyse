@@ -68,9 +68,9 @@ export default class Services extends React.Component {
                         <div className="col-xl-9 col-lg-12 col-md-12">
                             <div className="sptb">
                                 <div className="card mb-0">
-                                    <div className="card-header">
+                                    {/* <div className="card-header">
                                         <h3 className="card-title">Service Settings</h3>
-                                    </div>
+                                    </div> */}
                                     <div className="card-body">
                                         <div className="form-group">
                                             <label className="form-label">Search Services</label>

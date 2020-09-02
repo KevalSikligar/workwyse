@@ -16,9 +16,9 @@ export default function MyCompany() {
                     </div>
                     <div className="col-xl-9 col-lg-12 col-md-12 sptb">
                         <div className="card mb-0">
-                            <div className="card-header">
+                            {/* <div className="card-header">
                                 <h3 className="card-title">My Company</h3>
-                            </div>
+                            </div> */}
                             <div className="card-body">
                                 <div className="row">
                                     <div className="col-12 col-md-12 bg-background3 border-radius-4 mb-md-5 mb-sm-3">

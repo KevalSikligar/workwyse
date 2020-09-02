@@ -4,10 +4,12 @@
 import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import Login from '../../Login/Login';
-
+import PostProject from '../../PostProject/PostProject';
+import swal from 'sweetalert';
 
 export default function Header() {
 
+    const [showModal, setshowModal] = useState(false)
     // eslint-disable-next-line no-unused-vars
     const [showMenu, setShowMenu] = useState(false);
 
@@ -17,12 +19,20 @@ export default function Header() {
         document.body.classList.add('active');
     }
 
+    const toggleModal = () => {
+        setshowModal(!showModal);
+        if (showModal === true) {
+            swal("Are you sure you want to Quit the process?").then(setshowModal(!showModal))
+        }
+    }
+
     const closeDropdwn = (e) => {
         e.preventDefault()
         if (document.body.classList.contains('active')) {
             document.body.classList.remove('active');
         }
     }
+    console.log('showModal => ', showModal);
 
     return (
         <>
@@ -120,7 +130,9 @@ export default function Header() {
                         </ul>
                         <ul className="mb-0 pl-2 create-resume-btn">
                             <li className="d-none d-lg-flex">
-                                <span><NavLink className="btn btn-success add-post mt-1" to="/post-a-project"><i className="fa fa-edit"></i> Post a Project</NavLink></span>
+                                <button className="btn btn-success add-post mt-1" onClick={() => toggleModal()}>
+                                    <i className="fa fa-edit"></i> Post a Project</button>
+                                <PostProject isOpenModal={showModal} onClose={toggleModal} />
                             </li>
                         </ul>
                     </nav>

@@ -6,7 +6,7 @@ class BreadCrumbs extends Component {
     render() {
         return (
             <div>
-                <section className="breadcrumb-section" >
+                <section className="breadcrumb-section">
                     <div className="bannerimg cover-image bg-background3 sptb-2" data-image-src={require("../assets/images/banners/banner2.jpg")}>
                         <div className="header-text mb-0">
                             <div className="container">
@@ -25,7 +25,7 @@ class BreadCrumbs extends Component {
                         </div>
                     </div>
                 </section>
-            </div >
+            </div>
         )
     }
 }

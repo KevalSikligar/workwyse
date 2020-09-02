@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function SideNav() {
     return (
@@ -29,7 +29,7 @@ export default function SideNav() {
                                 <i className="fa fa-envelope fs-16"></i>
                             </span> Inbox
 						</NavLink>
-                        <NavLink to="/posts" activeClassName="active" className=" d-flex  border-bottom">
+                        <NavLink to="/posts" activeClassName="active" className=" d-flex border-bottom">
                             <span className="icon1 mr-2">
                                 <i className="fa fa-sticky-note fs-16"></i>
                             </span> Posts

@@ -2,6 +2,7 @@ import React from 'react'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import Button from 'semantic-ui-react/dist/commonjs/elements/Button/Button';
 import SideNav from '../SideNav/SideNav';
+import { LinkedIn } from 'react-linkedin-login-oauth2';
 
 export default function GeneralSettings() {
 
@@ -18,6 +19,27 @@ export default function GeneralSettings() {
         document.getElementById("myDIV").addEventListener('blur', blurEventFunc);
     }
 
+    const state = {
+        code: '',
+        errorMessage: '',
+    };
+
+
+    const handleSuccess = (data) => {
+        this.setState({
+            code: data.code,
+            errorMessage: '',
+        });
+    }
+
+    const handleFailure = (error) => {
+        this.setState({
+            code: '',
+            errorMessage: error.errorMessage,
+        })
+    }
+
+
     return (
         <div>
             <BreadCrumbs title="General Settings" breadcrumbssegment={pathList} />
@@ -29,9 +51,9 @@ export default function GeneralSettings() {
                     <div className="col-xl-9 col-lg-12 col-md-12">
                         <div className="sptb pb-0">
                             <div className="card mb-0">
-                                <div className="card-header">
+                                {/* <div className="card-header">
                                     <h3 className="card-title">Edit Profile</h3>
-                                </div>
+                                </div> */}
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col-12 col-md-12 bg-background3 border-radius-4 mb-md-5 mb-sm-3">
@@ -85,7 +107,6 @@ export default function GeneralSettings() {
                                 <div className="card-header">
                                     <h3 className="card-title">Account Settings</h3>
                                 </div>
-                                {/* Connect with linkedin */}
                                 <div className="card-body">
                                     <div className="form-group">
                                         <label className="form-label">Email</label>
@@ -106,17 +127,30 @@ export default function GeneralSettings() {
                                         </div>
                                     </div>
                                     <div className="form-group">
-                                        <label className="form-label">Seller Template <span className="ml-2 edittemplate"><i class="typcn typcn-edit fs-20" onClick={() => myFunction()}></i></span></label>
+                                        <label className="form-label">Seller Template <span className="ml-2 edittemplate"><i className="typcn typcn-edit fs-20" onClick={() => myFunction()}></i></span></label>
                                         <p id="myDIV" contentEditable="true" className="templatedata" onClick={() => myFunction()}>
                                             Hi, I'm interested in working with you on your project.
                                         <br />
-                                        Our relationship with you is rooted in pragmatism. We respect confidentiality yet discuss your challenges honestly with you. We tell you things you may not want to heat but need to because such knowledge is vital.
+                                            Our relationship with you is rooted in pragmatism. We respect confidentiality yet discuss your challenges honestly with you. We tell you things you may not want to heat but need to because such knowledge is vital.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="card-footer text-right">
-                                    <Button className="btn btn-danger mr-2">Cancel</Button>
-                                    <Button className="btn btn-primary">Save</Button>
+                                    <div className="text-right d-sm-flex justify-content-between">
+                                        <div>
+                                            {/* Connect with linkedin */}
+                                            <LinkedIn
+                                                clientId="81lx5we2omq9xh"
+                                                onFailure={() => this.handleFailure()}
+                                                onSuccess={() => this.handleSuccess()}
+                                                redirectUri="http://localhost:3000/linkedin">
+                                            </LinkedIn>
+                                        </div>
+                                        <div>
+                                            <Button className="btn btn-danger mr-2">Cancel</Button>
+                                            <Button className="btn btn-primary">Save</Button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

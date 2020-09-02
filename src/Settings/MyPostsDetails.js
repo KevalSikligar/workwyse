@@ -30,14 +30,13 @@ export default function MyPostsDetails() {
                     <div className="col-xl-9 col-lg-12 col-md-12 sptb">
                         <div className="custom-card">
                             <div className="card">
-                                <div className="card-header">
+                                {/* <div className="card-header">
                                     <div className="filter-section">
                                         <div className="header-left">
                                             <h3 className="card-title">My Posts Details</h3>
                                         </div>
-
                                     </div>
-                                </div>
+                                </div> */}
                                 <div class="card-body">
                                     <div class="row">
 
@@ -91,7 +90,7 @@ export default function MyPostsDetails() {
                                                 </div>
                                                 <div class="col-md-6 pr-md-0">
                                                     <label class="form-label">Start Date</label>
-                                                    <div className="d-md-flex align-items-center">
+                                                    <div className="d-md-flex align-items-cente form-groupr">
                                                         <DatePicker
                                                             selected={state.startDate}
                                                             onChange={handleChange}
@@ -100,7 +99,7 @@ export default function MyPostsDetails() {
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label">End Date</label>
-                                                    <div className="d-md-flex align-items-center">
+                                                    <div className="d-md-flex align-items-center form-group">
                                                         <DatePicker
                                                             selected={state.startDate}
                                                             onChange={handleChange}
@@ -212,13 +211,11 @@ export default function MyPostsDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
-                                            <div className="card-footer text-right">
-                                                <button className="btn btn-danger  mr-2">Cancel</button>
-                                                <button className="btn btn-primary">Save</button>
-                                            </div>
-                                        </div>
                                     </div>
+                                </div>
+                                <div className="card-footer text-right">
+                                    <button className="btn btn-danger mr-2">Cancel</button>
+                                    <button className="btn btn-primary">Save</button>
                                 </div>
                             </div>
                         </div>

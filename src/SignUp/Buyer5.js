@@ -4,9 +4,8 @@ import { withRouter } from 'react-router-dom';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import swal from 'sweetalert';
-
-
 class Buyer5 extends Component {
+
     saveAndContinue = (e) => {
         swal("You have successfully registered. Clicking on OK will redirect you to Home Page.")
             .then(() => {
@@ -22,7 +21,7 @@ class Buyer5 extends Component {
     render() {
 
         var href = window.location.href;
-        const route = href.match(/([^\/]*)\/*$/)[1]
+        const route = href.match(/([^/]*)\/*$/)[1]
         const finalName = route.charAt(0).toUpperCase() + route.slice(1);
         const pathList = [
             { to: `/sign-up/${route}`, title: `Sign Up` }

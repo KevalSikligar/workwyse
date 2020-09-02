@@ -4,7 +4,7 @@ import Footer from "./layout/Footer/Footer"
 import Header from "./layout/Header/Header"
 import './assets/css/style.css';
 import './assets/css/stylePGD.css';
-import { Route, Switch, HashRouter } from "react-router-dom";
+import { Route, Switch, HashRouter, BrowserRouter } from "react-router-dom";
 import SignUpSeller from './SignUp/SignUpSeller';
 import AboutUs from './AboutUs/AboutUs';
 import Faq from './Faq/Faq';
@@ -38,7 +38,7 @@ import SignInLinkedIn from './SignUp/SignInLinkedIn';
 export default class App extends React.Component {
     render() {
         return (
-            <HashRouter>
+            <BrowserRouter>
                 <div className="App">
                     <Header />
                     <Switch>
@@ -69,14 +69,12 @@ export default class App extends React.Component {
                         <Route path="/dashboard-seller" exact component={SellerHome} />
                         <Route path="/dashboard-buyer" exact component={BuyerHome} />
                         <Route exact path="/linkedin" component={SignInLinkedIn} />
-                        <Route path="/" component={SignInLinkedIn} />
-                        {/* <Route path="/sign-up/linkedin" exact component={SignInLinkedIn} /> */}
                         <Route path="/forgot-password" exact component={ForgotPassword} />
                         <Route component={NotFoundPage} />
                     </Switch>
                     <Footer />
                 </div>
-            </HashRouter>
+            </BrowserRouter>
         );
     }
 }

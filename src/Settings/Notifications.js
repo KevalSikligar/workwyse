@@ -17,11 +17,10 @@ export default function Notifications() {
                     </div>
                     <div className="col-xl-9 col-lg-12 col-md-12 sptb">
                         <div className="card">
-                            <div className="card-header">
+                            {/* <div className="card-header">
                                 <h3 className="card-title">Notificaton</h3>
-                            </div>
+                            </div> */}
                             <div className="card-body">
-
                                 <div className="card">
                                     <div className="card-header bg-light-gray">
                                         <h3 className="text-capitalize card-title"> Seller Notification</h3>
@@ -91,7 +90,7 @@ export default function Notifications() {
                                             <p className="text-dark fs-16 font-weight-semibold">
                                                 We can send notifications straight to your web browser. Choose what you’d like to be notified about.
                                             </p>
-                                        </div>                                        
+                                        </div>
                                         <hr className="my-5" />
                                         <div className="not-getting-mail-section d-flex justify-content-between align-items-center mb-4">
                                             <p className="fs-16 text-dark font-weight-semibold mb-0">Notify me about: </p>
@@ -117,7 +116,7 @@ export default function Notifications() {
                                                     <input type="checkbox" name="custom-switch-checkbox" className="custom-switch-input" />
                                                     <span className="custom-switch-indicator"></span>
                                                 </label>
-                                            </div>                                            
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

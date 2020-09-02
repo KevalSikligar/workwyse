@@ -5,9 +5,7 @@ import CompanyDetails2 from './CompanyDetails2';
 import CompanyDetails4 from './CompanyDetails4';
 import CompanyDetails5 from './CompanyDetails5';
 import CompanyDetails6 from './CompanyDetails6';
-// import Buyer4 from './Buyer4';
 import Buyer5 from './Buyer5';
-
 class SignUpSeller extends Component {
     state = {
         step: 1,
@@ -29,23 +27,24 @@ class SignUpSeller extends Component {
         const { step } = this.state
         this.setState({
             step: step + 1
-        })
+        });
     }
 
     prevStep = () => {
         const { step } = this.state
         this.setState({
             step: step - 1
-        })
+        });
     }
 
     handleChange = input => event => {
         this.setState({
             [input]: event.target.value
-        })
+        });
     }
 
     render() {
+
         const { step } = this.state;
         const { firstName, lastName, email, age, city, country } = this.state;
         const values = { firstName, lastName, email, age, city, country };

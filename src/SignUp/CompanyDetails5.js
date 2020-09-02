@@ -18,7 +18,7 @@ export default class CompanyDetails5 extends Component {
     render() {
 
         var href = window.location.href;
-        const route = href.match(/([^\/]*)\/*$/)[1]
+        const route = href.match(/([^/]*)\/*$/)[1]
         const finalName = route.charAt(0).toUpperCase() + route.slice(1);
         const pathList = [
             { to: `/sign-up/${route}`, title: `Sign Up` }

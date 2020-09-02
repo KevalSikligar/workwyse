@@ -25,9 +25,9 @@ export default function MyPosts() {
                             <div className="card">
                                 <div className="card-header">
                                     <div className="filter-section">
-                                        <div className="header-left">
+                                        {/* <div className="header-left">
                                             <h3 className="card-title">My Posts</h3>
-                                        </div>
+                                        </div> */}
                                         <div className="header-right">
                                             <div className="dropdown-search d-md-flex">
                                                 <div className="form-group mb-0 position-relative mr-4">

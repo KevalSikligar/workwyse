@@ -21,9 +21,9 @@ export default function Billings() {
                     <div className="col-xl-9 col-lg-12 col-md-12">
                         <div className="sptb pb-0">
                             <div className="card mb-0">
-                                <div className="card-header">
+                                {/* <div className="card-header">
                                     <h3 className="card-title">Billing Details</h3>
-                                </div>
+                                </div> */}
                                 <div className="card-body">
                                     <StripeCheckout
                                         amount='5'

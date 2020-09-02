@@ -22,9 +22,9 @@ class Reviews extends Component {
                         <div className="col-xl-9 col-lg-12 col-md-12 review-sec">
                             <div className="sptb pb-0">
                                 <div className="card">
-                                    <div className="card-header">
+                                    {/* <div className="card-header">
                                         <h3 className="card-title">Marketing.Inc</h3>
-                                    </div>
+                                    </div> */}
                                     <div className="card-body">
                                         <div className="row">
                                             <div className="col-12 col-md-12 bg-background3 border-radius-4 mb-md-5 mb-sm-3">
