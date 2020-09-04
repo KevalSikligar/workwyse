@@ -58,6 +58,16 @@ class LocationSettings extends Component {
         });
     };
 
+    getLocation = () => navigator.geolocation.watchPosition((position) => {
+        console.log("position : " + JSON.stringify(position));
+        var gps_location = position.coords.latitude + "," + position.coords.longitude;
+        console.log("gps_location : " + JSON.stringify(gps_location));
+    }, error => {
+        console.log(" error in getting location " + error);
+    }, {
+        enableHighAccuracy: false, timeout: 20000, maximumAge: 1000
+    });
+
     render() {
 
         const pathList = [
@@ -112,6 +122,7 @@ class LocationSettings extends Component {
                                                                             inputProps={inputProps}
                                                                         />
                                                                         <span className="map-icon"><img src={require('../assets/images/svg/gps.svg')} className="location-gps" alt="img" /></span>
+                                                                        {/* <button onClick={() => this.getLocation()} />Hello */}
                                                                     </div>
                                                                 </div>
                                                                 <div className="location-map-section my-5">
@@ -129,12 +140,12 @@ class LocationSettings extends Component {
 
                                                                             </Map> */}
                                                                             {/* <MyMapComponent isMarkerShown
-                                                                                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgH29Pldnf8x3FQpXNB-9XK3U7Z2_FGr8"
+                                                                                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyB20MH1j--fffwINexQJHHFsFvA6mCCiWg"
                                                                                 loadingElement={<div style={{ height: `100%` }} />}
                                                                                 containerElement={<div style={{ height: `400px` }} />}
                                                                                 mapElement={<div style={{ height: `100%` }} />} /> */}
                                                                             {/* <iframe title="For Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238133.1523816246!2d72.68221020433099!3d21.15914250210564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1597424132065!5m2!1sen!2sin"
-                                                                            frameBorder="0" allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe> */}
+                                                                                fraeBorder="0" allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe> */}
                                                                         </div>
                                                                     </div>
                                                                 </div>

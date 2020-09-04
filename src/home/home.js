@@ -55,7 +55,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <div className="sptb">
+                <div className="">
                     <div className="bannerimg cover-image bg-background3 sptb-2">
                         <div className="header-text mb-0">
                             <div className="container">
@@ -89,9 +89,9 @@ export default class Home extends Component {
                             <div className="col-lg-5 col-xl-4 col-md-7 d-block mx-auto">
                                 <div className="single-page">
                                     <div className="wrapper wrapper2">
-                                        <div className="p-4 mb-5">
-                                            <h4 className="text-left font-weight-semibold fs-16">Login With</h4>
-                                            <div className="btn-list d-sm-flex">
+                                        <div className="p-4 mb-4">
+                                            <h4 className="text-left font-weight-semibold fs-16 ml-3 mb-3">Login With</h4>
+                                            <div className="btn-list d-sm-flex" class="LinkedIn-btn">
                                                 <LinkedIn
                                                     clientId="81lx5we2omq9xh"
                                                     onFailure={this.handleFailure}

@@ -3,7 +3,7 @@ import './App.css';
 import Footer from "./layout/Footer/Footer"
 import Header from "./layout/Header/Header"
 import './assets/css/style.css';
-import './assets/css/stylePGD.css';
+import './assets/css/styleDRP.css';
 import { Route, Switch, HashRouter, BrowserRouter } from "react-router-dom";
 import SignUpSeller from './SignUp/SignUpSeller';
 import AboutUs from './AboutUs/AboutUs';

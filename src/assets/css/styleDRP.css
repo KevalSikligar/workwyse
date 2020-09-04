@@ -295,3 +295,213 @@
     background-color: #1650e2;
     color: #fff;
 }
+
+.bannerimg .header-text h1 {
+    color: #ffffff;
+}
+
+.header-main .top-bar-right .custom {
+    display: flex;
+    margin: 0;
+}
+
+.btn-linkdin-bg {
+    width: 100%;
+}
+
+/* Model Step */
+
+.ant-modal-wrap .ant-modal {
+    width: 767px !important;
+}
+
+/* Step Wizard Css */
+
+.ant-steps-item-title {
+    display: none !important;
+}
+
+.model-title-set {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1890ff;
+    display: block;
+    padding: 0 0px 15px 0px;
+    margin: 10px 0 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.ant-steps {
+    width: 70% !important;
+    margin: 20px auto 10px !important;
+}
+
+.ant-steps:not(.ant-steps-dot):not(.ant-steps-navigation):not(.ant-steps-vertical) .ant-steps-item {
+    padding-top: 0 !important;
+    padding-bottom: 10px !important;
+    width: 10% !important;
+    padding-left: 0 !important;
+}
+
+.ant-steps:not(.ant-steps-dot):not(.ant-steps-navigation):not(.ant-steps-vertical) .ant-steps-item:last-child .ant-steps-item-icon:before {
+    display: none;
+}
+
+.ant-steps:not(.ant-steps-dot):not(.ant-steps-navigation) .ant-steps-item .ant-steps-item-icon {
+    position: relative;
+    margin: 0 !important;
+}
+
+.ant-steps-item-icon:before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: #1890ff;
+    top: 50%;
+    left: 100%;
+    transform: translate(0%, -50%);
+}
+
+.anticon {
+    vertical-align: 1px !important;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon {
+    background-color: #1890ff !important;
+    border-color: #1890ff !important;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon>.ant-steps-icon {
+    color: #ffffff !important;
+}
+
+/* Checkbox */
+
+.checkbox-alias {
+    background-color: #ffffff;
+    padding: 5px 15px 5px 15px;
+    display: inline-block;
+    z-index: 1;
+    border: 1px solid #ddd;
+    margin: 15px 0 0 0;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 500;
+    width: 100%;
+    position: relative;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.invisible-checkboxes input[type=checkbox] {
+    display: none;
+    /*   margin-right: -20px;
+  position: relative;
+  z-index: 2; */
+}
+
+.invisible-checkboxes input[type=checkbox]:checked+.checkbox-alias {
+    background-color: #1650e2;
+    border: 1px solid #1650e2;
+    color: #ffffff;
+}
+
+/* Radio Section */
+
+.radio-section {
+    margin: 0 0 15px 0;
+}
+
+.radio-section .ant-radio-wrapper {
+    display: flex !important;
+    align-items: center;
+    line-height: 22px;
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    margin: 0 0 10px 0px;
+}
+
+.ant-radio-group {
+    width: 100%
+}
+
+.ant-modal-footer {
+    display: none;
+}
+
+.radio-section h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.radio-section input[type=radio]:checked+.checkbox-alias {
+    background-color: #1650e2;
+    border: 1px solid #1650e2;
+    color: #ffffff;
+}
+
+.ant-modal-body {
+    padding: 25px 25px 0 25px;
+}
+
+.model-popup-wizard {
+    padding: 20px 0 20px 0px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.model-popup-wizard button {
+    margin: 0 10px 0px 0;
+}
+
+.react-autosuggest__input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0 10px;
+}
+
+.LinkedIn-btn {
+    margin: 0 15px;
+}
+
+.LinkedIn-btn .btn-linkedin {
+    width: 100%;
+    border: 0;
+    background-color: #0077b5;
+    padding: 2px 0px;
+    margin: 0 0px;
+}
+
+.btn-linkedin {
+    border: 0;
+    background-color: #0077b5;
+}
+
+.react-autosuggest__container.react-autosuggest__container--open {
+    position: relative;
+}
+
+.react-autosuggest__suggestions-container.react-autosuggest__suggestions-container--open {
+    position: absolute;
+    z-index: 9999;
+    background-color: white;
+    width: 100%;
+}
+
+.react-autosuggest__suggestions-container.react-autosuggest__suggestions-container--open ul {
+    border-bottom: 1px solid #ddd;
+}
+
+.react-autosuggest__suggestions-container.react-autosuggest__suggestions-container--open ul li {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}

@@ -1,7 +1,8 @@
+
 import React from 'react'
-import { Radio, Input } from 'antd';
+import { Radio } from 'antd';
 import 'antd/dist/antd.css';
-export default class Step2 extends React.Component {
+export default class Step6 extends React.Component {
     state = {
         value: 1,
     };
@@ -25,19 +26,19 @@ export default class Step2 extends React.Component {
                 </div>
                 <Radio.Group onChange={this.onChange} value={value}>
                     <Radio style={radioStyle} value={1}>
-                        <h4> How do you currently do your marketing ? </h4>
+                        <h4> When would you like the website to go live/be updated ? </h4>
                     </Radio>
                     <Radio style={radioStyle} value={2}>
-                        <h4> Dont't currently do any marketing </h4>
+                        <h4> ASAP </h4>
                     </Radio>
                     <Radio style={radioStyle} value={3}>
-                        <h4> Small in-house </h4>
+                        <h4> Within a few weeks </h4>
                     </Radio>
                     <Radio style={radioStyle} value={4}>
-                        <h4> Large in-house </h4>
+                        <h4> Within a few months </h4>
                     </Radio>
                     <Radio style={radioStyle} value={5}>
-                        <h4> External Agency </h4>
+                        <h4> i'd need to discuss this with the agency </h4>
                     </Radio>
                     {/* <Radio style={radioStyle} value={6}>
                         More...
@@ -48,3 +49,5 @@ export default class Step2 extends React.Component {
         );
     }
 }
+
+

@@ -1,8 +1,7 @@
-
 import React from 'react'
 import { Radio } from 'antd';
 import 'antd/dist/antd.css';
-export default class Step3 extends React.Component {
+export default class Step5 extends React.Component {
     state = {
         value: 1,
     };
@@ -26,28 +25,43 @@ export default class Step3 extends React.Component {
                 </div>
                 <Radio.Group onChange={this.onChange} value={value}>
                     <Radio style={radioStyle} value={1}>
-                        <h4> Which of the followings do you need support with ? </h4>
+                        <h4> Which channels are you looking to utilise/manage ? </h4>
                     </Radio>
                     <Radio style={radioStyle} value={2}>
-                        <h4> Advert Design </h4>
+                        <h4> Facebook </h4>
                     </Radio>
                     <Radio style={radioStyle} value={3}>
-                        <h4> Advert Production </h4>
+                        <h4> Instagram </h4>
                     </Radio>
                     <Radio style={radioStyle} value={4}>
-                        <h4> Copywriting </h4>
+                        <h4> Google Adwords ( Search and Display ) </h4>
                     </Radio>
                     <Radio style={radioStyle} value={5}>
-                        <h4> Creative Productive Services </h4>
+                        <h4> LinkedIn </h4>
                     </Radio>
                     <Radio style={radioStyle} value={6}>
-                        <h4> Measuring Perfomance </h4>
+                        <h4> Twitter </h4>
                     </Radio>
                     <Radio style={radioStyle} value={7}>
-                        <h4> Media buying </h4>
+                        <h4> YouTube </h4>
                     </Radio>
                     <Radio style={radioStyle} value={8}>
-                        <h4> Unsure/I need to discuss </h4>
+                        <h4> Quora </h4>
+                    </Radio>
+                    <Radio style={radioStyle} value={9}>
+                        <h4> Pinterest </h4>
+                    </Radio>
+                    <Radio style={radioStyle} value={10}>
+                        <h4> Amazon </h4>
+                    </Radio>
+                    <Radio style={radioStyle} value={11}>
+                        <h4> Snapchat </h4>
+                    </Radio>
+                    <Radio style={radioStyle} value={12}>
+                        <h4> Spotify </h4>
+                    </Radio>
+                    <Radio style={radioStyle} value={13}>
+                        <h4> Unsure / Other </h4>
                     </Radio>
                     {/* <Radio style={radioStyle} value={6}>
                         More...
@@ -58,3 +72,5 @@ export default class Step3 extends React.Component {
         );
     }
 }
+
+

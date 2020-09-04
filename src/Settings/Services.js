@@ -106,7 +106,7 @@ export default class Services extends React.Component {
                                     </div>
                                     <div className="card-body">
                                         <div className="form-group">
-                                            <label className="form-label">Search Services</label>
+                                            {/* <label className="form-label">Search Services</label> */}
                                             <input type="text" className="form-control" placeholder="Search for the available services..." />
                                         </div>
                                         <InfiniteScroll

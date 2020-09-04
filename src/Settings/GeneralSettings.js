@@ -104,8 +104,17 @@ export default function GeneralSettings() {
                         </div>
                         <div className="sptb low-pad-top">
                             <div className="card mb-0">
-                                <div className="card-header">
+                                <div className="card-header d-flex justify-content-between">
                                     <h3 className="card-title">Account Settings</h3>
+                                    <div>
+                                        {/* Connect with linkedin */}
+                                        <LinkedIn
+                                            clientId="81lx5we2omq9xh"
+                                            onFailure={() => this.handleFailure()}
+                                            onSuccess={() => this.handleSuccess()}
+                                            redirectUri="http://localhost:3000/linkedin">
+                                        </LinkedIn>
+                                    </div>
                                 </div>
                                 <div className="card-body">
                                     <div className="form-group">
@@ -136,16 +145,7 @@ export default function GeneralSettings() {
                                     </div>
                                 </div>
                                 <div className="card-footer text-right">
-                                    <div className="text-right d-sm-flex justify-content-between">
-                                        <div>
-                                            {/* Connect with linkedin */}
-                                            <LinkedIn
-                                                clientId="81lx5we2omq9xh"
-                                                onFailure={() => this.handleFailure()}
-                                                onSuccess={() => this.handleSuccess()}
-                                                redirectUri="http://localhost:3000/linkedin">
-                                            </LinkedIn>
-                                        </div>
+                                    <div className="text-right">
                                         <div>
                                             <Button className="btn btn-danger mr-2">Cancel</Button>
                                             <Button className="btn btn-primary">Save</Button>

@@ -9,7 +9,7 @@ import swal from 'sweetalert';
 
 export default function Header() {
 
-    const [showModal, setshowModal] = useState(false)
+    const [showModal, setshowModal] = useState(false);
     // eslint-disable-next-line no-unused-vars
     const [showMenu, setShowMenu] = useState(false);
 
@@ -21,9 +21,9 @@ export default function Header() {
 
     const toggleModal = () => {
         setshowModal(!showModal);
-        if (showModal === true) {
-            swal("Are you sure you want to Quit the process?").then(setshowModal(!showModal))
-        }
+        // if (showModal === true) {
+        //     swal("Are you sure you want to Quit the process?").then(setshowModal(!showModal))
+        // }
     }
 
     const closeDropdwn = (e) => {
