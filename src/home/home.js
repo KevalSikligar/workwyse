@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 // import { ReCaptcha } from 'react-recaptcha-google'
+
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { LinkedIn } from 'react-linkedin-login-oauth2';
+import PostProject from '../PostProject/PostProject';
+import swal from 'sweetalert';
 
 export default class Home extends Component {
 
@@ -16,6 +22,30 @@ export default class Home extends Component {
         code: '',
         errorMessage: '',
     };
+
+    toggleModal = () => {
+        this.setState({
+            showModal: true
+        });
+        if (this.state.showModal === true) {
+            this.setState({ showModal: false })
+            swal("Are you sure you want to Quit the process??", {
+                buttons: { cancel: "Continue", catch: "OK" },
+            }).then((value) => {
+                switch (value) {
+                    case "catch":
+                        this.setState({
+                            showModal: false
+                        });
+                        break;
+                    default:
+                        this.setState({
+                            showModal: true
+                        });
+                }
+            });
+        }
+    }
 
 
     handleSuccess = (data) => {
@@ -55,13 +85,13 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <div className="">
-                    <div className="bannerimg cover-image bg-background3 sptb-2">
+                <div className="homepage-bg">
+                    <div className="banner-1 cover-image sptb-3 pb-14 sptb-tab bg-background2">
                         <div className="header-text mb-0">
                             <div className="container">
                                 <div className="text-center text-white mb-7">
-                                    <h1 className="mb-1">Find Verified Marketing And Advertising Firms</h1>
-                                    <p>It is a long established fact that a reader will be distracted by the readable.</p>
+                                    <h1 className="mb-1 text-white">Find Verified Marketing And Advertising Firms</h1>
+                                    <p className="text-white">It is a long established fact that a reader will be distracted by the readable.</p>
                                 </div>
                                 <div className="row">
                                     <div className="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
@@ -75,7 +105,7 @@ export default class Home extends Component {
                                                     <span><img src={require('../assets/images/svg/gps.svg')} className="location-gps" alt="img" /></span>
                                                 </div>
                                                 <div className="col-xl-3 col-lg-3 col-md-4 mb-0">
-                                                    <a href="!#" className="btn btn-lg btn-block btn-success br-tl-md-0 br-bl-md-0"><i className="fa fa-search mr-1"></i>Post A Project</a>
+                                                    <a className="btn btn-lg btn-block btn-success br-tl-md-0 br-bl-md-0" onClick={() => this.toggleModal()}><i className="fa fa-search mr-1"></i>Post A Project</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -83,7 +113,86 @@ export default class Home extends Component {
                                 </div>
                             </div>
                         </div>
+                        <div className="header-slider-img">
+                            <div className="container">
+                                <OwlCarousel id="small-categories"
+                                    className="owl-theme"
+                                    loop={true}
+                                    dots={false}
+                                    items={4}
+                                    margin={10}
+                                    nav >
+                                    <div className="item">
+                                        <div className="card mb-0">
+                                            <div className="card-body p-3">
+                                                <div className="cat-item d-flex">
+                                                    <a href="jobs-list.html"></a>
+                                                    <div className="cat-img mr-4 bg-warning-transparent p-3 brround">
+                                                        <img src={require('../assets/images/products/categories/operator.png')} alt="img" />
+                                                    </div>
+                                                    <div className="cat-desc text-left">
+                                                        <h5 className="mb-3 mt-0">Call Center</h5>
+                                                        <small className="badge badge-pill badge-primary mr-2">7,485 Jobs</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="card mb-0">
+                                            <div className="card-body p-3">
+                                                <div className="cat-item d-flex">
+                                                    <a href="jobs-list.html"></a>
+                                                    <div className="cat-img mr-4 bg-success-transparent p-3 brround">
+                                                        <img src={require('../assets/images/products/categories/nurse.png')} alt="img" />
+                                                    </div>
+                                                    <div className="cat-desc text-left">
+                                                        <h5 className="mb-3 mt-0">Nurse</h5>
+                                                        <small className="badge badge-pill badge-success mr-2">7,485 Jobs</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="card mb-0">
+                                            <div className="card-body p-3">
+                                                <div className="cat-item d-flex">
+                                                    <a href="jobs-list.html"></a>
+                                                    <div className="cat-img mr-4 bg-info-transparent p-3 brround">
+                                                        <img src={require('../assets/images/products/categories/charts.png')} alt="img" />
+                                                    </div>
+                                                    <div className="cat-desc text-left">
+                                                        <h5 className="mb-3 mt-0">Sales</h5>
+                                                        <small className="badge badge-pill badge-info mr-2">7,485 Jobs</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="card mb-0">
+                                            <div className="card-body p-3">
+                                                <div className="cat-item d-flex">
+                                                    <a href="jobs-list.html"></a>
+                                                    <div className="cat-img mr-4 bg-danger-transparent p-3 brround">
+                                                        <img src={require('../assets/images/products/categories/web.png')} alt="img" />
+                                                    </div>
+                                                    <div className="cat-desc text-left">
+                                                        <h5 className="mb-3 mt-0">IT Software</h5>
+                                                        <small className="badge badge-pill badge-danger mr-2">7,485 Jobs</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                </OwlCarousel>
+                            </div>
+                        </div>
                     </div>
+
                     <div className="sptb container">
                         <div className="row">
                             <div className="col-lg-5 col-xl-4 col-md-7 d-block mx-auto">
@@ -128,9 +237,10 @@ export default class Home extends Component {
                                             <hr className="my-5" />
                                             <div className="swticher-section">
                                                 <p className="mb-0">I am a :</p>
-                                                <label className="custom-switch">Buyer&nbsp;
+                                                <label className="custom-switch">
+                                                    <span className="custom-switch-description ml-0"> Buyer</span>
                                                     <input type="checkbox" name="custom-switch-checkbox" className="custom-switch-input" />
-                                                    <span className="custom-switch-indicator"></span>
+                                                    <span className="custom-switch-indicator  ml-2"></span>
                                                     <span className="custom-switch-description">Seller</span>
                                                 </label>
                                             </div>
@@ -153,13 +263,134 @@ export default class Home extends Component {
                                 </div>
                             </div>
                             <div className="col-lg-7 col-md-7 col-sm-12 col-12 d-block">
-                                <div className="post-project-video">
-                                    <iframe title="Post Project" src="https://www.youtube.com/embed/QFaFIcGhPoM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3"> </iframe>
+                                <div className="job-category">
+                                    <div class="section-title center-block text-center">
+                                        <h1>Job Categories</h1>
+                                        <p>Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+                                    </div>
                                 </div>
+                                <div className="item-all-cat center-block text-center education-categories">
+                                    <div className="row">
+                                        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                            <div className="item-all-card text-dark text-center">
+                                                <a href="jobs-list.html"></a>
+                                                <div className="iteam-all-icon">
+                                                    <img src={require('../assets/images/products/categories/cashier.png')} className="imag-service" alt="Cashier" />
+                                                </div>
+                                                <div class="item-all-text mt-3">
+                                                    <h5 className="mb-0 text-body">Cashier</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                            <div className="item-all-card text-dark text-center">
+                                                <a href="jobs-list.html"></a>
+                                                <div className="iteam-all-icon">
+                                                    <img src={require('../assets/images/products/categories/makeup.png')} className="imag-service" alt="Cashier" />
+                                                </div>
+                                                <div class="item-all-text mt-3">
+                                                    <h5 className="mb-0 text-body">Beautician</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                            <div className="item-all-card text-dark text-center">
+                                                <a href="jobs-list.html"></a>
+                                                <div className="iteam-all-icon">
+                                                    <img src={require('../assets/images/products/categories/chauffer.png')} className="imag-service" alt="Cashier" />
+                                                </div>
+                                                <div class="item-all-text mt-3">
+                                                    <h5 className="mb-0 text-body">Driver</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                            <div className="item-all-card text-dark text-center">
+                                                <a href="jobs-list.html"></a>
+                                                <div className="iteam-all-icon">
+                                                    <img src={require('../assets/images/products/categories/web.png')} className="imag-service" alt="Cashier" />
+                                                </div>
+                                                <div class="item-all-text mt-3">
+                                                    <h5 className="mb-0 text-body">IT Hardware</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                            <div className="item-all-card text-dark text-center">
+                                                <a href="jobs-list.html"></a>
+                                                <div className="iteam-all-icon">
+                                                    <img src={require('../assets/images/products/categories/operator.png')} className="imag-service" alt="Cashier" />
+                                                </div>
+                                                <div class="item-all-text mt-3">
+                                                    <h5 className="mb-0 text-body">BPO</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                            <div className="item-all-card text-dark text-center">
+                                                <a href="jobs-list.html"></a>
+                                                <div className="iteam-all-icon">
+                                                    <img src={require('../assets/images/products/categories/truck.png')} className="imag-service" alt="Cashier" />
+                                                </div>
+                                                <div class="item-all-text mt-3">
+                                                    <h5 className="mb-0 text-body">Delivery Jobs</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                            <div className="item-all-card text-dark text-center">
+                                                <a href="jobs-list.html"></a>
+                                                <div className="iteam-all-icon">
+                                                    <img src={require('../assets/images/products/categories/web.png')} className="imag-service" alt="Cashier" />
+                                                </div>
+                                                <div class="item-all-text mt-3">
+                                                    <h5 className="mb-0 text-body">IT Software</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                            <div className="item-all-card text-dark text-center">
+                                                <a href="jobs-list.html"></a>
+                                                <div className="iteam-all-icon">
+                                                    <img src={require('../assets/images/products/categories/presentation.png')} className="imag-service" alt="Cashier" />
+                                                </div>
+                                                <div class="item-all-text mt-3">
+                                                    <h5 className="mb-0 text-body">Teacher/Leacturer</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                            <div className="item-all-card text-dark text-center">
+                                                <a href="jobs-list.html"></a>
+                                                <div className="iteam-all-icon">
+                                                    <img src={require('../assets/images/products/categories/hand.png')} className="imag-service" alt="Cashier" />
+                                                </div>
+                                                <div class="item-all-text mt-3">
+                                                    <h5 className="mb-0 text-body">Life Insurance</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                                            <div className="item-all-card text-dark text-center">
+                                                <a href="jobs-list.html"></a>
+                                                <div className="iteam-all-icon">
+                                                    <img src={require('../assets/images/products/categories/charts.png')} className="imag-service" alt="Cashier" />
+                                                </div>
+                                                <div class="item-all-text mt-3">
+                                                    <h5 className="mb-0 text-body">Sales</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* <div className="post-project-video">
+                                    <iframe title="Post Project" src="https://www.youtube.com/embed/QFaFIcGhPoM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3"> </iframe>
+                                </div> */}
                             </div>
                         </div>
                     </div>
                 </div>
+                <PostProject className="btn btn-lg btn-block btn-success br-tl-md-0 br-bl-md-0" isOpenModal={this.state.showModal} onClose={() => this.toggleModal()} />
             </div>
         )
     };

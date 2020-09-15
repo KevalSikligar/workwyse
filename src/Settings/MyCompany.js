@@ -27,7 +27,7 @@ export default function MyCompany() {
                                                 <div className="profile-pic">
                                                     <div className="profile-pic-img">
                                                         <span className="edit-profile-img dots" data-toggle="tooltip" data-placement="top" title="Edit picture">
-                                                            <i className="typcn typcn-edit" aria-hidden="true"></i>
+                                                        <i className="fa fa-pencil" aria-hidden="true"></i>
                                                         </span>
                                                         <img src={require('../assets/images/users/male/25.jpg')} className="brround" alt="user" />
                                                     </div>

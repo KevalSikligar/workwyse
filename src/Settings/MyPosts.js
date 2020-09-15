@@ -28,7 +28,7 @@ export default function MyPosts() {
                                         {/* <div className="header-left">
                                             <h3 className="card-title">My Posts</h3>
                                         </div> */}
-                                        <div className="header-right">
+                                        <div className="header-right ml-auto">
                                             <div className="dropdown-search d-md-flex">
                                                 <div className="form-group mb-0 position-relative mr-4">
                                                     <input type="text" className="form-control position-relative search-buyer" placeholder="Search Posts" />
@@ -73,7 +73,7 @@ export default function MyPosts() {
                                                             <li><a href="#tab3" data-toggle="tab">Housing(4)</a></li>
                                                         </div>
                                                     </OwlCarousel>
-                                                    <OwlCarousel
+                                                    {/* <OwlCarousel
                                                         className="owl-theme"
                                                         loop={false}
                                                         dots={false}
@@ -89,12 +89,12 @@ export default function MyPosts() {
                                                         <div className="item">
                                                             <li><a href="#tab6" data-toggle="tab">Completed (02)</a></li>
                                                         </div>
-                                                    </OwlCarousel>
+                                                    </OwlCarousel> */}
                                                 </ul>
                                             </div>
                                             <div className="tab-content">
                                                 <div className="tab-pane table-responsive border-top userprof-tab active">
-                                                    <div className="table table-bordered table-hover mb-0 text-nowrap">
+                                                    <div className="table table-bordered table-striped table-hover mb-0 text-nowrap">
                                                         <thead>
                                                             <tr>
                                                                 <th className="w-100">My Posts</th>

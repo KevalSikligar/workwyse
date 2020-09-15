@@ -1,9 +1,16 @@
 import React from 'react'
+import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 
 export default function SellerHome() {
+
+    const pathList = [
+        { to: "/dashboard-seller", title: "Seller Home Page" }
+    ];
+
     return (
         <div>
-            <h1>The UK’s top platform for finding qualified leads</h1>
+            <BreadCrumbs title="Seller Home Page" breadcrumbssegment={pathList} />
+
         </div>
     )
 }

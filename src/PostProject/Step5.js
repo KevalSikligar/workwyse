@@ -23,51 +23,56 @@ export default class Step5 extends React.Component {
                 <div class="title_Section_pop">
                     <h3 class="model-title-set">Post a project</h3>
                 </div>
-                <Radio.Group onChange={this.onChange} value={value}>
-                    <Radio style={radioStyle} value={1}>
-                        <h4> Which channels are you looking to utilise/manage ? </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={2}>
-                        <h4> Facebook </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={3}>
-                        <h4> Instagram </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={4}>
-                        <h4> Google Adwords ( Search and Display ) </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={5}>
-                        <h4> LinkedIn </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={6}>
-                        <h4> Twitter </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={7}>
-                        <h4> YouTube </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={8}>
-                        <h4> Quora </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={9}>
-                        <h4> Pinterest </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={10}>
-                        <h4> Amazon </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={11}>
-                        <h4> Snapchat </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={12}>
-                        <h4> Spotify </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={13}>
-                        <h4> Unsure / Other </h4>
-                    </Radio>
-                    {/* <Radio style={radioStyle} value={6}>
+                <div className="question-list">
+                    <div className="question-item">
+                        <h4>Which channels are you looking to utilise/manage ?   </h4>
+                        <Radio.Group onChange={this.onChange} value={value} className="mt-2">
+                            <Radio style={radioStyle} value={2} className="mb-0">
+                                <h4 className="font-weight-normal">Facebook </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={3} className="mb-0">
+                                <h4 className="font-weight-normal"> Instagram </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={4} className="mb-0">
+                                <h4 className="font-weight-normal"> Google Adwords ( Search and Display )  </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={5} className="mb-0">
+                                <h4 className="font-weight-normal"> LinkedIn </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={6} className="mb-0">
+                                <h4 className="font-weight-normal"> Twitter</h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={7} className="mb-0">
+                                <h4 className="font-weight-normal"> YouTube</h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={8} className="mb-0" >
+                                <h4 className="font-weight-normal"> Quora </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={9} className="mb-0">
+                                <h4 className="font-weight-normal"> Pinterest </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={10} className="mb-0">
+                                <h4 className="font-weight-normal"> Amazon </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={11} className="mb-0">
+                                <h4 className="font-weight-normal"> Snapchat </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={12} className="mb-0">
+                                <h4 className="font-weight-normal"> Spotify </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={13} className="mb-0">
+                                <h4 className="font-weight-normal"> Unsure / Other </h4>
+                            </Radio>
+
+                        </Radio.Group>
+                    </div>
+                </div>
+
+
+                {/* <Radio style={radioStyle} value={6}>
                         More...
                         {value === 6 ? <Input style={{ width: 100, marginLeft: 10 }} /> : null}
                     </Radio> */}
-                </Radio.Group>
             </div>
         );
     }

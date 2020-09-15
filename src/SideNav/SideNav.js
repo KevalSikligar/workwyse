@@ -36,12 +36,12 @@ export default function SideNav() {
 						</NavLink>
                         <NavLink to="/general-setting" activeClassName="active" className="d-flex border-bottom">
                             <span className="icon1 mr-2">
-                                <i className="typcn typcn-edit fs-20"></i>
+                                <i className="typcn typcn-user fs-20"></i>
                             </span> My Profile
 						</NavLink>
                         <NavLink to="/my-company" activeClassName="active" className="d-flex border-bottom">
                             <span className="icon1 mr-2">
-                                <i className="fa fa-building fs-20"></i>
+                                <i className="fa fa-building fs-16"></i>
                             </span> My Company
 						</NavLink>
                         <NavLink to="/service-setting" activeClassName="active" className="d-flex border-bottom">
@@ -51,7 +51,7 @@ export default function SideNav() {
 						</NavLink>
                         <NavLink to="/location-setting" activeClassName="active" className="d-flex border-bottom">
                             <span className="icon1 mr-2">
-                                <i className="typcn typcn-location-arrow fs-20"></i>
+                                <i className="typcn typcn-location fs-20"></i>
                             </span> Location
 						</NavLink>
                         <NavLink to="/notifications" activeClassName="active" className="d-flex  border-bottom">
@@ -61,12 +61,12 @@ export default function SideNav() {
 						</NavLink>
                         <NavLink to="/reviews" activeClassName="active" className=" d-flex  border-bottom">
                             <span className="icon1 mr-2">
-                                <i className="typcn typcn-credit-card fs-20"></i>
+                                <i className="typcn typcn-star-outline fs-20"></i>
                             </span> Reviews
 						</NavLink>
                         <NavLink to="/billings" activeClassName="active" className="d-flex  border-bottom">
                             <span className="icon1 mr-2">
-                                <i className="typcn typcn-shopping-cart fs-20"></i>
+                                <i className="typcn typcn-credit-card fs-20"></i>
                             </span> Billings
 						</NavLink>
                     </div>

@@ -58,7 +58,7 @@ export default class Pricing extends Component {
                             {/* third card */}
                             <div className="col-xl-4 col-md-6 col-sm-12 col-lg-3">
                                 <div className="pricingTable2 green h-100">
-                                    <div className="pricingTable2-header"> <h3>SELLERS</h3> <span>What does cost</span> </div>
+                                    <div className="pricingTable2-header"> <h3>SELLERS</h3> <span>Premium</span> </div>
                                     <div className="pricing-plans">
                                         <span className="price-value1"><span>£5.00</span></span>
                                         <span className="month">/premium lead</span>

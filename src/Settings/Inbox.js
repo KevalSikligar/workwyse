@@ -1,49 +1,102 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React from 'react'
+import React, { Component } from 'react'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import SideNav from '../SideNav/SideNav';
-import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Annotations, AnnotationsDirective, AnnotationDirective } from '@syncfusion/ej2-react-circulargauge';
+// import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Annotations, AnnotationsDirective, AnnotationDirective } from '@syncfusion/ej2-react-circulargauge';
+import ReactApexCharts from 'react-apexcharts'
 
-export default function Inbox() {
+class Inbox extends Component {
 
-    const pathList = [
-        { to: "/inbox", title: "Inbox" }
-    ]
+    state = {
+        series: [67],
+        options: {
+            chart: {
+                height: 100,
+                type: 'radialBar',
+                offsetY: -10
+            },
+            plotOptions: {
+                radialBar: {
+                    startAngle: -150,
+                    endAngle: 150,
+                    dataLabels: {
+                        name: {
+                            fontSize: '20px',
+                            color: 'white',
+                            offsetY: 0
+                        },
+                        value: {
+                            offsetY: -10,
+                            fontSize: '16px',
+                            color: 'white',
+                            formatter: function (val) {
+                                return val + "%";
+                            }
+                        }
+                    }
+                }
+            },
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'dark',
+                    shadeIntensity: 0.15,
+                    inverseColors: false,
+                    opacityFrom: 1,
+                    opacityTo: 1,
+                    stops: [0, 50, 65, 91]
+                },
+            },
+            stroke: {
+                dashArray: 4
+            },
+            labels: [""]
+        },
+    };
 
-    return (
-        <div>
-            <BreadCrumbs title="Inbox" breadcrumbssegment={pathList} />
-            <div className="container">
-                <div className="row">
-                    <div className="col-xl-3 col-lg-12 col-md-12">
-                        <SideNav />
-                    </div>
-                    <div className="col-xl-9 col-lg-12 col-md-12 sptb">
-                        <div className="custom-card">
-                            <div className="card">
-                                <div className="card-header">
-                                    <div className="filter-section">
-                                        <div className="header-left">
-                                            <h3 className="card-title">Inbox</h3>
-                                        </div>
-                                        <div className="header-right">
-                                            <div className="dropdown-search d-md-flex">
-                                                <div className="filter-dropodwn">
-                                                    <select className="form-control">
-                                                        <option>Web Designing</option>
-                                                        <option>Digital Marketing</option>
-                                                        <option>Facebook Marketing</option>
-                                                    </select>
+
+    render() {
+
+        const pathList = [
+            { to: "/inbox", title: "Inbox" }
+        ]
+
+        return (
+            <div>
+                <BreadCrumbs title="Inbox" breadcrumbssegment={pathList} />
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xl-3 col-lg-12 col-md-12">
+                            <SideNav />
+                        </div>
+                        <div className="col-xl-9 col-lg-12 col-md-12 sptb">
+                            <div className="custom-card">
+                                <div className="card">
+                                    <div className="card-header">
+                                        <div className="filter-section">
+                                            <div className="header-left">
+                                                <h3 className="card-title">Inbox</h3>
+                                            </div>
+                                            <div className="header-right">
+                                                <div className="dropdown-search d-md-flex">
+                                                    <div className="filter-dropodwn">
+                                                        <select className="form-control">
+                                                            <option>Web Designing</option>
+                                                            <option>Digital Marketing</option>
+                                                            <option>Facebook Marketing</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="card-body">
-                                    <div className="card-header card-gauge-section col-12 col-md-12 bg-background3 border-radius-4 mb-md-5 mb-sm-3 p-6 text-white">
-                                        <h3 className="card-title text-capitalize z-index-10">Web Designing </h3>
-                                        <div className="gauge-content">
-                                            <CircularGaugeComponent style={{
+                                    <div className="card-body">
+                                        <div className="card-header card-gauge-section col-12 col-md-12 bg-background3 border-radius-4 p-3 text-white">
+                                            <h4 className="text-capitalize z-index-10 text-white z-index-10">Web Designing </h4>
+                                            <div className="gauge-content">
+                                                <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={100} width={120} />
+                                            </div>
+                                            {/* <CircularGaugeComponent style={{
                                                 width: 150,
                                                 height: 150
                                             }}>
@@ -88,7 +141,7 @@ export default function Inbox() {
                                                         </AnnotationsDirective>
                                                     </AxisDirective>
                                                 </AxesDirective>
-                                            </CircularGaugeComponent>
+                                            </CircularGaugeComponent> */}
                                         </div>
                                     </div>
                                     <div className="middle-section">
@@ -153,6 +206,8 @@ export default function Inbox() {
                     </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
+
+export default Inbox

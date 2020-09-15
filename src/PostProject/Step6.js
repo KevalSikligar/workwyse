@@ -24,27 +24,25 @@ export default class Step6 extends React.Component {
                 <div class="title_Section_pop">
                     <h3 class="model-title-set">Post a project</h3>
                 </div>
-                <Radio.Group onChange={this.onChange} value={value}>
-                    <Radio style={radioStyle} value={1}>
-                        <h4> When would you like the website to go live/be updated ? </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={2}>
-                        <h4> ASAP </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={3}>
-                        <h4> Within a few weeks </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={4}>
-                        <h4> Within a few months </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={5}>
-                        <h4> i'd need to discuss this with the agency </h4>
-                    </Radio>
-                    {/* <Radio style={radioStyle} value={6}>
-                        More...
-                        {value === 6 ? <Input style={{ width: 100, marginLeft: 10 }} /> : null}
-                    </Radio> */}
-                </Radio.Group>
+                <div className="question-list">
+                    <div className="question-item">
+                        <h4>When would you like the website to go live/be updated ? </h4>
+                        <Radio.Group onChange={this.onChange} value={value} className="mt-2">
+                            <Radio style={radioStyle} value={2} className="mb-0">
+                                <h4 className="font-weight-normal">ASAP </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={4} className="mb-0">
+                                <h4 className="font-weight-normal">Within a few weeks</h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={5} className="mb-0">
+                                <h4 className="font-weight-normal">Within a few months</h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={6} className="mb-0">
+                                <h4 className="font-weight-normal">I'd need to discuss with the agency</h4>
+                            </Radio>
+                        </Radio.Group>
+                    </div>
+                </div>                
             </div>
         );
     }

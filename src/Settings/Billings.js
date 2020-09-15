@@ -140,7 +140,7 @@ export default function Billings() {
                                     <h3 className="card-title">Previous Invoices</h3>
                                 </div>
                                 <div className="card-body">
-                                    <table className="services-table table-bordered invoice-table text-center">
+                                    <table className="services-table table-bordered invoice-table text-center table-striped">
                                         <thead>
                                             <tr>
                                                 <th></th>
@@ -151,18 +151,18 @@ export default function Billings() {
                                         <tbody>
                                             <tr>
                                                 <th>Marketing.inc WorkWyse Inc 21/06/2020</th>
-                                                <td><button className="view-btns" type="button"><i className="typcn typcn-eye-outline"></i></button></td>
-                                                <td><button className="view-btns" type="button"><i className="typcn typcn-download"></i></button></td>
+                                                <td><button className="view-btns" type="button"><i className="fa fa-eye"></i></button></td>
+                                                <td><button className="view-btns" type="button"><i className="fa fa-download"></i></button></td>
                                             </tr>
                                             <tr>
                                                 <th>Marketing.inc WorkWyse Inc 21/06/2020</th>
-                                                <td><button className="view-btns" type="button"><i className="typcn typcn-eye-outline"></i></button></td>
-                                                <td><button className="view-btns" type="button"><i className="typcn typcn-download"></i></button></td>
+                                                <td><button className="view-btns" type="button"><i className="fa fa-eye"></i></button></td>
+                                                <td><button className="view-btns" type="button"><i className="fa fa-download"></i></button></td>
                                             </tr>
                                             <tr>
                                                 <th>Marketing.inc WorkWyse Inc 21/06/2020</th>
-                                                <td><button className="view-btns" type="button"><i className="typcn typcn-eye-outline"></i></button></td>
-                                                <td><button className="view-btns" type="button"><i className="typcn typcn-download"></i></button></td>
+                                                <td><button className="view-btns" type="button"><i className="fa fa-eye"></i></button></td>
+                                                <td><button className="view-btns" type="button"><i className="fa fa-download"></i></button></td>
                                             </tr>
                                         </tbody>
                                     </table>

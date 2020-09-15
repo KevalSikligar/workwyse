@@ -26,11 +26,9 @@ class Reviews extends Component {
                                         <h3 className="card-title">Marketing.Inc</h3>
                                     </div> */}
                                     <div className="card-body">
-                                        <div className="row">
-                                            <div className="col-12 col-md-12 bg-background3 border-radius-4 mb-md-5 mb-sm-3">
-                                                <div className="company-profile-head">
-                                                    <div className="company-img">
-                                                        <div className="gauge-content">
+                                    <div className="card-header card-gauge-section col-12 col-md-12 bg-background3 border-radius-4 mb-md-5 mb-sm-3 p-4 text-white">
+                                        <h3 className="text-white company-name fs-18 mb-1 font-weight-semibold z-index-10">WorkWyse Index Rating </h3>
+                                        <div className="gauge-content">
                                                             <CircularGaugeComponent style={{
                                                                 width: 150,
                                                                 height: 150
@@ -78,13 +76,9 @@ class Reviews extends Component {
                                                                 </AxesDirective>
                                                             </CircularGaugeComponent>
                                                         </div>
-                                                    </div>
-                                                    <div className="company-content">
-                                                        <div className="company-name fs-18 mb-1 font-weight-semibold">WorkWyse Index Rating</div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
+
+                                       
                                         <div className="row">
                                             <div className="col-md-6 col-sm-12">
                                                 <div className="review-item">
@@ -122,7 +116,7 @@ class Reviews extends Component {
                                                         <img src={require('../assets/images/facebook-logo.png')} className="logo-image img-fluid" alt="img" />
                                                     </div>
                                                     <div className="review-content">
-                                                        <button className="btn review-btn-colorChange"> Connect Facebook Business</button>
+                                                        <button className="btn review-btn-colorChange bg-warning"> Connect Facebook Business</button>
                                                     </div>
                                                 </div>
                                             </div>

@@ -124,7 +124,7 @@ export default class Services extends React.Component {
                                                         <th></th>
                                                         <th>One Off</th>
                                                         <th>Monthly</th>
-                                                        <th>Hourly</th>
+                                                        <th width="30%">Hourly</th>
                                                     </tr>
                                                 </thead>
                                                 {this.state.items?.map((data, index) => (
@@ -159,9 +159,9 @@ export default class Services extends React.Component {
                                                                     </td>
                                                                     <td>
                                                                         <div className="hourly-rates">
-                                                                            <span>$25</span>
-                                                                            <b>-</b>
-                                                                            <span>$25</span>
+                                                                            <input type="text" className="form-control  w-50" placeholder="$5"/>
+                                                                            <b className="px-3 fs-16">-</b>
+                                                                            <input type="text" className="form-control w-50" placeholder="$25"/>
                                                                         </div>
                                                                     </td>
                                                                 </tr>

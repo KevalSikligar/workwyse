@@ -21,9 +21,20 @@ export default function Header() {
 
     const toggleModal = () => {
         setshowModal(!showModal);
-        // if (showModal === true) {
-        //     swal("Are you sure you want to Quit the process?").then(setshowModal(!showModal))
-        // }
+        if (showModal === true) {
+            swal("Are you sure you want to Quit the process??", {
+                buttons: { cancel: "Continue", catch: "OK" },
+            }).then((value) => {
+                switch (value) {
+                    case "catch":
+                        setshowModal(!showModal);
+                        break;
+                    default:
+                        setshowModal(showModal);
+                    // swal("continue to model!");
+                }
+            });
+        }
     }
 
     const closeDropdwn = (e) => {
@@ -109,6 +120,7 @@ export default function Header() {
                         <div className="horizontal-overlapbg"></div>
                         <ul className="horizontalMenu-list">
                             <li><NavLink to="/home" activeClassName="active">Home</NavLink></li>
+                            <li><NavLink to="/dashboard-buyer" activeClassName="active">Switch to Buyer/Seller</NavLink></li>
                             <li className="dropdown">
                                 <a href="!#" data-toggle="dropdown">About</a>
                                 <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">

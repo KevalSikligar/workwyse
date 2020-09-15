@@ -26,42 +26,44 @@ export default class Step7 extends React.Component {
                 <div class="title_Section_pop">
                     <h3 class="model-title-set">Post a project</h3>
                 </div>
-                <Radio.Group onChange={this.onChange} value={value}>
-                    <Radio style={radioStyle} value={1}>
-                        <h4> What goals/targets do you have ? </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={2}>
-                        <h4> Increase Brand Awareness </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={3}>
-                        <h4> Sell more of my product/service </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={4}>
-                        <h4> Provide customer support </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={5}>
-                        <h4> Improve search position / ranking </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={6}>
-                        <h4> Gain followers on social media </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={7}>
-                        <h4> Advertise on Social media </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={8}>
-                        <h4> Technical SEO </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={9}>
-                        <h4> Website Copywriting and Content </h4>
-                    </Radio>
-                    <Radio style={radioStyle} value={10}>
-                        <h4> Unsure / Other </h4>
-                    </Radio>
-                    {/* <Radio style={radioStyle} value={6}>
-                        More...
-                        {value === 6 ? <Input style={{ width: 100, marginLeft: 10 }} /> : null}
-                    </Radio> */}
-                </Radio.Group>
+                <div className="question-list">
+                    <div className="question-item">
+                        <h4>What goals/targets do you have ?</h4>
+                        <Radio.Group onChange={this.onChange} value={value} className="mt-2">
+                            <Radio style={radioStyle} value={2} className="mb-0">
+                                <h4 className="font-weight-normal">Increase Brand Awareness </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={3} className="mb-0">
+                                <h4 className="font-weight-normal"> Sell more of my product/service </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={4} className="mb-0">
+                                <h4 className="font-weight-normal"> Google Adwords ( Search and Display )  </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={5} className="mb-0">
+                                <h4 className="font-weight-normal"> Provide customer support </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={6} className="mb-0">
+                                <h4 className="font-weight-normal"> Improve search position / ranking</h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={7} className="mb-0">
+                                <h4 className="font-weight-normal"> Gain followers on social media </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={8} className="mb-0">
+                                <h4 className="font-weight-normal"> Advertise on Social media </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={9} className="mb-0">
+                                <h4 className="font-weight-normal"> Technical SEO </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={10} className="mb-0">
+                                <h4 className="font-weight-normal"> Website Copywriting and Content </h4>
+                            </Radio>
+                            <Radio style={radioStyle} value={11} className="mb-0">
+                                <h4 className="font-weight-normal"> Unsure / Other </h4>
+                            </Radio>                            
+
+                        </Radio.Group>
+                    </div>
+                </div>               
             </div>
         );
     }
