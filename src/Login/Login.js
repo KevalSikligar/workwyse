@@ -27,11 +27,11 @@ function Login(props) {
                                                 <hr className="divider" />
                                                 <form id="login" className="card-body" tabIndex="500">
                                                     <div className="mail">
-                                                        <input type="email" name="mail" />
+                                                        <input type="email" name="mail" className="form-control"/>
                                                         <label>Mail or Username</label>
                                                     </div>
                                                     <div className="passwd">
-                                                        <input type="password" name="password" />
+                                                        <input type="password" name="password" className="form-control"/>
                                                         <label>Password</label>
                                                     </div>
                                                     <p className="mb-2"><NavLink to="/forgot-password" onClick={() => props.history.push("/forgot-password")} data-dismiss="modal">Forgot Password</NavLink></p>

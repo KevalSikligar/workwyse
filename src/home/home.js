@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 // import { ReCaptcha } from 'react-recaptcha-google'
+import _ from 'lodash';
 
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -8,8 +9,62 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { LinkedIn } from 'react-linkedin-login-oauth2';
 import PostProject from '../PostProject/PostProject';
 import swal from 'sweetalert';
+import Autosuggest from 'react-autosuggest';
+import axios from 'axios';
 
 export default class Home extends Component {
+
+   
+    state = {
+        code: '',
+        errorMessage: '',
+        value: '',
+        suggestions: []
+    };
+
+    componentDidMount = async () => {
+        const resp = await axios.get(`http://api.postcodes.io/postcodes/${this.state.value}/autocomplete`)
+        this.setState({ suggestions: resp.data.result });
+    }
+
+    getSuggestions = value => {
+        const inputValue = value.trim().toLowerCase();
+        const inputLength = inputValue.length;
+        return inputLength === 0 ? [] : this.state.suggestions.filter(city =>
+            city.toLowerCase().slice(0, inputLength) === inputValue
+        );
+    };
+
+
+    getSuggestionValue = suggestion => suggestion;
+
+    renderSuggestion = suggestion => (
+        <div>
+            {suggestion}
+        </div>
+    );
+
+    onChange = (event, { newValue }) => {
+        this.setState({
+            value: newValue
+        }, async () => {
+            const resp = await axios.get(`http://api.postcodes.io/postcodes/${this.state.value}/autocomplete`)
+            this.setState({ suggestions: resp.data.result });
+        });
+    };
+
+    onSuggestionsFetchRequested = ({ value }) => {
+        console.log('1Working')
+        this.setState({
+            suggestions: this.getSuggestions(this.state.value)
+        });
+    };
+
+    onSuggestionsClearRequested = () => {
+        this.setState({
+            suggestions: []
+        });
+    };
 
     constructor(props, context) {
         super(props, context);
@@ -18,10 +73,6 @@ export default class Home extends Component {
     }
 
 
-    state = {
-        code: '',
-        errorMessage: '',
-    };
 
     toggleModal = () => {
         this.setState({
@@ -83,6 +134,17 @@ export default class Home extends Component {
     }
 
     render() {
+
+
+        
+        const { value, suggestions } = this.state;
+        const inputProps = {
+            className: 'form-control',
+            placeholder: 'Enter Post Code',
+            value,
+            onChange: this.onChange
+        };
+
         return (
             <div>
                 <div className="homepage-bg">
@@ -101,7 +163,15 @@ export default class Home extends Component {
                                                     <input type="text" className="form-control input-lg br-tr-md-0 br-br-md-0" id="text4" placeholder="What service are you looking for?" />
                                                 </div>
                                                 <div className="form-group  col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-0 bg-white">
-                                                    <input type="text" className="form-control input-lg br-md-0" id="text5" placeholder="PostCode/City" />
+                                                    {/* <input type="text" className="form-control input-lg br-md-0" id="text5" placeholder="PostCode/City" /> */}
+                                                    <Autosuggest
+                                                        suggestions={suggestions}
+                                                        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                                                        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                                                        getSuggestionValue={this.getSuggestionValue}
+                                                        renderSuggestion={this.renderSuggestion}
+                                                        inputProps={inputProps}
+                                                    />
                                                     <span><img src={require('../assets/images/svg/gps.svg')} className="location-gps" alt="img" /></span>
                                                 </div>
                                                 <div className="col-xl-3 col-lg-3 col-md-4 mb-0">
@@ -186,7 +256,7 @@ export default class Home extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    
+
 
                                 </OwlCarousel>
                             </div>
@@ -213,11 +283,11 @@ export default class Home extends Component {
                                         <hr className="divider" />
                                         <form id="login" className="card-body" tabindex="500">
                                             <div className="mail">
-                                                <input type="email" name="mail" />
+                                                <input type="email" name="mail" className="form-control"/>
                                                 <label>Mail or Username</label>
                                             </div>
                                             <div className="passwd">
-                                                <input type="password" name="password" />
+                                                <input type="password" name="password"  className="form-control"/>
                                                 <label>Password</label>
                                             </div>
                                             <div className="submit">

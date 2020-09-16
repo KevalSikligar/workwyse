@@ -168,7 +168,8 @@ body {
     color: #343a40;
     text-align: left;
     background-color: #f0f3fa;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Jura', sans-serif !important;
+    font-weight: 500 !important;
 }
 
 .h1,
@@ -183,7 +184,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Jura', sans-serif !important;
 }
 
 [tabindex="-1"]:focus {
@@ -13572,6 +13573,8 @@ a.chip:hover {
     .search-background {
         background: 0 0;
         border-radius: 0;
+        overflow: visible;
+        position: relative;
     }
     .search-background .form-group {
         margin-bottom: 10px !important;
@@ -39010,6 +39013,7 @@ select.form-control {
 .breadcrumb-search {
     max-width: 80%;
     margin: auto;
+    overflow: visible;
 }
 
 .services-table {
@@ -39445,7 +39449,7 @@ button.swal-button.swal-button--confirm {
 .card-body .StripeCheckout span {
     background: #7469eb !important;
     border: 1px solid #7469eb !important;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Jura', sans-serif !important;
     background-image: none !important;
     box-shadow: none !important;
     font-weight: 500 !important;
@@ -39484,7 +39488,7 @@ button.swal-button.swal-button--confirm {
     padding: 6px 12px;
     background-color: #1650e2;
     transition: .3s all;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Jura', sans-serif !important;
 }
 
 .btn-prev {
@@ -39494,7 +39498,7 @@ button.swal-button.swal-button--confirm {
     transition: .3s all;
     border-radius: 4px;
     padding: 6px 12px;
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Jura', sans-serif !important;
 }
 
 .btn-next,
@@ -39607,4 +39611,17 @@ button.swal-button.swal-button--confirm {
 .btn-default:hover {
     background: #1650e2;
     color: #fff;
+}
+
+
+/* Autosuggest CSS  */
+
+.react-autosuggest__suggestions-container.react-autosuggest__suggestions-container--open ul li {
+    color: #000;
+}
+
+.react-autosuggest__container>.form-control {
+    height: 100%;
+    min-height: 46px;
+    color: #000;
 }
