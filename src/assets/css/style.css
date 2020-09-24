@@ -37804,13 +37804,14 @@ display: flex;
     color: #fff;
 }
 
+<<<<<<< HEAD=======>>>>>>>5edf77eb043106f6b7070e439c2894110a7f4554
 /* Autosuggest CSS  */
 
 .react-autosuggest__suggestions-container.react-autosuggest__suggestions-container--open ul li {
     color: #000;
 }
 
-.react-autosuggest__container .react-autosuggest__input {
+<<<<<<< HEAD .react-autosuggest__container .react-autosuggest__input {
     height: 100%;
     min-height: 46px;
     color: #000;
@@ -38383,4 +38384,9 @@ display: flex;
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
-}
+    =======.react-autosuggest__container>.form-control {
+        height: 100%;
+        min-height: 46px;
+        color: #000;
+        >>>>>>>5edf77eb043106f6b7070e439c2894110a7f4554
+    }
