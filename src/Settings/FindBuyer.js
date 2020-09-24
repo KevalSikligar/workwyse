@@ -1,7 +1,7 @@
 import React from 'react'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import SideNav from '../SideNav/SideNav';
-import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Annotations, AnnotationsDirective, AnnotationDirective } from '@syncfusion/ej2-react-circulargauge';
+// import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Annotations, AnnotationsDirective, AnnotationDirective } from '@syncfusion/ej2-react-circulargauge';
 import ReactApexCharts from 'react-apexcharts'
 
 
@@ -28,8 +28,8 @@ export default class FindBuyer extends React.Component {
                         value: {
                             offsetY: -10,
                             fontSize: '20px',
-                            fontWeight:'bold',
-                            color: 'black',
+                            fontWeight: 'bold',
+                            color: '#6759ea',
                             formatter: function (val) {
                                 return val + "%";
                             }
@@ -55,7 +55,7 @@ export default class FindBuyer extends React.Component {
         },
     };
 
-   
+
     render() {
         const pathList = [
             { to: "/find-buyer", title: "Find Buyer" }
@@ -128,7 +128,7 @@ export default class FindBuyer extends React.Component {
                                                             </div>
                                                             <div className="buyer-desc-right-section ml-auto">
                                                                 <div className="gauge-meter">
-                                                                <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={350} width={250} />
+                                                                    <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={350} width={250} />
 
                                                                     {/* <CircularGaugeComponent style={{
                                                                         width: 200,
@@ -220,7 +220,7 @@ export default class FindBuyer extends React.Component {
                                                             </div>
                                                             <div className="buyer-desc-right-section ml-auto">
                                                                 <div className="gauge-meter">
-                                                                <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={350} width={250} />
+                                                                    <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={350} width={250} />
                                                                 </div>
                                                                 <div className="buyerbutton-list mt-5">
                                                                     <button className="service-btn mw-100  px-5 ready-hire-btn look-quote-btn d-block">

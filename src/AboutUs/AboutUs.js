@@ -1,13 +1,13 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 
-function AboutUs(props) {
+function AboutUs() {
 
     const pathList = [
         { to: "/about-us", title: "About Us" }
-    ]
+    ];
+
     return (
         <>
             <BreadCrumbs title="About Us" breadcrumbssegment={pathList} />
@@ -87,7 +87,7 @@ function AboutUs(props) {
                             <div className="row">
                                 <div className="col-lg-6 col-md-6 col-sm-12 col-12 bg-white p-0">
                                     <div className="about-map-section">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238133.1523816246!2d72.68221020433099!3d21.15914250210564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1597424132065!5m2!1sen!2sin"
+                                        <iframe title="About Us Iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238133.1523816246!2d72.68221020433099!3d21.15914250210564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1597424132065!5m2!1sen!2sin"
                                             frameBorder="0" allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
                                     </div>
                                 </div>

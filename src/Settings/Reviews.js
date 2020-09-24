@@ -2,13 +2,62 @@ import React, { Component } from 'react'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import SideNav from '../SideNav/SideNav';
 import Button from 'semantic-ui-react/dist/commonjs/elements/Button/Button';
-import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Annotations, AnnotationsDirective, AnnotationDirective } from '@syncfusion/ej2-react-circulargauge';
+// import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Annotations, AnnotationsDirective, AnnotationDirective } from '@syncfusion/ej2-react-circulargauge';
+import ReactApexCharts from 'react-apexcharts'
 
 
 const pathList = [
     { to: "/reviews", title: "Reviews" }
 ]
 class Reviews extends Component {
+
+    state = {
+        series: [67],
+        options: {
+            chart: {
+                height: 100,
+                type: 'radialBar',
+                offsetY: -10
+            },
+            plotOptions: {
+                radialBar: {
+                    startAngle: -150,
+                    endAngle: 150,
+                    dataLabels: {
+                        name: {
+                            fontSize: '20px',
+                            color: 'white',
+                            offsetY: 0
+                        },
+                        value: {
+                            offsetY: -10,
+                            fontSize: '16px',
+                            color: 'white',
+                            formatter: function (val) {
+                                return val + "%";
+                            }
+                        }
+                    }
+                }
+            },
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'dark',
+                    shadeIntensity: 0.15,
+                    inverseColors: false,
+                    opacityFrom: 1,
+                    opacityTo: 1,
+                    stops: [0, 50, 65, 91]
+                },
+            },
+            stroke: {
+                dashArray: 4
+            },
+            labels: [""]
+        },
+    };
+
 
     render() {
         return (
@@ -26,59 +75,13 @@ class Reviews extends Component {
                                         <h3 className="card-title">Marketing.Inc</h3>
                                     </div> */}
                                     <div className="card-body">
-                                    <div className="card-header card-gauge-section col-12 col-md-12 bg-background3 border-radius-4 mb-md-5 mb-sm-3 p-4 text-white">
-                                        <h3 className="text-white company-name fs-18 mb-1 font-weight-semibold z-index-10">WorkWyse Index Rating </h3>
-                                        <div className="gauge-content">
-                                                            <CircularGaugeComponent style={{
-                                                                width: 150,
-                                                                height: 150
-                                                            }}>
-                                                                <Inject services={[Annotations]} />
-                                                                <AxesDirective>
-                                                                    <AxisDirective lineStyle={{
-                                                                        width: 2,
-                                                                        color: '#fff'
-                                                                    }} background='transparent'
-                                                                        majorTicks={{
-                                                                            interval: 25,
-                                                                            color: '#fff',
-                                                                            height: 3,
-                                                                            width: 3
-                                                                        }} minorTicks={{
-                                                                            interval: 5,
-                                                                            color: '#fff',
-                                                                            height: 5,
-                                                                            width: 2
-                                                                        }}
-                                                                        labelStyle={{
-                                                                            font: {
-                                                                                color: '#fff',
-                                                                                size: 15,
-                                                                                fontWeight: 'normal'
-                                                                            }
-                                                                        }}>
-                                                                        <PointersDirective>
-                                                                            <PointerDirective value={45} pointerWidth={2} needleStartWidth={3} needleEndWidth={3} radius='80%' color='#fff' cap={{
-                                                                                radius: 4,
-                                                                                color: '#fff',
-                                                                                border: {
-                                                                                    color: '#fff',
-                                                                                    width: 10
-                                                                                },
-                                                                            }} needleTail={{
-                                                                                length: '0%'
-                                                                            }}></PointerDirective>
-                                                                        </PointersDirective>
-                                                                        <AnnotationsDirective>
-                                                                            {/* <AnnotationDirective content='<div><div><span>Pointer Value : 45</span></div></div>' /> */}
-                                                                        </AnnotationsDirective>
-                                                                    </AxisDirective>
-                                                                </AxesDirective>
-                                                            </CircularGaugeComponent>
-                                                        </div>
-                                        </div>
+                                        <div className="card-header card-gauge-section col-12 col-md-12 bg-background3 border-radius-4 mb-md-5 mb-sm-3 p-4 text-white">
+                                            <h3 className="text-white company-name fs-18 mb-1 font-weight-semibold z-index-10">WorkWyse Index Rating </h3>
+                                            <div className="gauge-content">
+                                                <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={100} width={120} />
 
-                                       
+                                            </div>
+                                        </div>
                                         <div className="row">
                                             <div className="col-md-6 col-sm-12">
                                                 <div className="review-item">

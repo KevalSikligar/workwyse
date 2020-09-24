@@ -6,12 +6,17 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Router } from 'react-router-dom';
 import history from './history';
+import store from './redux/store/store';
+import { Provider } from 'react-redux';
+
 
 ReactDOM.render(
   <React.Fragment>
-    <Router history={history}>
-      <App />
-    </Router>
+    <Provider store={store}>
+      <Router history={history}>
+        <App />
+      </Router>
+    </Provider>
   </React.Fragment>,
   document.getElementById('root')
 );

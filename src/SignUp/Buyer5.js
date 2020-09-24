@@ -7,10 +7,9 @@ import swal from 'sweetalert';
 class Buyer5 extends Component {
 
     saveAndContinue = (e) => {
-        swal("You have successfully registered. Clicking on OK will redirect you to Home Page.")
-            .then(() => {
-                this.props.history.push("/home");
-            })
+        swal("You have successfully registered. Clicking on OK will redirect you to Home Page.").then(() => {
+            this.props.history.push("/home");
+        });
     }
 
     back = (e) => {

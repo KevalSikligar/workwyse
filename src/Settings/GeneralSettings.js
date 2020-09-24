@@ -2,7 +2,8 @@ import React from 'react'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import Button from 'semantic-ui-react/dist/commonjs/elements/Button/Button';
 import SideNav from '../SideNav/SideNav';
-import { LinkedIn } from 'react-linkedin-login-oauth2';
+import SignInLinkedIn from '../SignUp/SignInLinkedIn';
+// import { LinkedIn } from 'react-linkedin-login-oauth2';
 
 export default function GeneralSettings() {
 
@@ -106,14 +107,8 @@ export default function GeneralSettings() {
                             <div className="card mb-0">
                                 <div className="card-header d-flex justify-content-between">
                                     <h3 className="card-title">Account Settings</h3>
-                                    <div>
-                                        {/* Connect with linkedin */}
-                                        <LinkedIn
-                                            clientId="81lx5we2omq9xh"
-                                            onFailure={() => this.handleFailure()}
-                                            onSuccess={() => this.handleSuccess()}
-                                            redirectUri="http://localhost:3000/linkedin">
-                                        </LinkedIn>
+                                    <div className="linkdin-login-width">
+                                        <SignInLinkedIn />
                                     </div>
                                 </div>
                                 <div className="card-body">

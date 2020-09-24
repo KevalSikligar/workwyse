@@ -14,19 +14,20 @@ class LocationSettings extends Component {
         suggestions: []
     }
 
-    componentDidMount = async () => {
-        const resp = await axios.get(`http://api.postcodes.io/postcodes/${this.state.value}/autocomplete`)
-        this.setState({ suggestions: resp.data.result });
-    }
+    // componentDidMount = async () => {
+    //     const resp = await axios.get(`http://api.postcodes.io/postcodes/${this.state.value}/autocomplete`)
+    //     this.setState({ suggestions: resp.data.result });
+    // }
 
     getSuggestions = value => {
+        console.log('valu => ', value);
+
         const inputValue = value.trim().toLowerCase();
         const inputLength = inputValue.length;
         return inputLength === 0 ? [] : this.state.suggestions.filter(city =>
             city.toLowerCase().slice(0, inputLength) === inputValue
         );
     };
-
 
     getSuggestionValue = suggestion => suggestion;
 
@@ -40,13 +41,18 @@ class LocationSettings extends Component {
         this.setState({
             value: newValue
         }, async () => {
-            const resp = await axios.get(`http://api.postcodes.io/postcodes/${this.state.value}/autocomplete`)
-            this.setState({ suggestions: resp.data.result });
+            try {
+                const resp = await axios.get(`http://api.postcodes.io/postcodes/${this.state.value}/autocomplete`)
+                this.setState({ suggestions: resp.data.result });
+            } catch (err) {
+                this.setState({
+                    suggestions: this.getSuggestions('No Data Found')
+                });
+            }
         });
     };
 
     onSuggestionsFetchRequested = ({ value }) => {
-        console.log('1Working')
         this.setState({
             suggestions: this.getSuggestions(this.state.value)
         });
@@ -57,6 +63,10 @@ class LocationSettings extends Component {
             suggestions: []
         });
     };
+
+    onSuggestionSelected = () => {
+        console.log('Hi')
+    }
 
     getLocation = () => navigator.geolocation.watchPosition((position) => {
         console.log("position : " + JSON.stringify(position));
@@ -120,6 +130,7 @@ class LocationSettings extends Component {
                                                                             getSuggestionValue={this.getSuggestionValue}
                                                                             renderSuggestion={this.renderSuggestion}
                                                                             inputProps={inputProps}
+                                                                            onSuggestionSelected={this.onSuggestionSelected}
                                                                         />
                                                                         <span className="map-icon"><img src={require('../assets/images/svg/gps.svg')} className="location-gps" alt="img" /></span>
                                                                         {/* <button onClick={() => this.getLocation()} />Hello */}

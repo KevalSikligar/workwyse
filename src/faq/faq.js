@@ -3,13 +3,9 @@ import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 
 
 export default class Faq extends Component {
+
     state = {
         index: null
-    }
-
-    onChange = (i) => {
-        let res = this.state.index === i ? null : i
-        this.setState({ index: res })
     }
 
     render() {
@@ -17,6 +13,7 @@ export default class Faq extends Component {
         const pathList = [
             { to: "/faq", title: "FAQ" }
         ];
+
         const data = [
             {
                 mainHeading: "How do Buyers get in touch with Sellers?",
@@ -132,6 +129,11 @@ export default class Faq extends Component {
                 </div>
             </div>
         )
+    }
+
+    onChange = (i) => {
+        let res = this.state.index === i ? null : i
+        this.setState({ index: res })
     }
 }
 

@@ -73,23 +73,6 @@ export default function MyPosts() {
                                                             <li><a href="#tab3" data-toggle="tab">Housing(4)</a></li>
                                                         </div>
                                                     </OwlCarousel>
-                                                    {/* <OwlCarousel
-                                                        className="owl-theme"
-                                                        loop={false}
-                                                        dots={false}
-                                                        items={3}
-                                                        margin={10}
-                                                        nav>
-                                                        <div className="item">
-                                                            <li><a href="#tab4" data-toggle="tab">Active (13)</a></li>
-                                                        </div>
-                                                        <div className="item">
-                                                            <li><a href="#tab5" data-toggle="tab">Paused (05)</a></li>
-                                                        </div>
-                                                        <div className="item">
-                                                            <li><a href="#tab6" data-toggle="tab">Completed (02)</a></li>
-                                                        </div>
-                                                    </OwlCarousel> */}
                                                 </ul>
                                             </div>
                                             <div className="tab-content">

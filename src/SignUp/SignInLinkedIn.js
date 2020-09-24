@@ -1,46 +1,43 @@
 import React, { Component } from 'react';
-
-import { LinkedIn } from 'react-linkedin-login-oauth2';
-
+import LinkedIn from "linkedin-login-for-react";
+import { SignInWithLinkedIn } from '../Services/SocialLogin';
+import swal from 'sweetalert';
+import { connect } from 'react-redux'
+import { addAuthUser, onauthError } from '../redux/action/User/UserAction';
 class SignInLinkedIn extends Component {
-    state = {
-        code: '',
-        errorMessage: '',
+
+    callbackLinkedIn = (error, code, redirectUri, _props) => {
+        if (error) {
+            swal("There was an error while fetching data! Please try again later");
+        } else {
+            redirectUri = "/home";
+            SignInWithLinkedIn(code).then(res => {
+                this.props.dispatch(addAuthUser(res));
+            }).catch(err => {
+                this.props.dispatch(onauthError(err));
+            });
+        }
     };
 
-
-    handleSuccess = (data) => {
-        this.setState({
-            code: data.code,
-            errorMessage: '',
-        });
-    }
-
-    handleFailure = (error) => {
-        this.setState({
-            code: '',
-            errorMessage: error.errorMessage,
-        })
-    }
-
     render() {
-        const { code, errorMessage } = this.state;
         return (
             <div>
                 <LinkedIn
-                    clientId="81lx5we2omq9xh"
-                    onFailure={this.handleFailure}
-                    onSuccess={this.handleSuccess}
-                    redirectUri="http://localhost:3000/linkedin"
-                >
-                    {/* <img src={require('./assets/linkedin.png')} alt="Log in with Linked In" style={{ maxWidth: '180px' }} /> */}
-                </LinkedIn>
-                {!code && <div>No code</div>}
-                {code && <div>Code: {code}</div>}
-                {errorMessage && <div>{errorMessage}</div>}
+                    clientId="78g9t5dnyhf0z3"
+                    callback={(error, code, redirectUri) => this.callbackLinkedIn(error, code, redirectUri, this.props)}
+                    scope={["r_liteprofile", "r_emailaddress"]}
+                    text="Sign In With LinkedIn"
+                    className="linkedin-login"
+                />
             </div>
         );
     }
 }
 
-export default SignInLinkedIn;
+const mapStateToProps = state => {
+    return {
+        isDark: state
+    }
+}
+
+export default connect(mapStateToProps)(SignInLinkedIn)

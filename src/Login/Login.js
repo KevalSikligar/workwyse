@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, withRouter } from "react-router-dom";
+import SignInLinkedIn from "../SignUp/SignInLinkedIn";
 
 function Login(props) {
     return (
@@ -20,8 +21,8 @@ function Login(props) {
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
-                                                    <div className="btn-list d-sm-flex">
-                                                        <a href="https://www.linkedin.com/login" className="btn btn-secondary btn-linkdin-bg mb-sm-0"><i className="fa fa-linkedin fa-1x mr-2"></i> LinkedIn</a>
+                                                    <div className="btn-list">
+                                                        <SignInLinkedIn />
                                                     </div>
                                                 </div>
                                                 <hr className="divider" />
@@ -53,7 +54,7 @@ function Login(props) {
                         </section>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 };

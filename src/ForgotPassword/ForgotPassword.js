@@ -6,9 +6,10 @@ export default function ForgotPassword() {
 
     const pathList = [
         { to: "/forgot-password", title: "Forgot Password" }
-    ]
+    ];
 
     return (
+
         <div>
             <BreadCrumbs title="Forgot Password" breadcrumbssegment={pathList} />
             <section className="sptb">

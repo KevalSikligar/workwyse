@@ -1,6 +1,7 @@
 import React from 'react'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import ReactApexCharts from 'react-apexcharts'
+import { Link } from 'react-router-dom';
 
 export default class BuyerHome extends React.Component {
 
@@ -59,9 +60,9 @@ export default class BuyerHome extends React.Component {
         ];
 
         return (
+
             <div>
                 <BreadCrumbs title="Buyer Home Page" breadcrumbssegment={pathList} />
-
                 <section class="sptb">
                     <div class="container">
                         <div class="row">
@@ -106,7 +107,7 @@ export default class BuyerHome extends React.Component {
                                                             <div class="card overflow-hidden br-0 overflow-hidden">
                                                                 <div class="d-sm-flex card-body p-3">
                                                                     <div class="item-card9 mt-3 mt-md-5 mr-sm-4">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Web Spinners</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Web Spinners</h4></Link>
                                                                         <div className="company-location font-weight-semibold">
                                                                             <span className="location-icon"><i class="typcn typcn-location"></i></span> Leicester, UK
                                                                     </div>
@@ -170,8 +171,8 @@ export default class BuyerHome extends React.Component {
                                                                     </div>
                                                                     <div className="card-footer">
                                                                         <div class="d-sm-flex">
-                                                                            <a class="btn btn-default mr-2" href="!#">Not Interested</a>
-                                                                            <a class="btn btn-next btn-primary" href="!#">Send a Request</a>
+                                                                            <Link class="btn btn-default mr-2" to={"javascript:void(0)"}>Not Interested</Link>
+                                                                            <Link class="btn btn-next btn-primary" to={"javascript:void(0)"}>Send a Request</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -181,13 +182,13 @@ export default class BuyerHome extends React.Component {
                                                             <div class="card overflow-hidden br-0 overflow-hidden">
                                                                 <div class="d-sm-flex card-body p-3">
                                                                     <div class="item-card9 mt-3 mt-md-5 mr-sm-4">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Marketing.inc</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Marketing.inc</h4></Link>
                                                                         <div className="company-location font-weight-semibold">
                                                                             <span className="location-icon"><i class="typcn typcn-location"></i></span> Leicester, UK
-                                                                    </div>
+                                                                        </div>
                                                                         <p className="font-weghr-normal mb-0">
                                                                             A Multi-Service Marketing Agency. We specialise in the FMCG, wholesale and local business sectors.
-                                                                    </p>
+                                                                        </p>
                                                                     </div>
                                                                     <div class="ml-auto align-self-center">
                                                                         <div className="gauge-meter">
@@ -245,8 +246,8 @@ export default class BuyerHome extends React.Component {
                                                                     </div>
                                                                     <div className="card-footer">
                                                                         <div class="d-sm-flex">
-                                                                            <a class="btn btn-default mr-2" href="!#">Not Interested</a>
-                                                                            <a class="btn btn-next btn-primary" href="!#">Send a Request</a>
+                                                                            <Link class="btn btn-default mr-2" to={"javascript:void(0)"}>Not Interested</Link>
+                                                                            <Link class="btn btn-next btn-primary" to={"javascript:void(0)"}>Send a Request</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -256,7 +257,7 @@ export default class BuyerHome extends React.Component {
                                                             <div class="card overflow-hidden br-0 overflow-hidden">
                                                                 <div class="d-sm-flex card-body p-3">
                                                                     <div class="item-card9 mt-3 mt-md-5 mr-sm-4">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Web Spinners</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Web Spinners</h4></Link>
                                                                         <div className="company-location font-weight-semibold">
                                                                             <span className="location-icon"><i class="typcn typcn-location"></i></span> Leicester, UK
                                                                     </div>
@@ -320,8 +321,8 @@ export default class BuyerHome extends React.Component {
                                                                     </div>
                                                                     <div className="card-footer">
                                                                         <div class="d-sm-flex">
-                                                                            <a class="btn btn-default mr-2" href="!#">Not Interested</a>
-                                                                            <a class="btn btn-next btn-primary" href="!#">Send a Request</a>
+                                                                            <Link class="btn btn-default mr-2" to={"javascript:void(0)"}>Not Interested</Link>
+                                                                            <Link class="btn btn-next btn-primary" to={"javascript:void(0)"}>Send a Request</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -331,13 +332,13 @@ export default class BuyerHome extends React.Component {
                                                             <div class="card overflow-hidden br-0 overflow-hidden">
                                                                 <div class="d-sm-flex card-body p-3">
                                                                     <div class="item-card9 mt-3 mt-md-5 mr-sm-4">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Marketing.inc</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Marketing.inc</h4></Link>
                                                                         <div className="company-location font-weight-semibold">
                                                                             <span className="location-icon"><i class="typcn typcn-location"></i></span> Leicester, UK
-                                                                    </div>
+                                                                        </div>
                                                                         <p className="font-weghr-normal mb-0">
                                                                             A Multi-Service Marketing Agency. We specialise in the FMCG, wholesale and local business sectors.
-                                                                    </p>
+                                                                        </p>
                                                                     </div>
                                                                     <div class="ml-auto align-self-center">
                                                                         <div className="gauge-meter">
@@ -395,8 +396,8 @@ export default class BuyerHome extends React.Component {
                                                                     </div>
                                                                     <div className="card-footer">
                                                                         <div class="d-sm-flex">
-                                                                            <a class="btn btn-default mr-2" href="!#">Not Interested</a>
-                                                                            <a class="btn btn-next btn-primary" href="!#">Send a Request</a>
+                                                                            <Link class="btn btn-default mr-2" to={"javascript:void(0)"}>Not Interested</Link>
+                                                                            <Link class="btn btn-next btn-primary" to={"javascript:void(0)"}>Send a Request</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -411,12 +412,12 @@ export default class BuyerHome extends React.Component {
                                                                 <div class="d-sm-flex card-body p-3">
                                                                     <div class="p-0 m-0 mr-3">
                                                                         <div class="">
-                                                                            <a href="#"></a>
+                                                                            <Link to={"javascript:void(0)"}></Link>
                                                                             <img src="../assets/images/products/logo/img1.jpg" alt="img" class="w-8 h-8" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="item-card9 mt-2">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-semibold mt-1">G Technicals Solutions</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">G Technicals Solutions</h4></Link>
                                                                         <div class="rating-stars d-inline-flex">
                                                                             <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
                                                                             <div class="rating-stars-container mr-2">
@@ -456,8 +457,8 @@ export default class BuyerHome extends React.Component {
                                                                             </tbody>
                                                                         </table>
                                                                         <div class="mt-3">
-                                                                            <a class="btn btn-primary" href="!#" data-toggle="modal" data-target="#Applynow">Apply Now</a>
-                                                                            <a class="btn btn-light font-weight-semibold text-dark" href="company-details.html"><i class="fa fa-briefcase"></i> 12 vacancies</a>
+                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 12 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -468,12 +469,12 @@ export default class BuyerHome extends React.Component {
                                                                 <div class="d-sm-flex card-body p-3">
                                                                     <div class="p-0 m-0 mr-3">
                                                                         <div class="">
-                                                                            <a href="#"></a>
+                                                                            <Link to={"javascript:void(0)"}></Link>
                                                                             <img src="../assets/images/products/logo/img2.jpg" alt="img" class="w-8 h-8" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="item-card9 mt-2">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-semibold mt-1">Pro.Meet Pvt Ltd</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Pro.Meet Pvt Ltd</h4></Link>
                                                                         <div class="rating-stars d-inline-flex">
                                                                             <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="3" />
                                                                             <div class="rating-stars-container mr-2">
@@ -513,8 +514,8 @@ export default class BuyerHome extends React.Component {
                                                                             </tbody>
                                                                         </table>
                                                                         <div class="mt-3">
-                                                                            <a class="btn btn-primary" href="!#" data-toggle="modal" data-target="#Applynow">Apply Now</a>
-                                                                            <a class="btn btn-light font-weight-semibold text-dark" href="company-details.html"><i class="fa fa-briefcase"></i> 6 vacancies</a>
+                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 6 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -525,12 +526,12 @@ export default class BuyerHome extends React.Component {
                                                                 <div class="d-sm-flex card-body p-3">
                                                                     <div class="p-0 m-0 mr-3">
                                                                         <div class="">
-                                                                            <a href="#"></a>
+                                                                            <Link to={"javascript:void(0)"}></Link>
                                                                             <img src="../assets/images/products/logo/img3.jpg" alt="img" class="w-8 h-8" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="item-card9 mt-2">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-semibold mt-1">Infratech Pvt Ltd</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Infratech Pvt Ltd</h4></Link>
                                                                         <div class="rating-stars d-inline-flex">
                                                                             <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
                                                                             <div class="rating-stars-container mr-2">
@@ -570,8 +571,8 @@ export default class BuyerHome extends React.Component {
                                                                             </tbody>
                                                                         </table>
                                                                         <div class="mt-3">
-                                                                            <a class="btn btn-primary" href="!#" data-toggle="modal" data-target="#Applynow">Apply Now</a>
-                                                                            <a class="btn btn-light font-weight-semibold text-dark" href="company-details.html"><i class="fa fa-briefcase"></i> 78 vacancies</a>
+                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 78 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -582,12 +583,12 @@ export default class BuyerHome extends React.Component {
                                                                 <div class="d-sm-flex card-body p-3">
                                                                     <div class="p-0 m-0 mr-3">
                                                                         <div class="">
-                                                                            <a href="#"></a>
+                                                                            <Link to={"javascript:void(0)"}></Link>
                                                                             <img src="../assets/images/products/logo/img4.jpg" alt="img" class="w-8 h-8" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="item-card9 mt-2">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-semibold mt-1">Bahringer and Wyman</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Bahringer and Wyman</h4></Link>
                                                                         <div class="rating-stars d-inline-flex">
                                                                             <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="5" />
                                                                             <div class="rating-stars-container mr-2">
@@ -627,8 +628,8 @@ export default class BuyerHome extends React.Component {
                                                                             </tbody>
                                                                         </table>
                                                                         <div class="mt-3">
-                                                                            <a class="btn btn-primary" href="!#" data-toggle="modal" data-target="#Applynow">Apply Now</a>
-                                                                            <a class="btn btn-light font-weight-semibold text-dark" href="company-details.html"><i class="fa fa-briefcase"></i> 64 vacancies</a>
+                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 64 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -639,12 +640,12 @@ export default class BuyerHome extends React.Component {
                                                                 <div class="d-sm-flex card-body p-3">
                                                                     <div class="p-0 m-0 mr-3">
                                                                         <div class="">
-                                                                            <a href="!#"></a>
+                                                                            <Link to={"javascript:void(0)"}></Link>
                                                                             <img src="../assets/images/products/logo/img5.jpg" alt="img" class="w-8 h-8" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="item-card9 mt-2">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-semibold mt-1">Hardware Solutions</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Hardware Solutions</h4></Link>
                                                                         <div class="rating-stars d-inline-flex">
                                                                             <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
                                                                             <div class="rating-stars-container mr-2">
@@ -684,8 +685,8 @@ export default class BuyerHome extends React.Component {
                                                                             </tbody>
                                                                         </table>
                                                                         <div class="mt-3">
-                                                                            <a class="btn btn-primary" href="!#" data-toggle="modal" data-target="#Applynow">Apply Now</a>
-                                                                            <a class="btn btn-light font-weight-semibold text-dark" href="company-details.html"><i class="fa fa-briefcase"></i> 32 vacancies</a>
+                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 32 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -696,12 +697,12 @@ export default class BuyerHome extends React.Component {
                                                                 <div class="d-sm-flex card-body p-3">
                                                                     <div class="p-0 m-0 mr-3">
                                                                         <div class="">
-                                                                            <a href="#"></a>
+                                                                            <Link to={"javascript:void(0)"}></Link>
                                                                             <img src="../assets/images/products/logo/img6.jpg" alt="img" class="w-8 h-8" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="item-card9 mt-2">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-semibold mt-1">Flowtech Solutions</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Flowtech Solutions</h4></Link>
                                                                         <div class="rating-stars d-inline-flex">
                                                                             <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="3" />
                                                                             <div class="rating-stars-container mr-2">
@@ -741,8 +742,8 @@ export default class BuyerHome extends React.Component {
                                                                             </tbody>
                                                                         </table>
                                                                         <div class="mt-3">
-                                                                            <a class="btn btn-primary" href="!#" data-toggle="modal" data-target="#Applynow">Apply Now</a>
-                                                                            <a class="btn btn-light font-weight-semibold text-dark" href="company-details.html"><i class="fa fa-briefcase"></i> 2 vacancies</a>
+                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 2 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -753,12 +754,12 @@ export default class BuyerHome extends React.Component {
                                                                 <div class="d-sm-flex card-body p-4">
                                                                     <div class="p-0 m-0 mr-3">
                                                                         <div class="">
-                                                                            <a href="#"></a>
+                                                                            <Link to={"javascript:void(0)"}></Link>
                                                                             <img src="../assets/images/products/logo/logo5.jpg" alt="img" class="w-8 h-8" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="item-card9 mt-2">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-semibold mt-1">Hardware Private Solutions</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Hardware Private Solutions</h4></Link>
                                                                         <div class="rating-stars d-inline-flex">
                                                                             <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
                                                                             <div class="rating-stars-container mr-2">
@@ -798,8 +799,8 @@ export default class BuyerHome extends React.Component {
                                                                             </tbody>
                                                                         </table>
                                                                         <div class="mt-3">
-                                                                            <a class="btn btn-primary" href="!#" data-toggle="modal" data-target="#Applynow">Apply Now</a>
-                                                                            <a class="btn btn-light font-weight-semibold text-dark" href="company-details.html"><i class="fa fa-briefcase"></i> 25 vacancies</a>
+                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 25 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -810,12 +811,12 @@ export default class BuyerHome extends React.Component {
                                                                 <div class="d-sm-flex card-body p-4">
                                                                     <div class="p-0 m-0 mr-3">
                                                                         <div class="">
-                                                                            <a href="#"></a>
+                                                                            <Link to={"javascript:void(0)"}></Link>
                                                                             <img src="../assets/images/products/logo/logo2.jpg" alt="img" class="w-8 h-8" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="item-card9 mt-2">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-semibold mt-1">Wisoky-Dickens</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Wisoky-Dickens</h4></Link>
                                                                         <div class="rating-stars d-inline-flex">
                                                                             <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
                                                                             <div class="rating-stars-container mr-2">
@@ -855,8 +856,8 @@ export default class BuyerHome extends React.Component {
                                                                             </tbody>
                                                                         </table>
                                                                         <div class="mt-3">
-                                                                            <a class="btn btn-primary" href="!#" data-toggle="modal" data-target="#Applynow">Apply Now</a>
-                                                                            <a class="btn btn-light font-weight-semibold text-dark" href="company-details.html"><i class="fa fa-briefcase"></i> 36 vacancies</a>
+                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 36 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -867,12 +868,12 @@ export default class BuyerHome extends React.Component {
                                                                 <div class="d-sm-flex card-body p-4">
                                                                     <div class="p-0 m-0 mr-3">
                                                                         <div class="">
-                                                                            <a href="#"></a>
+                                                                            <Link to={"javascript:void(0)"}></Link>
                                                                             <img src="../assets/images/products/logo/logo3.jpg" alt="img" class="w-8 h-8" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="item-card9 mt-2">
-                                                                        <a href="company-details.html" class="text-dark"><h4 class="font-weight-semibold mt-1">Job pvt ltd</h4></a>
+                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Job pvt ltd</h4></Link>
                                                                         <div class="rating-stars d-inline-flex">
                                                                             <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
                                                                             <div class="rating-stars-container mr-2">
@@ -912,8 +913,8 @@ export default class BuyerHome extends React.Component {
                                                                             </tbody>
                                                                         </table>
                                                                         <div class="mt-3">
-                                                                            <a class="btn btn-primary" href="!#" data-toggle="modal" data-target="#Applynow">Apply Now</a>
-                                                                            <a class="btn btn-light font-weight-semibold text-dark" href="company-details.html"><i class="fa fa-briefcase"></i> 26 vacancies</a>
+                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 26 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -926,13 +927,13 @@ export default class BuyerHome extends React.Component {
                                         <div class="center-block text-center">
                                             <ul class="pagination mb-5 mb-lg-0">
                                                 <li class="page-item page-prev disabled">
-                                                    <a class="page-link" href="!#" tabIndex="-1">Prev</a>
+                                                    <Link class="page-link" to={"javascript:void(0)"} tabIndex="-1">Prev</Link>
                                                 </li>
-                                                <li class="page-item active"><a class="page-link" href="!#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="!#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="!#">3</a></li>
+                                                <li class="page-item active"><Link class="page-link" to={"javascript:void(0)"}>1</Link></li>
+                                                <li class="page-item"><Link class="page-link" to={"javascript:void(0)"}>2</Link></li>
+                                                <li class="page-item"><Link class="page-link" to={"javascript:void(0)"}>3</Link></li>
                                                 <li class="page-item page-next">
-                                                    <a class="page-link" href="!#">Next</a>
+                                                    <Link class="page-link" to={"javascript:void(0)"}>Next</Link>
                                                 </li>
                                             </ul>
                                         </div>
