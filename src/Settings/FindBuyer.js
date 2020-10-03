@@ -129,59 +129,12 @@ export default class FindBuyer extends React.Component {
                                                             <div className="buyer-desc-right-section ml-auto">
                                                                 <div className="gauge-meter">
                                                                     <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={350} width={250} />
-
-                                                                    {/* <CircularGaugeComponent style={{
-                                                                        width: 200,
-                                                                        height: 200
-                                                                    }}>
-                                                                        <Inject services={[Annotations]} />
-                                                                        <AxesDirective>
-                                                                            <AxisDirective lineStyle={{
-                                                                                width: 2,
-                                                                                color: '#fff'
-                                                                            }} background='transparent'
-                                                                                majorTicks={{
-                                                                                    interval: 15,
-                                                                                    color: '#766aec',
-                                                                                    height: 3,
-                                                                                    width: 3
-                                                                                }} minorTicks={{
-                                                                                    interval: 5,
-                                                                                    color: '#766aec',
-                                                                                    height: 5,
-                                                                                    width: 2
-                                                                                }}
-                                                                                labelStyle={{
-                                                                                    font: {
-                                                                                        color: '#766aec',
-                                                                                        size: 15,
-                                                                                        fontWeight: 'normal'
-                                                                                    }
-                                                                                }}>
-                                                                                <PointersDirective>
-                                                                                    <PointerDirective value={45} pointerWidth={2} needleStartWidth={3} needleEndWidth={3} radius='80%' color='#766aec' cap={{
-                                                                                        radius: 4,
-                                                                                        color: '#766aec',
-                                                                                        border: {
-                                                                                            color: '#766aec',
-                                                                                            width: 10
-                                                                                        },
-                                                                                    }} needleTail={{
-                                                                                        length: '0%'
-                                                                                    }}></PointerDirective>
-                                                                                </PointersDirective>
-                                                                                <AnnotationsDirective>
-                                                                                    <AnnotationDirective content='<div><div><span>Pointer Value : 45</span></div></div>' />
-                                                                                </AnnotationsDirective>
-                                                                            </AxisDirective>
-                                                                        </AxesDirective>
-                                                                    </CircularGaugeComponent> */}
                                                                 </div>
                                                                 <div className="buyerbutton-list mt-5">
                                                                     <button className="service-btn mw-100  px-5 ready-hire-btn active d-block">
-                                                                        <span className="star-icon fs-20 pr-3"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                                                                        <span className="star-icon fs-20 pr-3"><i className="fa fa-star-o" aria-hidden="true"></i></span>
                                                                         Ready to Hire
-                                                            </button>
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -226,8 +179,7 @@ export default class FindBuyer extends React.Component {
                                                                     <button className="service-btn mw-100  px-5 ready-hire-btn look-quote-btn d-block">
                                                                         {/* <div className="service-btn mw-100  px-5 ready-hire-btn text-center  d-block">£5,000 - £10,000 </div> */}
                                                                         Looking for Quotes
-                                                            </button>
-
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </div>

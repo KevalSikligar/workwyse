@@ -4,6 +4,7 @@ import SideNav from '../SideNav/SideNav';
 import Button from 'semantic-ui-react/dist/commonjs/elements/Button/Button';
 // import { CircularGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, Inject, Annotations, AnnotationsDirective, AnnotationDirective } from '@syncfusion/ej2-react-circulargauge';
 import ReactApexCharts from 'react-apexcharts'
+import { Link } from 'react-router-dom';
 
 
 const pathList = [
@@ -83,43 +84,46 @@ class Reviews extends Component {
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="col-md-6 col-sm-12">
+                                            <div className="col-md-12 col-sm-12">
                                                 <div className="review-item">
+                                                    <div className="review-input">
+                                                        <input type="text" className="form-control" placeholder="Enter your company name" />
+                                                    </div>
                                                     <div className="review-img">
-                                                        <img src={require('../assets/images/trustpilot-logo.png')} className="logo-image img-fluid" alt="img" />
+                                                        <img src={require('../assets/images/trustpilot-logo.png')} className="logo-image img-fluid" alt="img" title="https://uk.trustpilot.com/review/" />
                                                     </div>
                                                     <div className="review-content">
-                                                        <button className="btn review-btn">Trustpilot Connected</button>
+                                                        <Link to="/" className="btn review-btn">Connect Trustpilot</Link>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-md-6 col-sm-12">
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-md-12 col-sm-12">
                                                 <div className="review-item">
+                                                    <div className="review-input">
+                                                        <input type="text" className="form-control" placeholder="Enter your company name" />
+                                                    </div>
                                                     <div className="review-img">
-                                                        <img src={require('../assets/images/glassdoor-logo.png')} className="logo-image img-fluid" alt="img" />
+                                                        <img src={require('../assets/images/glassdoor-logo.png')} className="logo-image img-fluid" alt="img" title="https://www.glassdoor.co.uk/Reviews/" />
                                                     </div>
                                                     <div className="review-content">
-                                                        <button className="btn review-btn">Glassdoor Connected</button>
+                                                        <Link to="/" className="btn review-btn">Connect Glassdoor</Link>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-md-6 col-sm-12">
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-md-12 col-sm-12">
                                                 <div className="review-item">
+                                                    <div className="review-input">
+                                                        <input type="text" className="form-control" placeholder="Enter your company name" />
+                                                    </div>
                                                     <div className="review-img">
-                                                        <img src={require('../assets/images/google-logo.png')} className="logo-image img-fluid" alt="img" />
+                                                        <img src={require('../assets/images/facebook-logo.png')} className="logo-image img-fluid" alt="img" title="https://facebook.com/" />
                                                     </div>
                                                     <div className="review-content">
-                                                        <button className="btn review-btn">Google Connected</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-12">
-                                                <div className="review-item">
-                                                    <div className="review-img">
-                                                        <img src={require('../assets/images/facebook-logo.png')} className="logo-image img-fluid" alt="img" />
-                                                    </div>
-                                                    <div className="review-content">
-                                                        <button className="btn review-btn-colorChange bg-warning"> Connect Facebook Business</button>
+                                                        <Link to="/" className="btn review-btn">Connect Facebook</Link>
                                                     </div>
                                                 </div>
                                             </div>
@@ -142,17 +146,17 @@ class Reviews extends Component {
                                                                 <div className="company-profile-head bg-background3">
                                                                     <h4>New Website & Social Media Advertising</h4>
                                                                 </div>
-                                                                <table class="table table-striped table-bordered">
+                                                                <table className="table table-striped table-bordered">
                                                                     <tbody>
                                                                         <tr>
                                                                             <th>Reliability</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -160,11 +164,11 @@ class Reviews extends Component {
                                                                             <th>Communication</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -172,11 +176,11 @@ class Reviews extends Component {
                                                                             <th>Value for Money</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -184,11 +188,11 @@ class Reviews extends Component {
                                                                             <th>Trust</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -202,17 +206,17 @@ class Reviews extends Component {
                                                                 <div className="company-profile-head bg-background3">
                                                                     <h4>New Website & Social Media Advertising</h4>
                                                                 </div>
-                                                                <table class="table table-striped table-bordered">
+                                                                <table className="table table-striped table-bordered">
                                                                     <tbody>
                                                                         <tr>
                                                                             <th>Reliability</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -220,11 +224,11 @@ class Reviews extends Component {
                                                                             <th>Communication</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -232,11 +236,11 @@ class Reviews extends Component {
                                                                             <th>Value for Money</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -244,11 +248,11 @@ class Reviews extends Component {
                                                                             <th>Trust</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -273,17 +277,17 @@ class Reviews extends Component {
                                                                 <div className="company-profile-head bg-background3">
                                                                     <h4>New Website & Social Media Advertising</h4>
                                                                 </div>
-                                                                <table class="table table-striped table-bordered">
+                                                                <table className="table table-striped table-bordered">
                                                                     <tbody>
                                                                         <tr>
                                                                             <th>Reliability</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -291,11 +295,11 @@ class Reviews extends Component {
                                                                             <th>Communication</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -303,11 +307,11 @@ class Reviews extends Component {
                                                                             <th>Value for Money</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -315,11 +319,11 @@ class Reviews extends Component {
                                                                             <th>Trust</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -333,17 +337,17 @@ class Reviews extends Component {
                                                                 <div className="company-profile-head bg-background3">
                                                                     <h4>New Website & Social Media Advertising</h4>
                                                                 </div>
-                                                                <table class="table table-striped table-bordered">
+                                                                <table className="table table-striped table-bordered">
                                                                     <tbody>
                                                                         <tr>
                                                                             <th>Reliability</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -351,11 +355,11 @@ class Reviews extends Component {
                                                                             <th>Communication</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -363,11 +367,11 @@ class Reviews extends Component {
                                                                             <th>Value for Money</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -375,11 +379,11 @@ class Reviews extends Component {
                                                                             <th>Trust</th>
                                                                             <td>
                                                                                 <span className="review-stars">
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
-                                                                                    <i class="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
+                                                                                    <i className="typcn typcn-star-full-outline"></i>
                                                                                 </span>
                                                                             </td>
                                                                         </tr>
@@ -404,7 +408,7 @@ class Reviews extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }

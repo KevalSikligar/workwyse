@@ -6,15 +6,11 @@ import CompanyDetails4 from './CompanyDetails4';
 import CompanyDetails5 from './CompanyDetails5';
 import CompanyDetails6 from './CompanyDetails6';
 import Buyer5 from './Buyer5';
+import LastStepNotSignedUp from './LastStepNotSignedUp';
 class SignUpSeller extends Component {
+
     state = {
-        step: 1,
-        firstName: '',
-        lastName: '',
-        email: '',
-        age: '',
-        city: '',
-        country: ''
+        step: 1
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -46,41 +42,39 @@ class SignUpSeller extends Component {
     render() {
 
         const { step } = this.state;
-        const { firstName, lastName, email, age, city, country } = this.state;
-        const values = { firstName, lastName, email, age, city, country };
 
         switch (step) {
             case 1:
                 return <ComapanyDetails1
                     nextStep={this.nextStep}
                     handleChange={this.handleChange}
-                    values={values}
+                // values={values}
                 />
             case 2:
                 return <CompanyDetails2
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     handleChange={this.handleChange}
-                    values={values}
+                // values={values}
                 />
             case 3:
                 return <CompanyDetails3
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
-                    values={values}
+                // values={values}
                 />
             case 4:
                 if (this.props.match.params[0] === 'seller') {
                     return <CompanyDetails4
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
-                        values={values}
+                    // values={values}
                     />
                 } else {
                     return <CompanyDetails5
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
-                        values={values}
+                    // values={values}
                     />
                 }
             case 5:
@@ -88,20 +82,26 @@ class SignUpSeller extends Component {
                     return <CompanyDetails5
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
-                        values={values}
+                    // values={values}
                     />
                 } else {
                     return <Buyer5
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
-                        values={values}
+                    // values={values}
                     />
                 }
             case 6:
+                return <LastStepNotSignedUp
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                // values={values}
+                />
+            case 7:
                 return <CompanyDetails6
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
-                    values={values}
+                // values={values}
                 />
             default: return false
         }

@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import _ from 'lodash';
+// import _ from 'lodash';
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs'
 import SideNav from '../SideNav/SideNav'
 import Button from 'semantic-ui-react/dist/commonjs/elements/Button/Button';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
 import axios from 'axios';
 import Autosuggest from 'react-autosuggest';
 

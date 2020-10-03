@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-escape */
 import React, { Component } from 'react'
 import { Button } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
@@ -8,10 +7,9 @@ import swal from 'sweetalert';
 class CompanyDetails6 extends Component {
 
     saveAndContinue = (e) => {
-        swal("You have successfully registered. Clicking on OK will redirect you to Home Page.")
-            .then(() => {
-                this.props.history.push("/home");
-            })
+        swal("You have successfully registered. Clicking on OK will redirect you to Home Page.").then(() => {
+            this.props.history.push("/home");
+        })
     }
 
     back = (e) => {
@@ -58,7 +56,7 @@ class CompanyDetails6 extends Component {
                                             <tr>
                                                 <th scope="row">Facebook</th>
                                                 <td>
-                                                    <select class="form-control">
+                                                    <select className="form-control">
                                                         <option selected>$250 - $1000</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -66,7 +64,7 @@ class CompanyDetails6 extends Component {
                                                     </select>
                                                 </td>
                                                 <td>
-                                                    <select class="form-control">
+                                                    <select className="form-control">
                                                         <option selected>Choose...</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -84,7 +82,7 @@ class CompanyDetails6 extends Component {
                                             <tr>
                                                 <th scope="row">Linkedin</th>
                                                 <td>
-                                                    <select class="form-control">
+                                                    <select className="form-control">
                                                         <option selected>Choose...</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -92,7 +90,7 @@ class CompanyDetails6 extends Component {
                                                     </select>
                                                 </td>
                                                 <td>
-                                                    <select class="form-control">
+                                                    <select className="form-control">
                                                         <option selected>Choose...</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -117,7 +115,7 @@ class CompanyDetails6 extends Component {
                                             <tr>
                                                 <th scope="row">Frontend Web Design</th>
                                                 <td>
-                                                    <select class="form-control">
+                                                    <select className="form-control">
                                                         <option selected>$250 - $1000</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -125,7 +123,7 @@ class CompanyDetails6 extends Component {
                                                     </select>
                                                 </td>
                                                 <td>
-                                                    <select class="form-control">
+                                                    <select className="form-control">
                                                         <option selected>Choose...</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -143,7 +141,7 @@ class CompanyDetails6 extends Component {
                                             <tr>
                                                 <th scope="row">UI/UX Design</th>
                                                 <td>
-                                                    <select class="form-control">
+                                                    <select className="form-control">
                                                         <option selected>Choose...</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -151,7 +149,7 @@ class CompanyDetails6 extends Component {
                                                     </select>
                                                 </td>
                                                 <td>
-                                                    <select class="form-control">
+                                                    <select className="form-control">
                                                         <option selected>Choose...</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>

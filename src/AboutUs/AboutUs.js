@@ -95,19 +95,23 @@ function AboutUs() {
                                     <h4 className="contact-us-title text-white"> Contact Details</h4>
                                     <div className="filedlist">
                                         <div className="contact-us-static-fields">
-                                            <h4><i className="fa fa-address-card"></i>Workwyse Association</h4>
+                                            <h4><i className="fa fa-address-card"></i>WorkWyse Ltd</h4>
                                             <hr className="mb-40" />
                                         </div>
                                         <div className="contact-us-static-fields">
-                                            <h4><i className="fa fa-phone"></i>+91 8866339158</h4>
+                                            <h4><i className="fa fa-address-card"></i>Kemp House</h4>
                                             <hr className="mb-40" />
                                         </div>
                                         <div className="contact-us-static-fields">
-                                            <h4><i className="fa fa-calculator"></i>654321</h4>
+                                            <h4><i className="fa fa-address-card"></i>152-160 City Road</h4>
                                             <hr className="mb-40" />
                                         </div>
                                         <div className="contact-us-static-fields">
-                                            <h4><i className="fa fa-map-marker"></i>Horw, 5058 Switzerland</h4>
+                                            <h4><i className="fa fa-map-marker"></i>EC1V 2NX</h4>
+                                            <hr className="mb-40" />
+                                        </div>
+                                        <div className="contact-us-static-fields">
+                                            <h4><i className="fa fa-map-marker"></i>London</h4>
                                             <hr className="mb-40" />
                                         </div>
                                         <div className="mt-5"><NavLink to="/about-us" className="btn btn-contact-us">Contact Us</NavLink> </div>

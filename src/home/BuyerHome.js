@@ -63,14 +63,14 @@ export default class BuyerHome extends React.Component {
 
             <div>
                 <BreadCrumbs title="Buyer Home Page" breadcrumbssegment={pathList} />
-                <section class="sptb">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-12">
-                                <div class=" mb-lg-0">
-                                    <div class="">
-                                        <div class="item2-gl">
-                                            <div class=" mb-0">
+                <section className="sptb">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-xl-12 col-lg-12 col-md-12">
+                                <div className=" mb-lg-0">
+                                    <div className="">
+                                        <div className="item2-gl">
+                                            <div className=" mb-0">
                                                 <div className="card p-4 mb-0">
                                                     <div className="filter-section">
                                                         <div className="header-left">
@@ -83,8 +83,8 @@ export default class BuyerHome extends React.Component {
                                                                     <button className="search-icon"><i className="fa fa-search" aria-hidden="true"></i> </button>
                                                                 </div>
                                                                 <div className="filter-dropodwn">
-                                                                    <div class="d-flex">
-                                                                        <label class="mr-2 mt-2 mb-sm-1">Sort By:</label>
+                                                                    <div className="d-flex">
+                                                                        <label className="mr-2 mt-2 mb-sm-1">Sort By:</label>
                                                                         <select className="form-control">
                                                                             <option value="1">Relavant</option>
                                                                             <option value="2">Newest First</option>
@@ -100,120 +100,45 @@ export default class BuyerHome extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tab-content company-list">
-                                                <div class="tab-pane active" id="tab-11">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-12">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-3">
-                                                                    <div class="item-card9 mt-3 mt-md-5 mr-sm-4">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Web Spinners</h4></Link>
+                                            <div className="tab-content company-list">
+                                                <div className="tab-pane active" id="tab-11">
+                                                    <div className="row">
+                                                        <div className="col-lg-6 col-md-12">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-3">
+                                                                    <div className="item-card9 mt-3 mt-md-5 mr-sm-4">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-normal mb-1 mt-1">Web Spinners</h4></Link>
                                                                         <div className="company-location font-weight-semibold">
-                                                                            <span className="location-icon"><i class="typcn typcn-location"></i></span> Leicester, UK
-                                                                    </div>
-                                                                        <p className="font-weghr-normal mb-0">
-                                                                            A Multi-Service Marketing Agency. We specialise in the FMCG, wholesale and local business sectors.
-                                                                    </p>
-                                                                    </div>
-                                                                    <div class="ml-auto align-self-center">
-                                                                        <div className="gauge-meter">
-                                                                            <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={120} width={140} />
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap ">
-                                                                            <tbody class="p-0">
-                                                                                <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Services</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Web designer, Web developers</span></td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Amount</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> £5,000 - £10,000</span></td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="px-0 align-middle  py-1"><span class="font-weight-semibold">Industry Focus</span></td>
-                                                                                    <td class="p-1 align-middle"><span>:</span></td>
-                                                                                    <td class="p-1">
-                                                                                        <select className="form-control">
-                                                                                            <option>wholesale</option>
-                                                                                            <option>wholesale 2</option>
-                                                                                            <option>wholesale 3</option>
-                                                                                        </select>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="px-0 align-middle py-1"><span class="font-weight-semibold">Operations</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1">
-                                                                                        <select className="form-control">
-                                                                                            <option>Local</option>
-                                                                                            <option>Private</option>
-                                                                                        </select>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="px-0 align-middle py-1"><span class="font-weight-semibold">Company Size</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1">
-                                                                                        <select className="form-control">
-                                                                                            <option>6-15</option>
-                                                                                            <option>16-50</option>
-                                                                                        </select>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div>
-                                                                    <div className="card-footer">
-                                                                        <div class="d-sm-flex">
-                                                                            <Link class="btn btn-default mr-2" to={"javascript:void(0)"}>Not Interested</Link>
-                                                                            <Link class="btn btn-next btn-primary" to={"javascript:void(0)"}>Send a Request</Link>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-12">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-3">
-                                                                    <div class="item-card9 mt-3 mt-md-5 mr-sm-4">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Marketing.inc</h4></Link>
-                                                                        <div className="company-location font-weight-semibold">
-                                                                            <span className="location-icon"><i class="typcn typcn-location"></i></span> Leicester, UK
+                                                                            <span className="location-icon"><i className="typcn typcn-location"></i></span> Leicester, UK
                                                                         </div>
                                                                         <p className="font-weghr-normal mb-0">
                                                                             A Multi-Service Marketing Agency. We specialise in the FMCG, wholesale and local business sectors.
                                                                         </p>
                                                                     </div>
-                                                                    <div class="ml-auto align-self-center">
+                                                                    <div className="ml-auto align-self-center">
                                                                         <div className="gauge-meter">
                                                                             <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={120} width={140} />
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap ">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap ">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Services</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Web designer, Web developers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Services</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Web designer, Web developers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Amount</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> £5,000 - £10,000</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Amount</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> £5,000 - £10,000</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 align-middle  py-1"><span class="font-weight-semibold">Industry Focus</span></td>
-                                                                                    <td class="p-1 align-middle"><span>:</span></td>
-                                                                                    <td class="p-1">
+                                                                                    <td className="px-0 align-middle  py-1"><span className="font-weight-semibold">Industry Focus</span></td>
+                                                                                    <td className="p-1 align-middle"><span>:</span></td>
+                                                                                    <td className="p-1">
                                                                                         <select className="form-control">
                                                                                             <option>wholesale</option>
                                                                                             <option>wholesale 2</option>
@@ -222,9 +147,9 @@ export default class BuyerHome extends React.Component {
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 align-middle py-1"><span class="font-weight-semibold">Operations</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1">
+                                                                                    <td className="px-0 align-middle py-1"><span className="font-weight-semibold">Operations</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1">
                                                                                         <select className="form-control">
                                                                                             <option>Local</option>
                                                                                             <option>Private</option>
@@ -232,9 +157,9 @@ export default class BuyerHome extends React.Component {
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 align-middle py-1"><span class="font-weight-semibold">Company Size</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1">
+                                                                                    <td className="px-0 align-middle py-1"><span className="font-weight-semibold">Company Size</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1">
                                                                                         <select className="form-control">
                                                                                             <option>6-15</option>
                                                                                             <option>16-50</option>
@@ -245,125 +170,50 @@ export default class BuyerHome extends React.Component {
                                                                         </table>
                                                                     </div>
                                                                     <div className="card-footer">
-                                                                        <div class="d-sm-flex">
-                                                                            <Link class="btn btn-default mr-2" to={"javascript:void(0)"}>Not Interested</Link>
-                                                                            <Link class="btn btn-next btn-primary" to={"javascript:void(0)"}>Send a Request</Link>
+                                                                        <div className="d-sm-flex">
+                                                                            <Link className="btn btn-default mr-2" to="/">Not Interested</Link>
+                                                                            <Link className="btn btn-next btn-primary" to="/">Send a Request</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-md-12">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-3">
-                                                                    <div class="item-card9 mt-3 mt-md-5 mr-sm-4">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Web Spinners</h4></Link>
+                                                        <div className="col-lg-6 col-md-12">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-3">
+                                                                    <div className="item-card9 mt-3 mt-md-5 mr-sm-4">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-normal mb-1 mt-1">Marketing.inc</h4></Link>
                                                                         <div className="company-location font-weight-semibold">
-                                                                            <span className="location-icon"><i class="typcn typcn-location"></i></span> Leicester, UK
-                                                                    </div>
-                                                                        <p className="font-weghr-normal mb-0">
-                                                                            A Multi-Service Marketing Agency. We specialise in the FMCG, wholesale and local business sectors.
-                                                                    </p>
-                                                                    </div>
-                                                                    <div class="ml-auto align-self-center">
-                                                                        <div className="gauge-meter">
-                                                                            <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={120} width={140} />
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap ">
-                                                                            <tbody class="p-0">
-                                                                                <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Services</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Web designer, Web developers</span></td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Amount</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> £5,000 - £10,000</span></td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="px-0 align-middle  py-1"><span class="font-weight-semibold">Industry Focus</span></td>
-                                                                                    <td class="p-1 align-middle"><span>:</span></td>
-                                                                                    <td class="p-1">
-                                                                                        <select className="form-control">
-                                                                                            <option>wholesale</option>
-                                                                                            <option>wholesale 2</option>
-                                                                                            <option>wholesale 3</option>
-                                                                                        </select>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="px-0 align-middle py-1"><span class="font-weight-semibold">Operations</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1">
-                                                                                        <select className="form-control">
-                                                                                            <option>Local</option>
-                                                                                            <option>Private</option>
-                                                                                        </select>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="px-0 align-middle py-1"><span class="font-weight-semibold">Company Size</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1">
-                                                                                        <select className="form-control">
-                                                                                            <option>6-15</option>
-                                                                                            <option>16-50</option>
-                                                                                        </select>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div>
-                                                                    <div className="card-footer">
-                                                                        <div class="d-sm-flex">
-                                                                            <Link class="btn btn-default mr-2" to={"javascript:void(0)"}>Not Interested</Link>
-                                                                            <Link class="btn btn-next btn-primary" to={"javascript:void(0)"}>Send a Request</Link>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-12">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-3">
-                                                                    <div class="item-card9 mt-3 mt-md-5 mr-sm-4">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-normal mb-1 mt-1">Marketing.inc</h4></Link>
-                                                                        <div className="company-location font-weight-semibold">
-                                                                            <span className="location-icon"><i class="typcn typcn-location"></i></span> Leicester, UK
+                                                                            <span className="location-icon"><i className="typcn typcn-location"></i></span> Leicester, UK
                                                                         </div>
                                                                         <p className="font-weghr-normal mb-0">
                                                                             A Multi-Service Marketing Agency. We specialise in the FMCG, wholesale and local business sectors.
                                                                         </p>
                                                                     </div>
-                                                                    <div class="ml-auto align-self-center">
+                                                                    <div className="ml-auto align-self-center">
                                                                         <div className="gauge-meter">
                                                                             <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={120} width={140} />
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap ">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap ">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Services</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Web designer, Web developers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Services</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Web designer, Web developers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Amount</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> £5,000 - £10,000</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Amount</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> £5,000 - £10,000</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 align-middle  py-1"><span class="font-weight-semibold">Industry Focus</span></td>
-                                                                                    <td class="p-1 align-middle"><span>:</span></td>
-                                                                                    <td class="p-1">
+                                                                                    <td className="px-0 align-middle  py-1"><span className="font-weight-semibold">Industry Focus</span></td>
+                                                                                    <td className="p-1 align-middle"><span>:</span></td>
+                                                                                    <td className="p-1">
                                                                                         <select className="form-control">
                                                                                             <option>wholesale</option>
                                                                                             <option>wholesale 2</option>
@@ -372,9 +222,9 @@ export default class BuyerHome extends React.Component {
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 align-middle py-1"><span class="font-weight-semibold">Operations</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1">
+                                                                                    <td className="px-0 align-middle py-1"><span className="font-weight-semibold">Operations</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1">
                                                                                         <select className="form-control">
                                                                                             <option>Local</option>
                                                                                             <option>Private</option>
@@ -382,9 +232,9 @@ export default class BuyerHome extends React.Component {
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 align-middle py-1"><span class="font-weight-semibold">Company Size</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1">
+                                                                                    <td className="px-0 align-middle py-1"><span className="font-weight-semibold">Company Size</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1">
                                                                                         <select className="form-control">
                                                                                             <option>6-15</option>
                                                                                             <option>16-50</option>
@@ -395,9 +245,159 @@ export default class BuyerHome extends React.Component {
                                                                         </table>
                                                                     </div>
                                                                     <div className="card-footer">
-                                                                        <div class="d-sm-flex">
-                                                                            <Link class="btn btn-default mr-2" to={"javascript:void(0)"}>Not Interested</Link>
-                                                                            <Link class="btn btn-next btn-primary" to={"javascript:void(0)"}>Send a Request</Link>
+                                                                        <div className="d-sm-flex">
+                                                                            <Link className="btn btn-default mr-2" to="/">Not Interested</Link>
+                                                                            <Link className="btn btn-next btn-primary" to="/">Send a Request</Link>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-lg-6 col-md-12">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-3">
+                                                                    <div className="item-card9 mt-3 mt-md-5 mr-sm-4">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-normal mb-1 mt-1">Web Spinners</h4></Link>
+                                                                        <div className="company-location font-weight-semibold">
+                                                                            <span className="location-icon"><i className="typcn typcn-location"></i></span> Leicester, UK
+                                                                    </div>
+                                                                        <p className="font-weghr-normal mb-0">
+                                                                            A Multi-Service Marketing Agency. We specialise in the FMCG, wholesale and local business sectors.
+                                                                    </p>
+                                                                    </div>
+                                                                    <div className="ml-auto align-self-center">
+                                                                        <div className="gauge-meter">
+                                                                            <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={120} width={140} />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap ">
+                                                                            <tbody className="p-0">
+                                                                                <tr>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Services</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Web designer, Web developers</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Amount</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> £5,000 - £10,000</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td className="px-0 align-middle  py-1"><span className="font-weight-semibold">Industry Focus</span></td>
+                                                                                    <td className="p-1 align-middle"><span>:</span></td>
+                                                                                    <td className="p-1">
+                                                                                        <select className="form-control">
+                                                                                            <option>wholesale</option>
+                                                                                            <option>wholesale 2</option>
+                                                                                            <option>wholesale 3</option>
+                                                                                        </select>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td className="px-0 align-middle py-1"><span className="font-weight-semibold">Operations</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1">
+                                                                                        <select className="form-control">
+                                                                                            <option>Local</option>
+                                                                                            <option>Private</option>
+                                                                                        </select>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td className="px-0 align-middle py-1"><span className="font-weight-semibold">Company Size</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1">
+                                                                                        <select className="form-control">
+                                                                                            <option>6-15</option>
+                                                                                            <option>16-50</option>
+                                                                                        </select>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div className="card-footer">
+                                                                        <div className="d-sm-flex">
+                                                                            <Link className="btn btn-default mr-2" to="/">Not Interested</Link>
+                                                                            <Link className="btn btn-next btn-primary" to="/">Send a Request</Link>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-lg-6 col-md-12">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-3">
+                                                                    <div className="item-card9 mt-3 mt-md-5 mr-sm-4">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-normal mb-1 mt-1">Marketing.inc</h4></Link>
+                                                                        <div className="company-location font-weight-semibold">
+                                                                            <span className="location-icon"><i className="typcn typcn-location"></i></span> Leicester, UK
+                                                                        </div>
+                                                                        <p className="font-weghr-normal mb-0">
+                                                                            A Multi-Service Marketing Agency. We specialise in the FMCG, wholesale and local business sectors.
+                                                                        </p>
+                                                                    </div>
+                                                                    <div className="ml-auto align-self-center">
+                                                                        <div className="gauge-meter">
+                                                                            <ReactApexCharts options={this.state.options} series={this.state.series} type="radialBar" height={120} width={140} />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap ">
+                                                                            <tbody className="p-0">
+                                                                                <tr>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Services</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Web designer, Web developers</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Amount</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> £5,000 - £10,000</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td className="px-0 align-middle  py-1"><span className="font-weight-semibold">Industry Focus</span></td>
+                                                                                    <td className="p-1 align-middle"><span>:</span></td>
+                                                                                    <td className="p-1">
+                                                                                        <select className="form-control">
+                                                                                            <option>wholesale</option>
+                                                                                            <option>wholesale 2</option>
+                                                                                            <option>wholesale 3</option>
+                                                                                        </select>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td className="px-0 align-middle py-1"><span className="font-weight-semibold">Operations</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1">
+                                                                                        <select className="form-control">
+                                                                                            <option>Local</option>
+                                                                                            <option>Private</option>
+                                                                                        </select>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td className="px-0 align-middle py-1"><span className="font-weight-semibold">Company Size</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1">
+                                                                                        <select className="form-control">
+                                                                                            <option>6-15</option>
+                                                                                            <option>16-50</option>
+                                                                                        </select>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div className="card-footer">
+                                                                        <div className="d-sm-flex">
+                                                                            <Link className="btn btn-default mr-2" to="/">Not Interested</Link>
+                                                                            <Link className="btn btn-next btn-primary" to="/">Send a Request</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -405,516 +405,516 @@ export default class BuyerHome extends React.Component {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane" id="tab-12">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-12 col-xl-4">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-3">
-                                                                    <div class="p-0 m-0 mr-3">
-                                                                        <div class="">
-                                                                            <Link to={"javascript:void(0)"}></Link>
-                                                                            <img src="../assets/images/products/logo/img1.jpg" alt="img" class="w-8 h-8" />
+                                                <div className="tab-pane" id="tab-12">
+                                                    <div className="row">
+                                                        <div className="col-lg-6 col-md-12 col-xl-4">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-3">
+                                                                    <div className="p-0 m-0 mr-3">
+                                                                        <div className="">
+                                                                            <Link to="/"></Link>
+                                                                            <img src="../assets/images/products/logo/img1.jpg" alt="img" className="w-8 h-8" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-card9 mt-2">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">G Technicals Solutions</h4></Link>
-                                                                        <div class="rating-stars d-inline-flex">
-                                                                            <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
-                                                                            <div class="rating-stars-container mr-2">
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                    <div className="item-card9 mt-2">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-semibold mt-1">G Technicals Solutions</h4></Link>
+                                                                        <div className="rating-stars d-inline-flex">
+                                                                            <input type="number" readonly="readonly" className="rating-value star" name="rating-stars-value" value="4" />
+                                                                            <div className="rating-stars-container mr-2">
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
                                                                             </div> (245 Reviews)
 																</div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Positions</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Web designer, Web developers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Positions</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Web designer, Web developers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Address</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Address</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
-                                                                        <div class="mt-3">
-                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
-                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 12 vacancies</Link>
+                                                                        <div className="mt-3">
+                                                                            <Link className="btn btn-primary" to="/" data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link className="btn btn-light font-weight-semibold text-dark" to="/"><i className="fa fa-briefcase"></i> 12 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-md-12 col-xl-4">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-3">
-                                                                    <div class="p-0 m-0 mr-3">
-                                                                        <div class="">
-                                                                            <Link to={"javascript:void(0)"}></Link>
-                                                                            <img src="../assets/images/products/logo/img2.jpg" alt="img" class="w-8 h-8" />
+                                                        <div className="col-lg-6 col-md-12 col-xl-4">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-3">
+                                                                    <div className="p-0 m-0 mr-3">
+                                                                        <div className="">
+                                                                            <Link to="/"></Link>
+                                                                            <img src="../assets/images/products/logo/img2.jpg" alt="img" className="w-8 h-8" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-card9 mt-2">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Pro.Meet Pvt Ltd</h4></Link>
-                                                                        <div class="rating-stars d-inline-flex">
-                                                                            <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="3" />
-                                                                            <div class="rating-stars-container mr-2">
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                    <div className="item-card9 mt-2">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-semibold mt-1">Pro.Meet Pvt Ltd</h4></Link>
+                                                                        <div className="rating-stars d-inline-flex">
+                                                                            <input type="number" readonly="readonly" className="rating-value star" name="rating-stars-value" value="3" />
+                                                                            <div className="rating-stars-container mr-2">
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
                                                                             </div> (58 Reviews)
 																</div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Positions</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Java designer, php developers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Positions</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Java designer, php developers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Address</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Address</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
-                                                                        <div class="mt-3">
-                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
-                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 6 vacancies</Link>
+                                                                        <div className="mt-3">
+                                                                            <Link className="btn btn-primary" to="/" data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link className="btn btn-light font-weight-semibold text-dark" to="/"><i className="fa fa-briefcase"></i> 6 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-md-12 col-xl-4">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-3">
-                                                                    <div class="p-0 m-0 mr-3">
-                                                                        <div class="">
-                                                                            <Link to={"javascript:void(0)"}></Link>
-                                                                            <img src="../assets/images/products/logo/img3.jpg" alt="img" class="w-8 h-8" />
+                                                        <div className="col-lg-6 col-md-12 col-xl-4">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-3">
+                                                                    <div className="p-0 m-0 mr-3">
+                                                                        <div className="">
+                                                                            <Link to="/"></Link>
+                                                                            <img src="../assets/images/products/logo/img3.jpg" alt="img" className="w-8 h-8" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-card9 mt-2">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Infratech Pvt Ltd</h4></Link>
-                                                                        <div class="rating-stars d-inline-flex">
-                                                                            <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
-                                                                            <div class="rating-stars-container mr-2">
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                    <div className="item-card9 mt-2">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-semibold mt-1">Infratech Pvt Ltd</h4></Link>
+                                                                        <div className="rating-stars d-inline-flex">
+                                                                            <input type="number" readonly="readonly" className="rating-value star" name="rating-stars-value" value="4" />
+                                                                            <div className="rating-stars-container mr-2">
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
                                                                             </div> (82 Reviews)
 																    </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Positions</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Angular developers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Positions</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Angular developers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Address</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Address</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
-                                                                        <div class="mt-3">
-                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
-                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 78 vacancies</Link>
+                                                                        <div className="mt-3">
+                                                                            <Link className="btn btn-primary" to="/" data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link className="btn btn-light font-weight-semibold text-dark" to="/"><i className="fa fa-briefcase"></i> 78 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-md-12 col-xl-4">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-3">
-                                                                    <div class="p-0 m-0 mr-3">
-                                                                        <div class="">
-                                                                            <Link to={"javascript:void(0)"}></Link>
-                                                                            <img src="../assets/images/products/logo/img4.jpg" alt="img" class="w-8 h-8" />
+                                                        <div className="col-lg-6 col-md-12 col-xl-4">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-3">
+                                                                    <div className="p-0 m-0 mr-3">
+                                                                        <div className="">
+                                                                            <Link to="/"></Link>
+                                                                            <img src="../assets/images/products/logo/img4.jpg" alt="img" className="w-8 h-8" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-card9 mt-2">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Bahringer and Wyman</h4></Link>
-                                                                        <div class="rating-stars d-inline-flex">
-                                                                            <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="5" />
-                                                                            <div class="rating-stars-container mr-2">
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                    <div className="item-card9 mt-2">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-semibold mt-1">Bahringer and Wyman</h4></Link>
+                                                                        <div className="rating-stars d-inline-flex">
+                                                                            <input type="number" readonly="readonly" className="rating-value star" name="rating-stars-value" value="5" />
+                                                                            <div className="rating-stars-container mr-2">
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
                                                                             </div> (324 Reviews)
 																</div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Positions</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Web designer, Ui Designers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Positions</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Web designer, Ui Designers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Address</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Address</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
-                                                                        <div class="mt-3">
-                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
-                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 64 vacancies</Link>
+                                                                        <div className="mt-3">
+                                                                            <Link className="btn btn-primary" to="/" data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link className="btn btn-light font-weight-semibold text-dark" to="/"><i className="fa fa-briefcase"></i> 64 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-md-12 col-xl-4">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-3">
-                                                                    <div class="p-0 m-0 mr-3">
-                                                                        <div class="">
-                                                                            <Link to={"javascript:void(0)"}></Link>
-                                                                            <img src="../assets/images/products/logo/img5.jpg" alt="img" class="w-8 h-8" />
+                                                        <div className="col-lg-6 col-md-12 col-xl-4">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-3">
+                                                                    <div className="p-0 m-0 mr-3">
+                                                                        <div className="">
+                                                                            <Link to="/"></Link>
+                                                                            <img src="../assets/images/products/logo/img5.jpg" alt="img" className="w-8 h-8" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-card9 mt-2">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Hardware Solutions</h4></Link>
-                                                                        <div class="rating-stars d-inline-flex">
-                                                                            <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
-                                                                            <div class="rating-stars-container mr-2">
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                    <div className="item-card9 mt-2">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-semibold mt-1">Hardware Solutions</h4></Link>
+                                                                        <div className="rating-stars d-inline-flex">
+                                                                            <input type="number" readonly="readonly" className="rating-value star" name="rating-stars-value" value="4" />
+                                                                            <div className="rating-stars-container mr-2">
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
                                                                             </div> (317 Reviews)
 																</div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Positions</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Web designer, php developers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Positions</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Web designer, php developers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Address</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Address</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
-                                                                        <div class="mt-3">
-                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
-                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 32 vacancies</Link>
+                                                                        <div className="mt-3">
+                                                                            <Link className="btn btn-primary" to="/" data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link className="btn btn-light font-weight-semibold text-dark" to="/"><i className="fa fa-briefcase"></i> 32 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-md-12 col-xl-4">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-3">
-                                                                    <div class="p-0 m-0 mr-3">
-                                                                        <div class="">
-                                                                            <Link to={"javascript:void(0)"}></Link>
-                                                                            <img src="../assets/images/products/logo/img6.jpg" alt="img" class="w-8 h-8" />
+                                                        <div className="col-lg-6 col-md-12 col-xl-4">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-3">
+                                                                    <div className="p-0 m-0 mr-3">
+                                                                        <div className="">
+                                                                            <Link to="/"></Link>
+                                                                            <img src="../assets/images/products/logo/img6.jpg" alt="img" className="w-8 h-8" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-card9 mt-2">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Flowtech Solutions</h4></Link>
-                                                                        <div class="rating-stars d-inline-flex">
-                                                                            <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="3" />
-                                                                            <div class="rating-stars-container mr-2">
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                    <div className="item-card9 mt-2">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-semibold mt-1">Flowtech Solutions</h4></Link>
+                                                                        <div className="rating-stars d-inline-flex">
+                                                                            <input type="number" readonly="readonly" className="rating-value star" name="rating-stars-value" value="3" />
+                                                                            <div className="rating-stars-container mr-2">
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
                                                                             </div> (24 Reviews)
 																</div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Positions</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Web designer, Web developers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Positions</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Web designer, Web developers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Address</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Address</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
-                                                                        <div class="mt-3">
-                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
-                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 2 vacancies</Link>
+                                                                        <div className="mt-3">
+                                                                            <Link className="btn btn-primary" to="/" data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link className="btn btn-light font-weight-semibold text-dark" to="/"><i className="fa fa-briefcase"></i> 2 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-md-12 col-xl-4">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-4">
-                                                                    <div class="p-0 m-0 mr-3">
-                                                                        <div class="">
-                                                                            <Link to={"javascript:void(0)"}></Link>
-                                                                            <img src="../assets/images/products/logo/logo5.jpg" alt="img" class="w-8 h-8" />
+                                                        <div className="col-lg-6 col-md-12 col-xl-4">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-4">
+                                                                    <div className="p-0 m-0 mr-3">
+                                                                        <div className="">
+                                                                            <Link to="/"></Link>
+                                                                            <img src="../assets/images/products/logo/logo5.jpg" alt="img" className="w-8 h-8" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-card9 mt-2">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Hardware Private Solutions</h4></Link>
-                                                                        <div class="rating-stars d-inline-flex">
-                                                                            <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
-                                                                            <div class="rating-stars-container mr-2">
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                    <div className="item-card9 mt-2">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-semibold mt-1">Hardware Private Solutions</h4></Link>
+                                                                        <div className="rating-stars d-inline-flex">
+                                                                            <input type="number" readonly="readonly" className="rating-value star" name="rating-stars-value" value="4" />
+                                                                            <div className="rating-stars-container mr-2">
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
                                                                             </div> (75 Reviews)
 																</div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Positions</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Ui designer, Ux Designers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Positions</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Ui designer, Ux Designers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Address</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Address</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
-                                                                        <div class="mt-3">
-                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
-                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 25 vacancies</Link>
+                                                                        <div className="mt-3">
+                                                                            <Link className="btn btn-primary" to="/" data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link className="btn btn-light font-weight-semibold text-dark" to="/"><i className="fa fa-briefcase"></i> 25 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-md-12 col-xl-4">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-4">
-                                                                    <div class="p-0 m-0 mr-3">
-                                                                        <div class="">
-                                                                            <Link to={"javascript:void(0)"}></Link>
-                                                                            <img src="../assets/images/products/logo/logo2.jpg" alt="img" class="w-8 h-8" />
+                                                        <div className="col-lg-6 col-md-12 col-xl-4">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-4">
+                                                                    <div className="p-0 m-0 mr-3">
+                                                                        <div className="">
+                                                                            <Link to="/"></Link>
+                                                                            <img src="../assets/images/products/logo/logo2.jpg" alt="img" className="w-8 h-8" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-card9 mt-2">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Wisoky-Dickens</h4></Link>
-                                                                        <div class="rating-stars d-inline-flex">
-                                                                            <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
-                                                                            <div class="rating-stars-container mr-2">
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                    <div className="item-card9 mt-2">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-semibold mt-1">Wisoky-Dickens</h4></Link>
+                                                                        <div className="rating-stars d-inline-flex">
+                                                                            <input type="number" readonly="readonly" className="rating-value star" name="rating-stars-value" value="4" />
+                                                                            <div className="rating-stars-container mr-2">
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
                                                                             </div> (75 Reviews)
 																</div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Positions</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Web designer, Web developers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Positions</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Web designer, Web developers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Address</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Address</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
-                                                                        <div class="mt-3">
-                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
-                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 36 vacancies</Link>
+                                                                        <div className="mt-3">
+                                                                            <Link className="btn btn-primary" to="/" data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link className="btn btn-light font-weight-semibold text-dark" to="/"><i className="fa fa-briefcase"></i> 36 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6 col-md-12 col-xl-4">
-                                                            <div class="card overflow-hidden br-0 overflow-hidden">
-                                                                <div class="d-sm-flex card-body p-4">
-                                                                    <div class="p-0 m-0 mr-3">
-                                                                        <div class="">
-                                                                            <Link to={"javascript:void(0)"}></Link>
-                                                                            <img src="../assets/images/products/logo/logo3.jpg" alt="img" class="w-8 h-8" />
+                                                        <div className="col-lg-6 col-md-12 col-xl-4">
+                                                            <div className="card overflow-hidden br-0 overflow-hidden">
+                                                                <div className="d-sm-flex card-body p-4">
+                                                                    <div className="p-0 m-0 mr-3">
+                                                                        <div className="">
+                                                                            <Link to="/"></Link>
+                                                                            <img src="../assets/images/products/logo/logo3.jpg" alt="img" className="w-8 h-8" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-card9 mt-2">
-                                                                        <Link to={"javascript:void(0)"} class="text-dark"><h4 class="font-weight-semibold mt-1">Job pvt ltd</h4></Link>
-                                                                        <div class="rating-stars d-inline-flex">
-                                                                            <input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value" value="4" />
-                                                                            <div class="rating-stars-container mr-2">
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                    <div className="item-card9 mt-2">
+                                                                        <Link to="/" className="text-dark"><h4 className="font-weight-semibold mt-1">Job pvt ltd</h4></Link>
+                                                                        <div className="rating-stars d-inline-flex">
+                                                                            <input type="number" readonly="readonly" className="rating-value star" name="rating-stars-value" value="4" />
+                                                                            <div className="rating-stars-container mr-2">
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
-                                                                                <div class="rating-star sm">
-                                                                                    <i class="fa fa-star"></i>
+                                                                                <div className="rating-star sm">
+                                                                                    <i className="fa fa-star"></i>
                                                                                 </div>
                                                                             </div> (15 Reviews)
 																</div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
-                                                                    <div class="card-body table-responsive border-top">
-                                                                        <table class="table table-borderless w-100 m-0 text-nowrap">
-                                                                            <tbody class="p-0">
+                                                                <div className="card overflow-hidden border-0 box-shadow-0 br-0 mb-0">
+                                                                    <div className="card-body table-responsive border-top">
+                                                                        <table className="table table-borderless w-100 m-0 text-nowrap">
+                                                                            <tbody className="p-0">
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Positions</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span>Web designer, Web developers</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Positions</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span>Web designer, Web developers</span></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="px-0 py-1"><span class="font-weight-semibold">Address</span></td>
-                                                                                    <td class="p-1"><span>:</span></td>
-                                                                                    <td class="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
+                                                                                    <td className="px-0 py-1"><span className="font-weight-semibold">Address</span></td>
+                                                                                    <td className="p-1"><span>:</span></td>
+                                                                                    <td className="p-1"><span> 2767  Concord Street, Charlotte, NC</span></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
-                                                                        <div class="mt-3">
-                                                                            <Link class="btn btn-primary" to={"javascript:void(0)"} data-toggle="modal" data-target="#Applynow">Apply Now</Link>
-                                                                            <Link class="btn btn-light font-weight-semibold text-dark" to={"javascript:void(0)"}><i class="fa fa-briefcase"></i> 26 vacancies</Link>
+                                                                        <div className="mt-3">
+                                                                            <Link className="btn btn-primary" to="/" data-toggle="modal" data-target="#Applynow">Apply Now</Link>
+                                                                            <Link className="btn btn-light font-weight-semibold text-dark" to="/"><i className="fa fa-briefcase"></i> 26 vacancies</Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -924,16 +924,16 @@ export default class BuyerHome extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="center-block text-center">
-                                            <ul class="pagination mb-5 mb-lg-0">
-                                                <li class="page-item page-prev disabled">
-                                                    <Link class="page-link" to={"javascript:void(0)"} tabIndex="-1">Prev</Link>
+                                        <div className="center-block text-center">
+                                            <ul className="pagination mb-5 mb-lg-0">
+                                                <li className="page-item page-prev disabled">
+                                                    <Link className="page-link" to="/" tabIndex="-1">Prev</Link>
                                                 </li>
-                                                <li class="page-item active"><Link class="page-link" to={"javascript:void(0)"}>1</Link></li>
-                                                <li class="page-item"><Link class="page-link" to={"javascript:void(0)"}>2</Link></li>
-                                                <li class="page-item"><Link class="page-link" to={"javascript:void(0)"}>3</Link></li>
-                                                <li class="page-item page-next">
-                                                    <Link class="page-link" to={"javascript:void(0)"}>Next</Link>
+                                                <li className="page-item active"><Link className="page-link" to="/">1</Link></li>
+                                                <li className="page-item"><Link className="page-link" to="/">2</Link></li>
+                                                <li className="page-item"><Link className="page-link" to="/">3</Link></li>
+                                                <li className="page-item page-next">
+                                                    <Link className="page-link" to="/">Next</Link>
                                                 </li>
                                             </ul>
                                         </div>

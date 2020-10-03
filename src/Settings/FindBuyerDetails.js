@@ -1,7 +1,6 @@
 import React from 'react'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import SideNav from '../SideNav/SideNav';
-// import GaugeChart from 'react-gauge-chart'
 
 export default function FindBuyerDetails() {
 
@@ -18,16 +17,6 @@ export default function FindBuyerDetails() {
                         <SideNav />
                     </div>
                     <div className="col-xl-9 col-lg-12 col-md-12 sptb">
-                        {/* <div className="col-xl-9 col-lg-12 col-md-12 sptb">
-                            <GaugeChart id="gauge-chart5"
-                                nrOfLevels={420}
-                                arcsLength={[0.3, 0.5, 0.2]}
-                                colors={['#5BE12C', '#F5CD19', '#EA4228']}
-                                percent={0.37}
-                                arcPadding={0.02}
-                                hideText
-                            />
-                        </div> */}
                         <div className="custom-card">
                             <div className="card">
                                 <div className="card-header">
@@ -63,7 +52,7 @@ export default function FindBuyerDetails() {
                                                     <div className="buyer-desc-right-section ml-auto">
                                                         <div className="buyerbutton-list">
                                                             <button className="service-btn mw-100  px-5 ready-hire-btn active d-block">
-                                                                <span className="star-icon fs-20 pr-3"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                                                                <span className="star-icon fs-20 pr-3"><i className="fa fa-star-o" aria-hidden="true"></i></span>
                                                                 Ready to Hire
                                                             </button>
                                                             <button className="service-btn mw-100  px-5 ready-hire-btn my-4  d-block active">Web Design </button>
@@ -81,7 +70,7 @@ export default function FindBuyerDetails() {
                                             <div className="card-header-content">
                                                 <div className="card-header-left-section">
                                                     <h3 className="card-title text-capitalize fs-18 font-font-weight-semibold-text">Website overhaul required</h3>
-                                                    <p class="text-dark fs-16">11:45AM 27th August 2020</p>
+                                                    <p className="text-dark fs-16">11:45AM 27th August 2020</p>
                                                 </div>
                                                 <div className="card-header-right-section">
                                                     <div className="card-header-buttons">

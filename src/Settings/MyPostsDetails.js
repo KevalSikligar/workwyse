@@ -37,14 +37,14 @@ export default function MyPostsDetails() {
                                         </div>
                                     </div>
                                 </div> */}
-                                <div class="card-body">
-                                    <div class="row">
+                                <div className="card-body">
+                                    <div className="row">
 
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-6 pr-md-0">
-                                                    <label class="form-label">Title</label>
-                                                    <div class="form-group" data-select2-id="10">
+                                        <div className="col-md-6">
+                                            <div className="row">
+                                                <div className="col-md-6 pr-md-0">
+                                                    <label className="form-label">Title</label>
+                                                    <div className="form-group" data-select2-id="10">
                                                         <select className="form-control w-100">
                                                             <option>Web Design</option>
                                                             <option>40 miles</option>
@@ -52,9 +52,9 @@ export default function MyPostsDetails() {
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <label class="form-label">Service</label>
-                                                    <div class="form-group" data-select2-id="10">
+                                                <div className="col-md-6">
+                                                    <label className="form-label">Service</label>
+                                                    <div className="form-group" data-select2-id="10">
                                                         <select className="form-control w-100">
                                                             <option>Web Design</option>
                                                             <option>40 miles</option>
@@ -62,9 +62,9 @@ export default function MyPostsDetails() {
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <label class="form-label">Project</label>
-                                                    <div class="form-group" data-select2-id="10">
+                                                <div className="col-md-12">
+                                                    <label className="form-label">Project</label>
+                                                    <div className="form-group" data-select2-id="10">
                                                         <select className="form-control w-100">
                                                             <option>Web Design</option>
                                                             <option>40 miles</option>
@@ -72,8 +72,8 @@ export default function MyPostsDetails() {
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <label class="form-label">Project Price</label>
+                                                <div className="col-md-12">
+                                                    <label className="form-label">Project Price</label>
                                                     <div className="d-md-flex align-items-center form-group">
                                                         <select className="form-control w-100">
                                                             <option>20 miles</option>
@@ -88,8 +88,8 @@ export default function MyPostsDetails() {
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 pr-md-0">
-                                                    <label class="form-label">Start Date</label>
+                                                <div className="col-md-6 pr-md-0">
+                                                    <label className="form-label">Start Date</label>
                                                     <div className="d-md-flex align-items-cente form-groupr">
                                                         <DatePicker
                                                             selected={state.startDate}
@@ -97,8 +97,8 @@ export default function MyPostsDetails() {
                                                         />
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <label class="form-label">End Date</label>
+                                                <div className="col-md-6">
+                                                    <label className="form-label">End Date</label>
                                                     <div className="d-md-flex align-items-center form-group">
                                                         <DatePicker
                                                             selected={state.startDate}
@@ -107,9 +107,9 @@ export default function MyPostsDetails() {
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-12 ">
-                                                    <label class="form-label">Title</label>
-                                                    <div class="form-group" data-select2-id="10">
+                                                <div className="col-md-12 ">
+                                                    <label className="form-label">Title</label>
+                                                    <div className="form-group" data-select2-id="10">
                                                         <select className="form-control w-100">
                                                             <option>Create a new website</option>
                                                             <option>40 miles</option>
@@ -117,8 +117,8 @@ export default function MyPostsDetails() {
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <label class="form-label">Title</label>
+                                                <div className="col-md-12">
+                                                    <label className="form-label">Title</label>
                                                     <div className="d-md-flex align-items-center form-group">
                                                         <select className="form-control w-100">
                                                             <option>Status; Ready to Hire</option>
@@ -128,8 +128,8 @@ export default function MyPostsDetails() {
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-12">
-                                                    <label class="form-label">Title</label>
+                                                <div className="col-md-12">
+                                                    <label className="form-label">Title</label>
                                                     <div className="d-md-flex align-items-center form-group">
                                                         <select className="form-control w-100">
                                                             <option>Going live/to be updated; Within a few weeks</option>
@@ -139,8 +139,8 @@ export default function MyPostsDetails() {
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-12">
-                                                    <label class="form-label">Title</label>
+                                                <div className="col-md-12">
+                                                    <label className="form-label">Title</label>
                                                     <div className="d-md-flex align-items-center form-group">
                                                         <select className="form-control w-100">
                                                             <option>Goals/Targets; Sell more of my product/service</option>
@@ -150,11 +150,11 @@ export default function MyPostsDetails() {
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-12">
-                                                    <div class="d-flex justify-content-center form-group">
-                                                        <button type="submit" class="btn btn-primary ml-1"><i class="fa fa-pause" aria-hidden="true"></i> Play</button>
-                                                        <button type="submit" class="btn btn-primary ml-1"><i class="fa fa-envelope" aria-hidden="true"></i> Message</button>
-                                                        <button type="submit" class="btn btn-primary ml-1"><i class="fa fa-stop" aria-hidden="true"></i> Stop</button>
+                                                <div className="col-md-12">
+                                                    <div className="d-flex justify-content-center form-group">
+                                                        <button type="submit" className="btn btn-primary ml-1"><i className="fa fa-pause" aria-hidden="true"></i> Play</button>
+                                                        <button type="submit" className="btn btn-primary ml-1"><i className="fa fa-envelope" aria-hidden="true"></i> Message</button>
+                                                        <button type="submit" className="btn btn-primary ml-1"><i className="fa fa-stop" aria-hidden="true"></i> Stop</button>
                                                     </div>
                                                 </div>
 
@@ -162,16 +162,16 @@ export default function MyPostsDetails() {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="form-label">Upload Image</label>
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" name="example-file-input-custom" />
-                                                    <label class="custom-file-label">Choose file</label>
+                                        <div className="col-md-6">
+                                            <div className="form-group">
+                                                <label className="form-label">Upload Image</label>
+                                                <div className="custom-file">
+                                                    <input type="file" className="custom-file-input" name="example-file-input-custom" />
+                                                    <label className="custom-file-label">Choose file</label>
                                                 </div>
                                             </div>
 
-                                            <div class="">
+                                            <div className="">
                                                 <label className="form-label text-dark fs-16 mb-4">I serve customer within</label>
                                                 <div className="custom-controls-stacked rdb-steps-1">
                                                     <div className="row">

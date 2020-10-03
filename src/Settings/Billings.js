@@ -40,7 +40,7 @@ export default function Billings() {
                                                 <div className="company-profile-head bg-background3 ">
                                                     <h4>Leads Purchased</h4>
                                                 </div>
-                                                <table class="services-table table-bordered">
+                                                <table className="services-table table-bordered">
                                                     <tbody>
                                                         <tr>
                                                             <td>New Website & Social Media Advertising</td>
@@ -93,34 +93,34 @@ export default function Billings() {
                                                 <div className="company-profile-head bg-background3 ">
                                                     <h4>Billing Information</h4>
                                                 </div>
-                                                <div class="wrapped">
-                                                    <div class="radio-in">
-                                                        <label class="wrapper">
+                                                <div className="wrapped">
+                                                    <div className="radio-in">
+                                                        <label className="wrapper">
                                                             <input type="radio" name="paymentradio" />
                                                             <span><img src={require('../assets/images/payment-icon.png')} alt="img" /></span>
                                                         </label>
-                                                        <label class="wrapper">
+                                                        <label className="wrapper">
                                                             <input type="radio" name="paymentradio" />
                                                             <span><img src={require('../assets/images/paytm-icon.png')} alt="img" /></span>
                                                         </label>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label class="form-label">Card Holder</label>
-                                                        <input type="text" class="form-control" name="" placeholder="Card Holder" />
+                                                    <div className="form-group">
+                                                        <label className="form-label">Card Holder</label>
+                                                        <input type="text" className="form-control" name="" placeholder="Card Holder" />
                                                     </div>
 
-                                                    <div class="form-group">
-                                                        <label class="form-label">Card Number</label>
-                                                        <input type="text" class="form-control" name="" placeholder="Card Number" />
+                                                    <div className="form-group">
+                                                        <label className="form-label">Card Number</label>
+                                                        <input type="text" className="form-control" name="" placeholder="Card Number" />
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="form-group col-md-6">
-                                                            <label class="form-label">Expires</label>
-                                                            <input type="text" class="form-control" name="" placeholder="MM/YY" />
+                                                    <div className="row">
+                                                        <div className="form-group col-md-6">
+                                                            <label className="form-label">Expires</label>
+                                                            <input type="text" className="form-control" name="" placeholder="MM/YY" />
                                                         </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label class="form-label">CVV</label>
-                                                            <input type="text" class="form-control" name="" placeholder="CVC" />
+                                                        <div className="form-group col-md-6">
+                                                            <label className="form-label">CVV</label>
+                                                            <input type="text" className="form-control" name="" placeholder="CVC" />
                                                         </div>
                                                     </div>
                                                 </div>

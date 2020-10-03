@@ -7,7 +7,6 @@ import InfiniteScroll from "react-infinite-scroll-component";
 const pathList = [
     { to: "/service-setting", title: "Services" }
 ]
-
 export default class Services extends React.Component {
     state = {
         items: [{
@@ -68,9 +67,6 @@ export default class Services extends React.Component {
                         <div className="col-xl-9 col-lg-12 col-md-12">
                             <div className="sptb">
                                 <div className="card mb-0">
-                                    {/* <div className="card-header">
-                                        <h3 className="card-title">Service Settings</h3>
-                                    </div> */}
                                     <div className="card-body">
                                         <div className="form-group">
                                             <label className="form-label">Search Services</label>
@@ -79,8 +75,8 @@ export default class Services extends React.Component {
                                         <div className="form-group">
                                             <label className="form-label">Services Offering</label>
                                             <div className="seleted-services multiselect">
-                                                <button type="button" class="badge">Digital Marketing<i className="typcn icon typcn-delete"></i></button>
-                                                <button type="button" class="badge">Web Design<i className="typcn icon typcn-delete"></i></button>
+                                                <button type="button" className="badge">Digital Marketing<i className="typcn icon typcn-delete"></i></button>
+                                                <button type="button" className="badge">Web Design<i className="typcn icon typcn-delete"></i></button>
                                             </div>
                                         </div>
                                         <div className="form-group">
@@ -90,14 +86,14 @@ export default class Services extends React.Component {
                                         <div className="form-group">
                                             <label className="form-label">We suggest the following services based on your industry.<br />Click to add.</label>
                                             <div className="suggested-services multiselect">
-                                                <button type="button" class="badge">Technical SEO</button>
-                                                <button type="button" class="badge">Social Media Management</button>
-                                                <button type="button" class="badge">UI/UX Design</button>
-                                                <button type="button" class="badge">Media Buying</button>
-                                                <button type="button" class="badge">Branding</button>
-                                                <button type="button" class="badge">Facebook Advertising</button>
-                                                <button type="button" class="badge">Graphics Design</button>
-                                                <button type="button" class="badge">Creative</button>
+                                                <button type="button" className="badge">Technical SEO</button>
+                                                <button type="button" className="badge">Social Media Management</button>
+                                                <button type="button" className="badge">UI/UX Design</button>
+                                                <button type="button" className="badge">Media Buying</button>
+                                                <button type="button" className="badge">Branding</button>
+                                                <button type="button" className="badge">Facebook Advertising</button>
+                                                <button type="button" className="badge">Graphics Design</button>
+                                                <button type="button" className="badge">Creative</button>
                                             </div>
                                         </div>
                                     </div>
@@ -128,10 +124,7 @@ export default class Services extends React.Component {
                                                     </tr>
                                                 </thead>
                                                 {this.state.items?.map((data, index) => (
-
                                                     <>
-                                                        {console.log('head', data, index)}
-
                                                         <thead>
                                                             <tr>
                                                                 <th colSpan="4">{`${data.tableHead} ${index}`}</th>
@@ -142,7 +135,7 @@ export default class Services extends React.Component {
                                                                 <tr>
                                                                     <th scope="row">{items}</th>
                                                                     <td>
-                                                                        <select class="form-control">
+                                                                        <select className="form-control">
                                                                             <option selected>$250 - $1000</option>
                                                                             <option value="1">One</option>
                                                                             <option value="2">Two</option>
@@ -150,7 +143,7 @@ export default class Services extends React.Component {
                                                                         </select>
                                                                     </td>
                                                                     <td>
-                                                                        <select class="form-control">
+                                                                        <select className="form-control">
                                                                             <option selected>Choose...</option>
                                                                             <option value="1">One</option>
                                                                             <option value="2">Two</option>
@@ -159,9 +152,9 @@ export default class Services extends React.Component {
                                                                     </td>
                                                                     <td>
                                                                         <div className="hourly-rates">
-                                                                            <input type="text" className="form-control  w-50" placeholder="$5"/>
+                                                                            <input type="text" className="form-control  w-50" placeholder="$5" />
                                                                             <b className="px-3 fs-16">-</b>
-                                                                            <input type="text" className="form-control w-50" placeholder="$25"/>
+                                                                            <input type="text" className="form-control w-50" placeholder="$25" />
                                                                         </div>
                                                                     </td>
                                                                 </tr>

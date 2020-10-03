@@ -58,7 +58,7 @@ export default function MyPosts() {
                                                         margin={10}
                                                         nav >
                                                         <div className="item">
-                                                            <li><a href="#tab1" class="active" data-toggle="tab">All Services (20)</a></li>
+                                                            <li><a href="#tab1" className="active" data-toggle="tab">All Services (20)</a></li>
                                                         </div>
                                                         <div className="item">
                                                             <li><a href="#tab2" data-toggle="tab">Designer (08)</a></li>
@@ -90,38 +90,38 @@ export default function MyPosts() {
                                                             <tr>
                                                                 <td>Buyer Title</td>
                                                                 <td>$100 - $500</td>
-                                                                <td><a href="!#" class="badge badge-warning">Published</a></td>
+                                                                <td><a href="!#" className="badge badge-warning">Published</a></td>
                                                                 <td>
-                                                                    <NavLink to="/home" className="btn btn-success btn-sm text-white" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i></NavLink>
-                                                                    <NavLink to="/home" className="btn btn-danger btn-sm text-white" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash-o"></i></NavLink>
-                                                                    <NavLink to="/posts-details" className="btn btn-primary btn-sm text-white" data-toggle="tooltip" data-original-title="View"><i class="fa fa-eye"></i></NavLink>                                                                </td>
+                                                                    <NavLink to="/home" className="btn btn-success btn-sm text-white" data-toggle="tooltip" data-original-title="Edit"><i className="fa fa-pencil"></i></NavLink>
+                                                                    <NavLink to="/home" className="btn btn-danger btn-sm text-white" data-toggle="tooltip" data-original-title="Delete"><i className="fa fa-trash-o"></i></NavLink>
+                                                                    <NavLink to="/posts-details" className="btn btn-primary btn-sm text-white" data-toggle="tooltip" data-original-title="View"><i className="fa fa-eye"></i></NavLink>                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Buyer Title 1</td>
                                                                 <td>$100 - $500</td>
-                                                                <td><a href="!#" class="badge badge-warning">Published</a></td>
+                                                                <td><a href="!#" className="badge badge-warning">Published</a></td>
                                                                 <td>
-                                                                    <NavLink to="/home" className="btn btn-success btn-sm text-white" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i></NavLink>
-                                                                    <NavLink to="/home" className="btn btn-danger btn-sm text-white" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash-o"></i></NavLink>
-                                                                    <NavLink to="/posts-details" className="btn btn-primary btn-sm text-white" data-toggle="tooltip" data-original-title="View"><i class="fa fa-eye"></i></NavLink>                                                                </td>
+                                                                    <NavLink to="/home" className="btn btn-success btn-sm text-white" data-toggle="tooltip" data-original-title="Edit"><i className="fa fa-pencil"></i></NavLink>
+                                                                    <NavLink to="/home" className="btn btn-danger btn-sm text-white" data-toggle="tooltip" data-original-title="Delete"><i className="fa fa-trash-o"></i></NavLink>
+                                                                    <NavLink to="/posts-details" className="btn btn-primary btn-sm text-white" data-toggle="tooltip" data-original-title="View"><i className="fa fa-eye"></i></NavLink>                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Buyer Title 2</td>
                                                                 <td>$500 - $1000</td>
-                                                                <td><a href="!#" class="badge badge-warning">Published</a></td>
+                                                                <td><a href="!#" className="badge badge-warning">Published</a></td>
                                                                 <td>
-                                                                    <NavLink to="/home" className="btn btn-success btn-sm text-white" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i></NavLink>
-                                                                    <NavLink to="/home" className="btn btn-danger btn-sm text-white" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash-o"></i></NavLink>
-                                                                    <NavLink to="/posts-details" className="btn btn-primary btn-sm text-white" data-toggle="tooltip" data-original-title="View"><i class="fa fa-eye"></i></NavLink>                                                                </td>
+                                                                    <NavLink to="/home" className="btn btn-success btn-sm text-white" data-toggle="tooltip" data-original-title="Edit"><i className="fa fa-pencil"></i></NavLink>
+                                                                    <NavLink to="/home" className="btn btn-danger btn-sm text-white" data-toggle="tooltip" data-original-title="Delete"><i className="fa fa-trash-o"></i></NavLink>
+                                                                    <NavLink to="/posts-details" className="btn btn-primary btn-sm text-white" data-toggle="tooltip" data-original-title="View"><i className="fa fa-eye"></i></NavLink>                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Buyer Title 2</td>
                                                                 <td>$500 - $1000</td>
-                                                                <td><a href="!#" class="badge badge-primary">Published</a></td>
+                                                                <td><a href="!#" className="badge badge-primary">Published</a></td>
                                                                 <td>
-                                                                    <NavLink to="/home" className="btn btn-success btn-sm text-white" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i></NavLink>
-                                                                    <NavLink to="/home" className="btn btn-danger btn-sm text-white" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash-o"></i></NavLink>
-                                                                    <NavLink to="/posts-details" className="btn btn-primary btn-sm text-white" data-toggle="tooltip" data-original-title="View"><i class="fa fa-eye"></i></NavLink>
+                                                                    <NavLink to="/home" className="btn btn-success btn-sm text-white" data-toggle="tooltip" data-original-title="Edit"><i className="fa fa-pencil"></i></NavLink>
+                                                                    <NavLink to="/home" className="btn btn-danger btn-sm text-white" data-toggle="tooltip" data-original-title="Delete"><i className="fa fa-trash-o"></i></NavLink>
+                                                                    <NavLink to="/posts-details" className="btn btn-primary btn-sm text-white" data-toggle="tooltip" data-original-title="View"><i className="fa fa-eye"></i></NavLink>
                                                                 </td>
                                                             </tr>
                                                         </tbody>

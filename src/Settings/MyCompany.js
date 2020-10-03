@@ -48,7 +48,7 @@ export default class MyCompany extends React.Component {
             const resp = await axios.get(`http://localhost:5000/ByCompanyName/${this.state.value}`);
             var suggestions = []
             resp.data.items.map(res => {
-                suggestions.push(res.title);
+                return suggestions.push(res.title);
             });
             this.setState({ suggestions });
         });
@@ -196,14 +196,14 @@ export default class MyCompany extends React.Component {
                                                             <input type="text" className="form-control" placeholder="Number" value="www.marketing.inc" />
                                                         </div>
                                                     </div>
-                                                    <div className="col-sm-6 col-md-6">
+                                                    {/* <div className="col-sm-6 col-md-6">
                                                         <div className="form-group">
                                                             <label className="form-label">External Link 1</label>
                                                             <input type="text" className="form-control" placeholder="VAT Number" value="External Link 2" />
                                                         </div>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
-                                                <div className="row">
+                                                {/* <div className="row">
                                                     <div className="col-sm-6 col-md-6">
                                                         <div className="form-group">
                                                             <label className="form-label">External Link 2 </label>
@@ -216,7 +216,7 @@ export default class MyCompany extends React.Component {
                                                             <input type="text" className="form-control" placeholder="VAT Number" value="External Link 4" />
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Button } from 'semantic-ui-react';
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import ProgressBar from 'react-bootstrap/ProgressBar'
-
+import { Link } from 'react-router-dom'
 export default class CompanyDetails5 extends Component {
 
     saveAndContinue = (e) => {
@@ -40,47 +40,50 @@ export default class CompanyDetails5 extends Component {
                                         <label className="text-dark fs-16">Please select which review sites you would like to connect</label>
                                     </div>
                                     <div className="row">
-                                            <div className="col-md-6 col-sm-12">
-                                                <div className="review-item">
-                                                    <div className="review-img">
-                                                        <img src={require('../assets/images/trustpilot-logo.png')} className="logo-image img-fluid" alt="img" />
-                                                    </div>
-                                                    <div className="review-content">
-                                                        <button className="btn review-btn">Trustpilot Connected</button>
-                                                    </div>
+                                        <div className="col-md-12 col-sm-12">
+                                            <div className="review-item">
+                                                <div className="review-input">
+                                                    <input type="text" className="form-control" placeholder="Enter your company name" />
                                                 </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-12">
-                                                <div className="review-item">
-                                                    <div className="review-img">
-                                                        <img src={require('../assets/images/glassdoor-logo.png')} className="logo-image img-fluid" alt="img" />
-                                                    </div>
-                                                    <div className="review-content">
-                                                        <button className="btn review-btn">Glassdoor Connected</button>
-                                                    </div>
+                                                <div className="review-img">
+                                                    <img src={require('../assets/images/trustpilot-logo.png')} className="logo-image img-fluid" alt="img" title="https://uk.trustpilot.com/review/" />
                                                 </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-12">
-                                                <div className="review-item">
-                                                    <div className="review-img">
-                                                        <img src={require('../assets/images/google-logo.png')} className="logo-image img-fluid" alt="img" />
-                                                    </div>
-                                                    <div className="review-content">
-                                                        <button className="btn review-btn">Google Connected</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-12">
-                                                <div className="review-item">
-                                                    <div className="review-img">
-                                                        <img src={require('../assets/images/facebook-logo.png')} className="logo-image img-fluid" alt="img" />
-                                                    </div>
-                                                    <div className="review-content">
-                                                        <button className="btn review-btn-colorChange bg-warning"> Connect Facebook Business</button>
-                                                    </div>
+                                                <div className="review-content">
+                                                    <Link to="/" className="btn review-btn">Connect Trustpilot</Link>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-12 col-sm-12">
+                                            <div className="review-item">
+                                                <div className="review-input">
+                                                    <input type="text" className="form-control" placeholder="Enter your company name" />
+                                                </div>
+                                                <div className="review-img">
+                                                    <img src={require('../assets/images/glassdoor-logo.png')} className="logo-image img-fluid" alt="img" title="https://www.glassdoor.co.uk/Reviews/" />
+                                                </div>
+                                                <div className="review-content">
+                                                    <Link to="/" className="btn review-btn">Connect Glassdoor</Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-12 col-sm-12">
+                                            <div className="review-item">
+                                                <div className="review-input">
+                                                    <input type="text" className="form-control" placeholder="Enter your company name" />
+                                                </div>
+                                                <div className="review-img">
+                                                    <img src={require('../assets/images/facebook-logo.png')} className="logo-image img-fluid" alt="img" title="https://facebook.com/" />
+                                                </div>
+                                                <div className="review-content">
+                                                    <Link to="/" className="btn review-btn">Connect Facebook</Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div className="row">
                                         <div className="col-md-12 col-sm-12">
                                             <div className="info-section mw-100">

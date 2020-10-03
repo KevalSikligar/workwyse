@@ -20,27 +20,6 @@ export default function GeneralSettings() {
         document.getElementById("myDIV").addEventListener('blur', blurEventFunc);
     }
 
-    const state = {
-        code: '',
-        errorMessage: '',
-    };
-
-
-    const handleSuccess = (data) => {
-        this.setState({
-            code: data.code,
-            errorMessage: '',
-        });
-    }
-
-    const handleFailure = (error) => {
-        this.setState({
-            code: '',
-            errorMessage: error.errorMessage,
-        })
-    }
-
-
     return (
         <div>
             <BreadCrumbs title="General Settings" breadcrumbssegment={pathList} />
