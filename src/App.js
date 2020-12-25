@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
-import Footer from "./layout/Footer/Footer"
-import Header from "./layout/Header/Header"
 import './assets/css/style.css';
-import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
+import './assets/css/admin-custom.css';
+import './assets/css/sidemenu.css';
+import './assets/css/responsive.css';
+import Footer from "./layout/Footer/Footer";
+import Header from "./layout/Header/Header";
+import { Route, Switch, BrowserRouter, Redirect, withRouter } from "react-router-dom";
 import SignUpSeller from './SignUp/SignUpSeller';
 import AboutUs from './AboutUs/AboutUs';
 import Faq from './Faq/Faq';
 import Pricing from './Pricing/Pricing';
 import TermsOfService from './TermsOfService.js/TermsOfService';
 import Privacy from './Privacy/Privacy';
-import HowItWorks from './HowItWorks/HowItWorks';
 import GeneralSettings from './Settings/GeneralSettings';
-import LocationSettings from './Settings/LocationSettings';
-import PostProject from './PostProject/PostProject';
 import FindBuyer from './Settings/FindBuyer';
 import Inbox from './Settings/Inbox';
 import Reviews from './Settings/Reviews';
@@ -28,50 +28,118 @@ import MyPosts from './Settings/MyPosts';
 import BuyerHome from './Home/BuyerHome';
 import FindBuyerDetails from './Settings/FindBuyerDetails';
 import MyPostsDetails from './Settings/MyPostsDetails';
-import SignInLinkedIn from './SignUp/SignInLinkedIn';
 import News from './News/News';
 import ResetPassword from './ResetPassword/ResetPassword';
+import NewsDetails from './News/NewsDetails';
+import AdminHeader from './AdminPanel/_layouts/AdminHeader/AdminHeader';
+import AdminDashboard from './AdminPanel/Components/AdminDashboard/AdminDashboard';
+import AdminNews from './AdminPanel/Components/AdminNews/AdminNews';
+import AdminNewsDetails from './AdminPanel/Components/AdminNews/AdminNewsDetails';
+import AdminNewsList from './AdminPanel/Components/AdminNews/AdminNewsList';
+import AdminFooter from './AdminPanel/_layouts/AdminFooter/AdminFooter';
+import TermsAndConditions from './TermsOfService.js/TermsAndConditions';
+import AdminSideNav from './AdminPanel/Components/AdminSideNav/AdminSideNav';
+import ConfirmEmail from './Login/ConfirmEmail';
+import ReactGA from 'react-ga';
+import Cookies from './Cookies/Cookies';
+import AcceptableUse from './AcceptableUse/AcceptableUse';
+import SellerHome from './Home/SellerHome';
+import ContactUs from './ContactUs/ContactUs';
+import { connect } from 'react-redux';
+import UnderConstruction from './UnderConstruction/UnderConstruction';
+import Requests from './Settings/Requests';
+import InboxBuyer from './Settings/InboxBuyer';
+import { history, getUserDetail } from "./const";
+import PrivateRouter from './PrivateRouter/PrivateRouter';
 
-export default class App extends React.Component {
+class App extends React.Component {
 
-    render() {
-        return (
-            <BrowserRouter>
-                <Header />
-                <Switch>
+  componentWillReceiveProps() {
+    ReactGA.initialize('UA-173091947-1', { debug: false });
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+
+  render() {
+
+    var href = window.location.href;
+    const route = href.match(/([^\/]*)\/*$/)[1];
+    var role = getUserDetail('roles')
+
+    return (
+      <section>
+        <BrowserRouter history={history}>
+          <div className={this.props.class.postaproject.class === true ? "main_section active" : "main_section"}>
+            <div className={route.includes('admin') ? "page" : ''}>
+              <div className={route.includes('admin') ? "page-main" : ''}>
+                {route.includes('admin') ? <AdminHeader /> : <Header />}
+                <div>
+                  {route.includes('admin') ? <AdminSideNav /> : ''}
+                  <Switch>
                     <Route exact path="/">
+                      {role === "Seller" ?
+                        <Redirect to="/seller" />
+                        :
                         <Redirect to="/home" />
+                      }
                     </Route>
                     <Route path="/home" exact component={Home} />
-                    <Route path="/about-us" exact component={AboutUs} />
                     <Route path="/faq" exact component={Faq} />
                     <Route path="/pricing" exact component={Pricing} />
                     <Route path="/terms-of-service" exact component={TermsOfService} />
+                    <Route path="/terms-and-conditions" exact component={TermsAndConditions} />
                     <Route path="/privacy-policy" exact component={Privacy} />
-                    <Route path="/how-it-works" exact component={HowItWorks} />
-                    <Route path="/general-setting" exact component={GeneralSettings} />
-                    <Route path="/my-company" exact component={MyCompany} />
-                    <Route path="/location-setting" exact component={LocationSettings} />
-                    <Route path="/service-setting" exact component={Services} />
+                    <Route path="/cookies" exact component={Cookies} />
+                    <Route path="/acceptable-use" exact component={AcceptableUse} />
+                    <Route path="/how-it-works" exact component={AboutUs} />
+                    <PrivateRouter path="/general-setting" exact component={GeneralSettings} />
+                    <PrivateRouter path="/my-company" exact component={MyCompany} />
+                    <PrivateRouter path="/service-setting" exact component={Services} />
                     <Route path="/sign-up/(seller|buyer)" exact component={SignUpSeller} />
-                    <Route path="/post-a-project" exact component={PostProject} />
-                    <Route path="/find-buyer" exact component={FindBuyer} />
-                    <Route path="/find-buyer-details" exact component={FindBuyerDetails} />
-                    <Route path="/billings" exact component={Billings} />
-                    <Route path="/inbox" exact component={Inbox} />
+                    <PrivateRouter path="/find-buyer" exact component={FindBuyer} />
+                    <PrivateRouter path="/find-buyer-details" exact component={FindBuyerDetails} />
+                    <PrivateRouter path="/billing" exact component={Billings} />
+                    <PrivateRouter path="/inbox/:projectId?" exact component={Inbox} />
+                    <PrivateRouter path="/buyer-inbox/:projectId?/:sellerId?" exact component={InboxBuyer} />
                     <Route path="/news" exact component={News} />
-                    <Route path="/reviews" exact component={Reviews} />
-                    <Route path="/notifications" exact component={Notifications} />
-                    <Route path="/posts" exact component={MyPosts} />
-                    <Route path="/posts-details" exact component={MyPostsDetails} />
-                    <Route path="/dashboard-buyer" exact component={BuyerHome} />
-                    <Route path="/linkedin" component={SignInLinkedIn} />
+                    <Route path="/news-details/:id" exact component={NewsDetails} />
+                    <PrivateRouter path="/reviews" exact component={Reviews} />
+                    <PrivateRouter path="/notifications" exact component={Notifications} />
+                    <PrivateRouter path="/posts" exact component={MyPosts} />
+                    <PrivateRouter path="/posts-details/:projectId" exact component={MyPostsDetails} />
+                    {/* Check this Path for Private Router */}
+                    <Route path="/dashboard-buyer/:buyerId/:projectId" exact component={BuyerHome} />
+                    <PrivateRouter path="/seller" exact component={SellerHome} />
                     <Route path="/forgot-password" exact component={ForgotPassword} />
-                    <Route path="/reset-password" exact component={ResetPassword} />
+                    <Route path="/resetpassword/:email/:token" exact component={ResetPassword} />
+                    <Route path="/confirm/:id/:token" exact component={ConfirmEmail} />
+                    <Route path="/contact-us" exact component={ContactUs} />
+                    <PrivateRouter path="/requests" exact component={Requests} />
+                    {/* Under Construction */}
+                    <Route path="/under-construction" component={UnderConstruction} />
+
+                    {/* Admin Routes */}
+                    <Route exact path="/admin-dashboard" component={AdminDashboard} />
+                    <Route exact path="/admin-news" component={AdminNews} />
+                    <Route exact path="/admin-news-list" component={AdminNewsList} />
+                    <Route exact path="/admin-news-details/:id" component={AdminNewsDetails} />
+
                     <Route component={NotFoundPage} />
-                </Switch>
-                <Footer />
-            </BrowserRouter>
-        );
-    }
+                  </Switch>
+                </div>
+              </div>
+            </div>
+            {route.includes('admin') ? <AdminFooter /> : <Footer />}
+          </div>
+        </BrowserRouter>
+      </section>
+    );
+  }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    class: state
+  };
+};
+
+export default withRouter(connect(mapStateToProps)(App));

@@ -13,10 +13,10 @@ export default function FindBuyerDetails() {
             <BreadCrumbs title="Find Buyer Details" breadcrumbssegment={pathList} />
             <div className="container">
                 <div className="row">
-                    <div className="col-xl-3 col-lg-12 col-md-12">
+                    <div className="col-xl-3 col-lg-3">
                         <SideNav />
                     </div>
-                    <div className="col-xl-9 col-lg-12 col-md-12 sptb">
+                    <div className="col-xl-9 col-lg-9 sptb">
                         <div className="custom-card">
                             <div className="card">
                                 <div className="card-header">

@@ -4,16 +4,16 @@ import GooglePicker from './ListDocuments';
 const SCOPE = ['https://www.googleapis.com/auth/drive',
     'https://www.googleapis.com/auth/drive.metadata',
     'https://www.googleapis.com/auth/drive.file'];
-// const DEVELOPER_KEY = 'AIzaSyAnyXnOHV5MNn3GVIYcYekMY6QlAw9hhXU';
-const DEVELOPER_KEY = 'AIzaSyA_1Y6HBXXhTvDVN0vM4OCYhCZzj1j6OA4';
-const CLIENT_ID = "883505734730-7culcu4hmm1m13ocq1uhbkr3fc31gpnf.apps.googleusercontent.com";
-// const CLIENT_ID = '850839595666-b9lgfp4nnq0nlghk3karrs861uqpnvg9.apps.googleusercontent.com';
+    // const DEVELOPER_KEY = `${process.env.REACT_APP_GOOGLE_DRIVE_DEVELOPER_KEY}`;
+    // const CLIENT_ID = `${process.env.REACT_APP_GOOGLE_DRIVE_CLIENT_ID}`;
+    const DEVELOPER_KEY = 'AIzaSyAnyXnOHV5MNn3GVIYcYekMY6QlAw9hhXU';
+const CLIENT_ID = '850839595666-b9lgfp4nnq0nlghk3karrs861uqpnvg9.apps.googleusercontent.com';
 export default class GoogleDrive extends Component {
 
     render() {
 
         return (
-            <div>
+            <>
                 <GooglePicker clientId={CLIENT_ID}
                     developerKey={DEVELOPER_KEY}
                     scope={SCOPE}
@@ -24,13 +24,14 @@ export default class GoogleDrive extends Component {
                     authImmediate={false}
                     viewId={'FOLDERS'}
                     createPicker={(google, oauthToken) => {
-                        const googleViewId = google.picker.ViewId.FOLDERS;
+                        const googleViewId = google.picker.ViewId.DOCS;
                         const docsView = new google.picker.DocsView(googleViewId)
                             .setIncludeFolders(true)
-                            .setMimeTypes('application/vnd.google-apps.folder',
+                            .setMimeTypes(
+                                'application/vnd.google-apps.file',
+                                'application/vnd.google-apps.folder',
                                 'application/vnd.google-apps.audio',
                                 'application/vnd.google-apps.document',
-                                'application/vnd.google-apps.file',
                                 'application/vnd.google-apps.photo',
                                 'application/vnd.google-apps.spreadsheet',
                                 'application/vnd.google-apps.video')
@@ -44,7 +45,7 @@ export default class GoogleDrive extends Component {
                     }}>
                     {this.props.children}
                 </GooglePicker>
-            </div>
+            </>
         )
     }
 
@@ -52,7 +53,7 @@ export default class GoogleDrive extends Component {
     pickerCallback(data) {
         if (data.action === google.picker.Action.PICKED) {
             var fileId = data.docs[0].id;
-            console.log('fileId => ', fileId);
+            // console.log('fileId => ', fileId);
         }
     }
 

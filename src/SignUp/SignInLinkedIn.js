@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LinkedIn from "linkedin-login-for-react";
 import { SignInWithLinkedIn } from '../Services/SocialLogin';
 import swal from 'sweetalert';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { addAuthUser, onauthError } from '../redux/action/User/UserAction';
 class SignInLinkedIn extends Component {
 
@@ -12,7 +12,9 @@ class SignInLinkedIn extends Component {
         } else {
             redirectUri = "/home";
             SignInWithLinkedIn(code).then(res => {
-                this.props.dispatch(addAuthUser(res));
+                console.log('res => ', res);
+
+                this.props.dispatch(addAuthUser('socialLogin',res));
             }).catch(err => {
                 this.props.dispatch(onauthError(err));
             });

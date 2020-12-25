@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/css/style.css';
-import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Router } from 'react-router-dom';
 import history from './history';
 import store from './redux/store/store';
 import { Provider } from 'react-redux';
-
+import 'antd/dist/antd.css'
 
 ReactDOM.render(
   <React.Fragment>

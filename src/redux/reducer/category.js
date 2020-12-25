@@ -1,7 +1,11 @@
-import { GET_QUESTION_SUCCESS } from '../action/Category/CategoryAction';
+import {
+    GET_QUESTION_SUCCESS,
+    GET_KEY, GET_POP_UP_CATEGORY_ACTION_KEY
+} from '../action/Category/CategoryAction';
 
 const initialState = {
-    category: []
+    category: [],
+    key: ''
 };
 
 const categoryMap = {
@@ -9,6 +13,18 @@ const categoryMap = {
         return {
             ...state,
             category: action.payload
+        }
+    },
+    [GET_KEY]: (state, action) => {
+        return {
+            ...state,
+            key: action.payload
+        }
+    },
+    [GET_POP_UP_CATEGORY_ACTION_KEY]: (state, action) => {
+        return {
+            ...state,
+            categoryKey: action.payload
         }
     }
 }

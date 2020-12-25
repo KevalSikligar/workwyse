@@ -1,6 +1,11 @@
 /*Color variables*/
+
+
 /*white variables*/
+
+
 /*black variables*/
+
 .header {
     padding-top: .75rem;
     padding-bottom: .75rem;
@@ -105,7 +110,6 @@
 }
 
 @media (max-width: 1024px) {
-
     body.search-show:before,
     body.sidebar-show:before {
         content: '';
@@ -118,15 +122,12 @@
         opacity: .6;
         z-index: 891;
     }
-
     body.search-show {
         overflow: hidden;
     }
-
     body.search-show .header {
         z-index: 892;
     }
-
     body.sidebar-show {
         overflow: hidden;
     }
@@ -136,13 +137,11 @@
     body.search-show .form-inline .nav-search {
         display: block;
     }
-
     .form-inline .nav-search {
         position: absolute;
         z-index: 892;
         display: none;
     }
-
     .search-show .nav-search {
         padding: 15px !important;
         left: 0;
@@ -150,15 +149,12 @@
         right: 0;
         width: 100%;
     }
-
     .form-inline .nav-search {
         display: none;
     }
-
     body.search-show .form-inline .nav-search {
         display: block;
     }
-
     .form-inline .nav-search {
         position: absolute;
         z-index: 892;
@@ -168,18 +164,15 @@
         z-index: 892;
         display: none;
     }
-
     .form-inline .nav-search .btn {
         margin-top: 0 !important;
         border-radius: 0 3px 3px 0;
     }
-
     .form-inline .nav-search .form-control {
         float: left;
         width: calc(100% - 41px);
         display: block;
     }
-
     .form-inline .nav-search .btn {
         margin-top: 0;
         border-radius: 0 3px 3px 0;
@@ -229,7 +222,6 @@
         padding: 0.75rem 2rem !important;
         margin-bottom: 2rem;
     }
-
     .app-content .page-header .page-title {
         margin-bottom: 5px !important;
         line-height: 1.5rem !important;
@@ -280,7 +272,6 @@
         display: contents;
         text-align: center;
     }
-
     .user-tabs ul li a {
         width: 100%;
     }
@@ -348,11 +339,9 @@
         width: 50%;
         float: left;
     }
-
     #count-down-1 .clock-presenter .digit {
         font-size: 36px;
     }
-
     #count-down-1 .hours_dash {
         border-right: none;
     }
@@ -405,7 +394,6 @@
         padding-top: 5px;
         margin-left: 0px;
     }
-
     .nested-media .media {
         display: block !important;
     }
@@ -437,4 +425,19 @@
     float: left;
 }
 
+
 /*# sourceMappingURL=admin-custom.css.map */
+
+
+/* dashboard design css kpt */
+
+.sidebar-mini {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #343a40;
+    text-align: left;
+    background-color: #f0f3fa;
+    font-family: 'Roboto', sans-serif;
+}

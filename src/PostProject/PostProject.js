@@ -1,12 +1,15 @@
 import React, { lazy } from "react";
-import { Modal, Button } from "antd";
+import { Modal } from "antd";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import IntroStep from "./IntroStep";
 import { connect } from "react-redux";
 import FinalPostAProject from "./FinalPostAProject";
+import HeaderStep from "./HeaderStep";
+import LastStepNotSignedUp from "./LastStepNotSignedUp";
+import { getPostAProjectData } from "../redux/action/PostAProject/PostAProject";
+import { withRouter } from "react-router-dom";
 lazy(import(`antd/dist/antd.css`));
-
 class PostProject extends React.Component {
 
     constructor(props) {
@@ -16,98 +19,99 @@ class PostProject extends React.Component {
             steps: [
                 {
                     title: "Step 1",
-                    content: <IntroStep />,
+                    content: <IntroStep onClose={() => { this.props.onClose(this.resetWizard); }} next={this.next} previous={this.prev} />,
                 },
                 {
                     title: "Step 2",
-                    content: <Step1 />
+                    content: <Step1 onClose={() => { this.props.onClose(this.resetWizard); }} next={this.next} previous={this.prev} />
                 }
             ]
         };
     }
 
+    resetWizard = () => {
+        this.setState({ current: 0 });
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.current !== this.state.current) {
+            this.props.dispatch(getPostAProjectData('steps', this.state.steps));
+            this.props.dispatch(getPostAProjectData('current', this.state.current));
+        }
+    }
+
     componentWillReceiveProps(nextProps) {
-        console.log('nextProps => ', nextProps);
-
         let questions = [...this.state.steps];
-        console.log('questions => ', questions);
-
+        if (questions.length > 2) {
+            questions.splice(2)
+        }
         if (nextProps.category !== this.props.category) {
             nextProps.category.category.category.length > 0 &&
                 nextProps.category.category.category.map((d) => {
                     questions.push({
                         title: d.question,
-                        content: <Step2 content={d} />
+                        content: <Step2 onClose={() => { this.props.onClose(this.resetWizard); }} content={d} next={this.next} previous={this.prev} />
                     });
                 });
             questions.push({
                 title: "Step 3",
-                content: <FinalPostAProject />
+                content: <FinalPostAProject onClose={() => { this.props.onClose(this.resetWizard); }} closeModal={() => { this.props.closeModal && this.props.closeModal(); this.resetWizard() }} next={this.next} previous={this.prev} />
             });
+            if (this.props.category.user.isLoggedIn === false) {
+                questions.push({
+                    title: "Login",
+                    content: <LastStepNotSignedUp onClose={() => { this.props.onClose(this.resetWizard); }} closeModal={() => { this.props.closeModal && this.props.closeModal(); this.resetWizard() }} next={this.next} previous={this.prev} />
+                });
+            }
             this.setState({ steps: questions }, () => {
                 return true;
             });
             return true;
         } else {
-            console.log('in else');
+            // console.log('in else');
         }
-
     }
 
     render() {
+
         let { current } = this.state;
-        const { isOpenModal, onClose } = this.props;
-        // const category = this.props.category && this.props.category.category.category;
+        const { isOpenModal } = this.props;
+        var steps = [...this.state.steps];
+        if (this.props.category.category.key === 'header' || this.props.category.category.key === 'home-popup') {
+            var introStep = {
+                title: "Intro Header Step",
+                content: <HeaderStep onClose={() => { this.props.onClose(this.resetWizard); }} next={this.next} previous={this.prev} />
+            }
+            steps = [introStep, ...steps]
+        }
 
         return (
-            <Modal
-                title="Post A Project"
-                visible={isOpenModal}
-                centered
-                onCancel={onClose} >
+
+            <Modal className="post-project-f post_project_model" title="Post A Project" visible={isOpenModal} centered destroyOnClose={true} onCancel={() => { this.props.onClose(this.resetWizard); }} >
                 {/* <Steps current={current}>
                     {this.state.steps.map(item => (
                         <Steps.Step key={item.title} title={item.title} />
                     ))}
                 </Steps> */}
-                <div>{this.state.steps[current].content}</div>
-                <div className="model-popup-wizard">
-                    <div className="px-5">
-                        {current > 0 && (
-                            <Button className="btn-prev" onClick={() => this.prev()}> Previous</Button>
-                        )}
-                        {current < this.state.steps.length - 1 && (
-                            <Button className="mr-0 btn-next" onClick={() => this.next()}>Next</Button>
-                        )}
-                        {current === this.state.steps.length - 1 && (
-                            <Button type="primary" onClick={() => this.handleDone()}> Finish</Button>
-                        )}
-                    </div>
-                </div>
+                <div>{steps[current] && steps[current].content}</div>
             </Modal>
         );
     }
 
-    next() {
+    next = () => {
         const current = this.state.current + 1;
         this.setState({ current });
     }
 
-    prev() {
+    prev = () => {
         const current = this.state.current - 1;
         this.setState({ current });
-    }
-
-    handleDone() {
-        this.props.history.push("/home");
     }
 
 }
 
 const mapStateToProps = (state) => {
-    return {
-        category: state,
-    };
+    return { category: state };
 };
 
-export default connect(mapStateToProps)(PostProject);
+export default withRouter(connect(mapStateToProps)(PostProject));

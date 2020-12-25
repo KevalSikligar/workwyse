@@ -1,239 +1,194 @@
 import React, { Component } from "react";
 import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import { DownOutlined, UserOutlined } from "@ant-design/icons";
-import { Form, Input, Button, Menu, Dropdown } from "antd";
-
+import { Form, Input, Button, Select } from "antd";
+import { getAllCompanyDetails } from "../redux/action/SignUp/SignUpAction";
+import { connect } from "react-redux";
+import debounce from 'lodash/debounce';
+import { COMPANY_SIZE, COMPANY_SCALE } from "../const";
 class CompanyDetails2 extends Component {
 
-    back = (e) => {
-        e.preventDefault();
-        this.props.prevStep();
-    };
+  formRef = React.createRef();
 
-    onFinish = (values) => {
-        console.log("Success:", values);
-        this.props.nextStep();
-    };
+  constructor(props) {
+    super(props);
+    this.handleCategory = debounce(this.handleCategory, 600);
+  }
 
-    onFinishFailed = (errorInfo) => {
-        console.log("Failed:", errorInfo);
-    };
-
-    handleButtonClick(e) {
-        console.info("Click on left button.");
-        console.log("click left button", e);
+  componentDidMount() {
+    if (this.formRef) {
+      this.formRef.current.setFieldsValue({
+        companySize: this.props.companyDetails.signup.companySize,
+        operationScale: this.props.companyDetails.signup.operationScale,
+        trustpilotConnected: this.props.companyDetails.signup.trustpilotConnected,
+        glassdoorConnnected: this.props.companyDetails.signup.glassdoorConnnected,
+        connectFacebookBusiness: this.props.companyDetails.signup.connectFacebookBusiness,
+      });
     }
+  }
 
-    render() {
 
-        var href = window.location.href;
-        const route = href.match(/([^\/]*)\/*$/)[1];
-        const finalName = route.charAt(0).toUpperCase() + route.slice(1);
-        const pathList = [{ to: `/sign-up/${route}`, title: `Sign Up` }];
+  handleCategory = (key, event) => {
+    this.props.dispatch(getAllCompanyDetails(key, event))
+  }
 
-        const companySize = (
-            <Menu onClick={(e) => this.handleMenuClick(e)}>
-                <Menu.Item key="1" icon={<UserOutlined />}>
-                    1-5
-                </Menu.Item>
-                <Menu.Item key="2" icon={<UserOutlined />}>
-                    6-15
-                </Menu.Item>
-                <Menu.Item key="3" icon={<UserOutlined />}>
-                    16-30
-                </Menu.Item>
-            </Menu>
-        );
+  render() {
 
-        const companyScale = (
-            <Menu onClick={(e) => this.handleMenuClick(e)}>
-                <Menu.Item key="1" icon={<UserOutlined />}>
-                    Local
-                </Menu.Item>
-                <Menu.Item key="2" icon={<UserOutlined />}>
-                    National
-                </Menu.Item>
-                <Menu.Item key="3" icon={<UserOutlined />}>
-                    Global
-                </Menu.Item>
-            </Menu>
-        );
+    var href = window.location.href;
+    const route = href.match(/([^\/]*)\/*$/)[1];
+    const finalName = route.charAt(0).toUpperCase() + route.slice(1);
+    const pathList = [{ to: `/sign-up/${route}`, title: `Sign Up` }];
 
-        return (
-            <>
-                <BreadCrumbs title={`${finalName} Sign Up`} breadcrumbssegment={pathList} />
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 sptb custom-card">
-                            <div className="card mb-0">
-                                <ProgressBar animated variant="primary" now={35} />
-                                <div className="card-header">
-                                    <h3 className="card-title">
-                                        Complete Your Profile
-                                    </h3>
-                                </div>
-                                <Form
-                                    name="basic"
-                                    initialValues={{ remember: true }}
-                                    onFinish={this.onFinish}
-                                    onFinishFailed={this.onFinishFailed}
-                                >
-                                    <div className="card-body">
-                                        <div className="row">
-                                            <div className="col-sm-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label className="form-label">
-                                                        Company Size
-                                                    </label>
-                                                    <Dropdown
-                                                        overlay={companySize}
-                                                    >
-                                                        <Button>
-                                                            Select Company Size
-                                                            <DownOutlined />
-                                                        </Button>
-                                                    </Dropdown>
-                                                    {/* <select className="form-control">
-                                                        <option>
-                                                            Select Company Size
-                                                    </option>
-                                                        <option>1-5</option>
-                                                        <option>6-15</option>
-                                                        <option>15-60</option>
-                                                    </select> */}
-                                                </div>
-                                            </div>
+    const onFinish = () => {
+      this.props.nextStep();
+    };
 
-                                            <div className="col-sm-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label className="form-label">
-                                                        What is the scale of
-                                                        your operation(s)?
-                                                    </label>
-                                                    <Dropdown
-                                                        overlay={companyScale}
-                                                    >
-                                                        <Button>
-                                                            Select Company Size
-                                                            <DownOutlined />
-                                                        </Button>
-                                                    </Dropdown>
-                                                    {/* <select className="form-control">
-                                                        <option>Local</option>
-                                                        <option>National</option>
-                                                        <option>Global</option>
-                                                    </select> */}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-sm-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label className="form-label">
-                                                        External Link 1
-                                                    </label>
-                                                    <Form.Item
-                                                        name="firstname"
-                                                        rules={[
-                                                            {
-                                                                required: true,
-                                                                message:
-                                                                    "Please enter external link 1!",
-                                                            }
-                                                        ]}
-                                                    >
-                                                        <Input />
-                                                    </Form.Item>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label className="form-label">
-                                                        External Link 2
-                                                    </label>
-                                                    <Form.Item
-                                                        name="firstname"
-                                                        rules={[
-                                                            {
-                                                                required: true,
-                                                                message:
-                                                                    "Please enter external link 2!",
-                                                            },
-                                                        ]}
-                                                    >
-                                                        <Input />
-                                                    </Form.Item>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-sm-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label className="form-label">
-                                                        External Link 3
-                                                    </label>
-                                                    <Form.Item
-                                                        name="firstname"
-                                                        rules={[
-                                                            {
-                                                                required: true,
-                                                                message:
-                                                                    "Please enter external link 3!",
-                                                            },
-                                                        ]}
-                                                    >
-                                                        <Input />
-                                                    </Form.Item>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label className="form-label">
-                                                        External Link 4
-                                                    </label>
-                                                    <Form.Item
-                                                        name="firstname"
-                                                        rules={[
-                                                            {
-                                                                required: true,
-                                                                message:
-                                                                    "Please enter external link 4!",
-                                                            },
-                                                        ]}
-                                                    >
-                                                        <Input />
-                                                    </Form.Item>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card-footer text-right">
-                                        <Form.Item>
-                                            <Button
-                                                className="btn btn-info mr-2"
-                                                onClick={this.back}
-                                            >
-                                                Back
-                                            </Button>
-                                        </Form.Item>
-                                        <Form.Item>
-                                            <Button
-                                                type="primary"
-                                                htmlType="submit"
-                                            >
-                                                Next
-                                            </Button>
-                                        </Form.Item>
-                                    </div>
-                                </Form>
-                            </div>
-                        </div>
-                    </div>
+    const onFinishFailed = (errorInfo) => { };
+
+    const back = (e) => {
+      e.preventDefault();
+      this.props.prevStep();
+    };
+
+    return (
+      <div className="seller_section_1">
+        <BreadCrumbs title={`${finalName} Sign Up`} breadcrumbssegment={pathList} />
+        <div className="container">
+          <div className="row">
+            <div className="col-12 sptb custom-card">
+              <div className="card mb-0">
+                <ProgressBar animated variant="primary" now={35} />
+                <div className="card-header">
+                  <h3 className="card-title">Complete Your Profile </h3>
                 </div>
-            </>
-        );
-    }
+                <Form ref={this.formRef} onFinish={onFinish} onFinishFailed={onFinishFailed}>
+                  <div className="card-body">
+                    <div className="row">
+                      <div className="col-sm-12 col-md-6 company_mb">
+                        <div className="form-group">
+                          <label className="form-label asterisk">Company Size</label>
+                          <Form.Item name="companySize"
+                            rules={[{ required: true, message: 'Please select the size of your company!' }]}>
+                            <Select className="form-ant-control" onChange={(e) => this.handleCategory('companySize', e)}>
+                              {COMPANY_SIZE.map((o, index) =>
+                                <Select.Option key={o.value} value={o.value}>{o.label}</Select.Option>
+                              )}
+                            </Select>
+                          </Form.Item>
+                        </div>
+                      </div>
+                      <div className="col-sm-12 col-md-6">
+                        <div className="form-group">
+                          <label className="form-label asterisk">What is the scale of your operation(s)?</label>
+                          <Form.Item name="operationScale"
+                            rules={[{ required: true, message: 'Please select the size of your Operation Scale!' }]}>
+                            <Select className="form-ant-control" onChange={(e) => this.handleCategory('operationScale', e)}>
+                              {COMPANY_SCALE.map(category => (
+                                <Select.Option key={category.value} value={category.value}>{category.label}</Select.Option>
+                              ))}
+                            </Select>
+                          </Form.Item>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="card-body review-sec companydetails2">
+                    <div className="form-group">
+                      <label className="text-dark m-0">Please select which review sites you would like to connect</label>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-12 col-sm-12">
+                        <div className="review-item">
+                          <div className="website-text">
+                            <label>https://uk.trustpilot.com/review/</label>
+                          </div>
+                          <div className="review-input">
+                            <Form.Item name="trustpilotConnected" rules={[{ required: false }]}>
+                              <Input onChange={(e) => this.handleCategory('trustpilotConnected', e.target.value)} />
+                            </Form.Item>
+                          </div>
+                          <div className="review-img">
+                            <img src={require('../assets/images/trustpilot-logo.png')} className="logo-image img-fluid" alt="img" title="https://uk.trustpilot.com/review/" />
+                          </div>
+                          {/* <div className="review-content">
+                            <Link to="/" className="btn review-btn">Connect Trustpilot</Link>
+                          </div> */}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-12 col-sm-12">
+                        <div className="review-item">
+                          <div className="review-input">
+                            <Form.Item name="glassdoorConnnected" rules={[{ required: false }]}>
+                              <Input onChange={(e) => this.handleCategory('glassdoorConnnected', e.target.value)} />
+                            </Form.Item>
+                          </div>
+                          <div className="website-text">
+                            <label>https://www.glassdoor.co.uk/Reviews/</label>
+                          </div>
+                          <div className="review-img">
+                            <img src={require('../assets/images/glassdoor-logo.png')} className="logo-image img-fluid" alt="img" title="https://www.glassdoor.co.uk/Reviews/" />
+                          </div>
+                          {/* <div className="review-content">
+                            <Link to="/" className="btn review-btn">Connect Glassdoor</Link>
+                          </div> */}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-12 col-sm-12">
+                        <div className="review-item">
+                          <div className="review-input">
+                            <Form.Item name="connectFacebookBusiness" rules={[{ required: false }]}>
+                              <Input onChange={(e) => this.handleCategory('connectFacebookBusiness', e.target.value)} />
+                            </Form.Item>
+                          </div>
+                          <div className="website-text">
+                            <label>https://facebook.com/</label>
+                          </div>
+                          <div className="review-img">
+                            <img src={require('../assets/images/facebook-logo.png')} className="logo-image img-fluid" alt="img" title="https://facebook.com/" />
+                          </div>
+                          {/* <div className="review-content">
+                            <Link to="/" className="btn review-btn">Connect Facebook</Link>
+                          </div> */}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-12 col-sm-12">
+                        <div className="info-section mw-100">
+                          <p className="text-dark fs-18 mb-0">
+                            Connecting review sites increases your ranking against competitors, we highly recommend selecting at least 2 review sites to connect.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-footer text-right company-details-f">
+                    <Form.Item className="m-0">
+                      <Button className="btn btn-info mr-2" onClick={back}>Back</Button>
+                    </Form.Item>
+                    <Form.Item className="m-0">
+                      <Button type="primary" htmlType="submit">Next</Button>
+                    </Form.Item>
+                  </div>
+                </Form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default CompanyDetails2;
+const mapStateToProps = (state) => {
+  return {
+    companyDetails: state
+  };
+};
+
+export default connect(mapStateToProps)(CompanyDetails2);

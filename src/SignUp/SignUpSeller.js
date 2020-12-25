@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import ComapanyDetails1 from './CompanyDetails1';
-import CompanyDetails3 from './CompanyDetails3';
+import CompanyDetails1 from './CompanyDetails1';
 import CompanyDetails2 from './CompanyDetails2';
+// import CompanyDetails3 from './CompanyDetails3';
 import CompanyDetails4 from './CompanyDetails4';
-import CompanyDetails5 from './CompanyDetails5';
-import CompanyDetails6 from './CompanyDetails6';
 import Buyer5 from './Buyer5';
-import LastStepNotSignedUp from './LastStepNotSignedUp';
+import FinalCompanyStep from './FinalCompanyStep';
 class SignUpSeller extends Component {
 
     state = {
@@ -45,63 +43,45 @@ class SignUpSeller extends Component {
 
         switch (step) {
             case 1:
-                return <ComapanyDetails1
+                return <CompanyDetails1
                     nextStep={this.nextStep}
                     handleChange={this.handleChange}
-                // values={values}
+
                 />
             case 2:
                 return <CompanyDetails2
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     handleChange={this.handleChange}
-                // values={values}
+
                 />
+            // case 3:
+            //     return <CompanyDetails3
+            //         nextStep={this.nextStep}
+            //         prevStep={this.prevStep}
+
+            //     />
             case 3:
-                return <CompanyDetails3
-                    nextStep={this.nextStep}
-                    prevStep={this.prevStep}
-                // values={values}
-                />
-            case 4:
                 if (this.props.match.params[0] === 'seller') {
                     return <CompanyDetails4
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
-                    // values={values}
-                    />
-                } else {
-                    return <CompanyDetails5
-                        nextStep={this.nextStep}
-                        prevStep={this.prevStep}
-                    // values={values}
+
                     />
                 }
-            case 5:
-                if (this.props.match.params[0] === 'seller') {
-                    return <CompanyDetails5
-                        nextStep={this.nextStep}
-                        prevStep={this.prevStep}
-                    // values={values}
-                    />
-                } else {
+            case 4:
+                if (this.props.match.params[0] === 'buyer') {
                     return <Buyer5
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
-                    // values={values}
+
                     />
                 }
-            case 6:
-                return <LastStepNotSignedUp
+            case 5:
+                return <FinalCompanyStep
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
-                // values={values}
-                />
-            case 7:
-                return <CompanyDetails6
-                    nextStep={this.nextStep}
-                    prevStep={this.prevStep}
-                // values={values}
+
                 />
             default: return false
         }

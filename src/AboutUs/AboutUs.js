@@ -1,129 +1,135 @@
 import React from 'react'
-import { withRouter, NavLink } from 'react-router-dom'
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
+import { getKey } from '../redux/action/Category/CategoryAction';
+import swal from "sweetalert";
+import PostProject from '../PostProject/PostProject';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { Button } from 'antd';
+import { getUserDetail } from '../const';
+class AboutUs extends React.Component {
 
-function AboutUs() {
+  state = {
+    showModal: false
+  }
 
-    const pathList = [
-        { to: "/about-us", title: "About Us" }
-    ];
+  toSellerDashboard = () => {
+    this.props.history.push('/seller');
+  }
+
+  render() {
+
+    const pathList = [{ to: "/how-it-works", title: "How It Works" }];
 
     return (
-        <>
-            <BreadCrumbs title="About Us" breadcrumbssegment={pathList} />
-            <div>
-                <div className="sptb bg-white">
-                    <div className="container">
-                        <div className="section-title center-block text-center">
-                            <h1>WHO ARE WE? THIS IS OUR STORY</h1>
-                        </div>
-                        <div className="about-desc pb-md-7 pb-0">
-                            <p>Born during the Covid crisis of 2020, when offices were left empty with phones left to continuously ring.</p>
-                            <p>Did you ever try cold calling or calling to buy services? I'm betting there were long hold times and voicemail responses.</p>
-                            <h4 className="font-weight-semibold">We set out to create a platform that solves two things:</h4>
-                            <p className="pl-4">1. Connect B2B buyers and sellers without having to search through multiple networking & review sites.</p>
-                            <p className="pl-4">2. Qualifies leads for sales teams & doesn't cost an arm and a leg just to connect with them.</p>
-                            <p>We like to keep things simple and tailored to our users. If you have any ideas on how can improve our service, we'd love to hear from you at
-                                <a href="!#"> team@workwyse.io </a></p>
-                        </div>
-                        <div className="row justify-content-center">
-                            <div className="col-lg-4 col-md-4 col-sm-6">
-                                <div className="services-item">
-                                    <div className="mb-lg-0 mb-4">
-                                        <div className="service-card text-center">
-                                            <div className="bg-light icon-bg icon-service text-purple about">
-                                                <img src={require('../assets/images/products/about/megaphone.png')} alt="img" />
-                                            </div>
-                                            <div className="servic-data mt-3">
-                                                <h4 className="font-weight-semibold mb-2">General Account</h4>
-                                                <h5>team@workwyse.io</h5>
-                                                <p className="text-muted mb-0">Reference site about Generate Account, giving information on its origins, as well as a random acc generator.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-4 col-sm-6">
-                                <div className="services-item">
-                                    <div className="mb-lg-0 mb-4">
-                                        <div className="service-card text-center">
-                                            <div className="bg-light icon-bg icon-service text-purple about">
-                                                <img src={require('../assets/images/products/about/technical.png')} alt="img" />
-                                            </div>
-                                            <div className="servic-data mt-3">
-                                                <h4 className="font-weight-semibold mb-2">Help Technical Issues</h4>
-                                                <h5>support@workwyse.io</h5>
-                                                <p className="text-muted mb-0">Reference site about Technical Issues, giving information on its origins, as well as a random technical generator.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-4 col-sm-6">
-                                <div className="services-item">
-                                    <div className="mb-lg-0 mb-4">
-                                        <div className="service-card text-center">
-                                            <div className="bg-light icon-bg icon-service text-purple about">
-                                                <img src={require('../assets/images/products/about/billing.png')} alt="img" />
-                                            </div>
-                                            <div className="servic-data mt-3">
-                                                <h4 className="font-weight-semibold mb-2">Billing Inquiries</h4>
-                                                <h5>billing@workwyse.io</h5>
-                                                <p className="text-mute mb-0">Reference site about Billing Inquiries, giving information on its origins, as well as a random billing psum generator. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      <>
+        <BreadCrumbs title="How It Works" breadcrumbssegment={pathList} />
+        <div>
+          <div className="sptb bg-white">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="section-title center-block text-center">
+                    <h1>For Buyers</h1>
+                  </div>
+                  <div className="about-desc pb-md-7 pb-0">
+                    <p className="data-sec-p">Our powerful engine in the back room matches your outsourcing requirements with companies that are able to cover your most important needs.</p>
+                    <div className="">
+                      <label className="color-data label-title">Search</label>
+                      <p className="data-sec-p"><span className="data-title">Accurate - </span>	Post a Project, define your requirements, and get matched with the most relevant companies.</p>
+                      <p className="data-sec-p"><span className="data-title">Experienced -  </span>	Companies with experience working with your industry are listed first (Industry Focus’ under Seller profiles).</p>
+                      <p className="data-sec-p"><span className="data-title">Trustworthy - </span>	See company ratings all in one place from all across the web.</p>
                     </div>
-                </div>
-                <div className="cover-image sptb bg-background-color contact-bg">
-                    <div className="content-text mb-0">
-                        <div className="container">
-                            <div className="text-center text-white section-title pb-7">
-                                <h1>Workwyse is a registered association in Luzern, Switzerland </h1>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6 col-md-6 col-sm-12 col-12 bg-white p-0">
-                                    <div className="about-map-section">
-                                        <iframe title="About Us Iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238133.1523816246!2d72.68221020433099!3d21.15914250210564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1597424132065!5m2!1sen!2sin"
-                                            frameBorder="0" allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 col-md-6 col-sm-12 col-12 contact-us-desc">
-                                    <h4 className="contact-us-title text-white"> Contact Details</h4>
-                                    <div className="filedlist">
-                                        <div className="contact-us-static-fields">
-                                            <h4><i className="fa fa-address-card"></i>WorkWyse Ltd</h4>
-                                            <hr className="mb-40" />
-                                        </div>
-                                        <div className="contact-us-static-fields">
-                                            <h4><i className="fa fa-address-card"></i>Kemp House</h4>
-                                            <hr className="mb-40" />
-                                        </div>
-                                        <div className="contact-us-static-fields">
-                                            <h4><i className="fa fa-address-card"></i>152-160 City Road</h4>
-                                            <hr className="mb-40" />
-                                        </div>
-                                        <div className="contact-us-static-fields">
-                                            <h4><i className="fa fa-map-marker"></i>EC1V 2NX</h4>
-                                            <hr className="mb-40" />
-                                        </div>
-                                        <div className="contact-us-static-fields">
-                                            <h4><i className="fa fa-map-marker"></i>London</h4>
-                                            <hr className="mb-40" />
-                                        </div>
-                                        <div className="mt-5"><NavLink to="/about-us" className="btn btn-contact-us">Contact Us</NavLink> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="">
+                      <label className="color-data label-title">Select</label>
+                      <p className="data-sec-p"><span className="data-title"> - </span>	Send your request to your top matched sellers.</p>
+                      <p className="data-sec-p">Or</p>
+                      <p className="data-sec-p"><span className="data-title"> - </span>	Receive  requests from our sellers.</p>
                     </div>
+                    <div className="">
+                      <label className="color-data label-title">Speak</label>
+                      <p className="data-sec-p"><span className="data-title"> - </span>	Once you’ve found the right match, you can message using our system or email/call.</p>
+                    </div>
+                    <div className="d-flex justify-content-center">
+                      <button className="btn btn-success add-post mt-1" onClick={() => this.toggleModal("header")}><i className="fa fa-edit"></i> Post a Project</button>
+                    </div>
+                  </div>
                 </div>
+                <div className="col-md-6">
+                  <div className="section-title center-block text-center">
+                    <h1>For Sellers</h1>
+                  </div>
+                  <div className="about-desc pb-md-7 pb-0">
+                    <p className="data-sec-p">Our powerful engine in the back room matches your requirements with buyers that are match your company’s service and industry focus.</p>
+                    <div className="">
+                      <label className="color-data label-title">Search</label>
+                      <p className="data-sec-p"><span className="data-title">Accurate - </span>	Get matched with buyers that fit your industry and service focus, so you can focus on your specialty.</p>
+                      <p className="data-sec-p"><span className="data-title">Qualified -  </span>	Contact buyers that fit within your ideal customer profile (budget, industry and requirements).</p>
+                      <p className="data-sec-p"><span className="data-title">Fair  - </span>	We don’t make you compete with everyone - our buyers are limited to contacting only 5 sellers per project.</p>
+                    </div>
+                    <div className="">
+                      <label className="color-data label-title">Select</label>
+                      <p className="data-sec-p"><span className="data-title"> - </span>	Send a request to your top buyer matches and instantly receive full project & contact details.</p>
+                      <p className="data-sec-p">Or</p>
+                      <p className="data-sec-p"><span className="data-title"> - </span>	Receive  requests from our buyers.</p>
+                    </div>
+                    <div className="">
+                      <label className="color-data label-title">Speak</label>
+                      <p className="data-sec-p"><span className="data-title"> - </span>	Once you’ve found the right match, you can message using our system or email/call</p>
+                    </div>
+                    {getUserDetail('roles') === 'Seller' ? <div className="d-flex justify-content-center" onClick={() => this.toSellerDashboard()}>
+                      <button className="btn btn-secondary add-post mt-1"><i className="fa fa-edit"></i> Find Buyers</button>
+                    </div> :
+                      <>
+                        <div className="d-flex justify-content-center">
+                          <Link as={Button} to="/sign-up/seller" className="btn btn-secondary add-post mt-1">Sign Up Seller</Link>
+                        </div>
+                      </>
+                    }
+                  </div>
+                </div>
+              </div>
             </div>
-        </>
+            {/* </div> */}
+            <PostProject className="btn btn-lg btn-block btn-success br-tl-md-0 br-bl-md-0" isOpenModal={this.state.showModal}
+              onClose={() => this.toggleModal("home")} />
+          </div>
+        </div>
+      </>
     )
+  }
+
+  toggleModal = (key) => {
+    this.props.dispatch(getKey(key))
+    if (this.state.showModal === true) {
+      this.setState({ showModal: false });
+    } else {
+      this.setState({ showModal: true });
+    }
+    if (this.state.showModal === true) {
+      swal("Are you sure you want to Quit the process?", {
+        buttons: { cancel: "No", catch: "Yes" },
+        icon: "error",
+      }).then((value) => {
+        switch (value) {
+          case "catch":
+            this.setState({ showModal: false });
+            break;
+          default:
+            this.setState({ showModal: true });
+        }
+      });
+    }
+  };
 }
 
-export default withRouter(AboutUs)
+
+const mapStateToProps = (state) => {
+  return {
+    howItWork: state
+  };
+};
+
+export default connect(mapStateToProps)(AboutUs);
+
+

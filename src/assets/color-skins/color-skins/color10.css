@@ -26,7 +26,7 @@ a:hover {
 }
 
 .bg-dark-purple {
-    background-color: #373346 !important;
+    background-color: #463333 !important;
 }
 
 .btn-primary {
@@ -336,7 +336,7 @@ a.text-dark:focus {
 }
 
 /*boYSIqMee+p4uAjskftSrErYaF9PDNDn+EGSzR9N2BspYI8=
-feCz66HNQhyoUIndT6pXQpWta+PA3e1h3yExMyH1EsOo6f8PXnNPyHGLRfchOSF9WSX7exs=*/
+feCz66HNQhyoUIndT6pXQpWta+PA3e1h3yExMyH1EsOo6f8PXnNPyHGLRfchOSF9WSX7exs= ssh???*/
 .admin-navbar .nav-item.active .nav-link {
     color: #1650e2;
 }
@@ -1024,7 +1024,7 @@ form.convFormDynamic button.submit:hover {
 .bg-background-5:before,
 .bg-background-6:before,
 .slider-header .item:before {
-    background: linear-gradient(to right, rgba(22, 80, 226, 0.95) 0%, rgba(126, 81, 236, 0.95) 100%);
+    background: linear-gradient(to right, rgba(134, 207, 241, 0.95) 0%, rgba(17, 31, 231, 0.95) 100%);
 }
 
 .select2-container--default.select2-container--focus .select2-selection--multiple {
@@ -1101,8 +1101,8 @@ button.bg-secondary:focus {
 
 .btn-secondary {
     color: #fff !important;
-    background-color: #e34216;
-    border-color: #e34216;
+    background-color: #1635e3;
+    border-color: #1635e3;
 }
 
 .btn-secondary:hover {
@@ -1183,7 +1183,7 @@ button.bg-secondary:focus {
 
 .construction-image:before {
     content: '';
-    background: linear-gradient(-225deg, rgba(72, 1, 255, 0.9) 0, rgba(121, 24, 242, 0.9) 48%, rgba(172, 50, 228, 0.9) 100%);
+    background: linear-gradient(135deg,  rgba(134, 207, 241, 0.95) 0%, rgba(17, 31, 231, 0.95) 100%);
 }
 
 .construction {
@@ -1337,7 +1337,7 @@ button.bg-secondary:focus {
 }
 
 .top-bar {
-    background: linear-gradient(135deg, #1650e2 0%, #7e51ec 100%);
+    background: linear-gradient(135deg,  rgba(134, 207, 241, 0.95) 0%, rgba(17, 31, 231, 0.95) 100%) !important;
 }
 
 .top-bar .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -1556,7 +1556,7 @@ button#ihavecookiesBtn {
 }
 
 .iteam-all-icon:before {
-    background: rgba(22, 80, 226, 0.1);
+    /* background: rgba(22, 80, 226, 0.1); */
 }
 
 .item-all-card::before,

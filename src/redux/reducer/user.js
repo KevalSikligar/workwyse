@@ -15,15 +15,36 @@ const initialState = {
 
 const actionsMap = {
     [AUTH_USER_SUCCESS]: (state, action) => {
-        return {
-            ...state,
-            user: `${action.payload.response.localizedFirstName} ${action.payload.response.localizedLastName}`,
-            isLoggedIn: true,
-            isLoading: false
+        // console.log('state,action => ', state,action);
+        if (action.key === 'normalLogin') {
+            // localStorage.setItem('userName', (action.payload.data.foreName.charAt(0).toUpperCase() + action.payload.data.foreName.slice(1)) + " " + (action.payload.data.surName.charAt(0).toUpperCase() + action.payload.data.surName.slice(1)))
+            // localStorage.setItem('firstName', action.payload.data.foreName)
+            // localStorage.setItem('lastName', action.payload.data.surName)
+            return {
+                ...state,
+                user: `${action.payload.data.foreName} ${action.payload.data.surName}`,
+                isLoggedIn: true,
+                isLoading: false
+            }
+        } else if (action.key === 'socialLogin') {
+            // localStorage.setItem('userName', action.payload.response.localizedFirstName + " " + action.payload.response.localizedLastName)
+            return {
+                ...state,
+                user: `${action.payload.response.localizedFirstName} ${action.payload.response.localizedLastName}`,
+                isLoggedIn: true,
+                isLoading: false
+            }
+        } else if (action.key === 'Buyer') {
+            return {
+                ...state,
+                // user: `${action.payload.response.localizedFirstName} ${action.payload.response.localizedLastName}`,
+                isLoggedIn: false,
+                isLoading: false
+            }
         }
     },
     [AUTH_USER_ERROR]: (state, action) => {
-        localStorage.removeItem('access_token');
+        // localStorage.removeItem('access_token');
         return {
             ...state,
             user: null,
@@ -32,8 +53,7 @@ const actionsMap = {
         }
     },
     [LOGOUT]: (state, action) => {
-        localStorage.removeItem('access_token');
-        localStorage.removeItem('UserDetails');
+        localStorage.clear();
         return {
             ...state,
             user: null,

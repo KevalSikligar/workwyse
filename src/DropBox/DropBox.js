@@ -1,23 +1,44 @@
 import React, { Component } from "react";
 import DropboxChooser from "./react-dropbox-chooser";
+import { connect } from "react-redux";
+import { getAllCompanyDetails } from "../redux/action/SignUp/SignUpAction";
+class DropBox extends Component {
 
-export default class DropBox extends Component {
+    state = {
+        chosenLink: '',
+    }
+
+    successFiles(files) {
+        // console.log("chose:", files)
+        this.setState({ chosenLink: files[0].name });
+        this.props.dispatch(getAllCompanyDetails('uploadLink', files));
+    }
+
     render() {
-        const APP_KEY = "qe8kl4gnlvsctvz";
-
+        const APP_KEY = process.env.REACT_APP_DROP_BOX_KEY;
+        const { disbleTextBox = false } = this.props
         return (
-            <div className="container">
+            <>
                 <DropboxChooser
                     appKey={APP_KEY}
-                    success={(files) => console.log("chose:", files)}
-                    cancel={() => console.log("closed")}
-                    multiselect={true}
-                >
-                    {/* <span id="myId">Click me!</span>
-                        <div className="dropbox"></div> */}
+                    linkType="direct"
+                    success={(files) => this.successFiles(files)}
+                    cancel={() => { }}
+                    multiselect={true}>
                     {this.props.children}
+                    {!disbleTextBox && this.state.chosenLink ?
+                        <input value={this.state.chosenLink} /> : ''}
                 </DropboxChooser>
-            </div>
+            </>
         );
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        dropbox: state
+    }
+}
+
+export default connect(mapStateToProps)(DropBox)
+
